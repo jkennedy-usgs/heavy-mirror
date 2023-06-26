@@ -1,0 +1,1139 @@
+# Recharge package input for MF2005 
+#  includes mt-front & tributary recharge, canal, septic return, irrigation , sewer & water line
+#  Parameters are defined for each of the componets of recharge
+#    Note: Canal leakage was based on leakage rate while canal is operating, therefore the starting 
+#    Parval for the irrigation season would be 1 and the Parval for an annual stress period 
+#    would be 230/365.25 or 0.63.  Canal parameters reduced to 50% of original (eg. 0.50 & 0.31)
+#
+#    Note: Irrigation seepage mult arrays were calculated based on 0.5 foot flux over a year 
+#    (0.5 ft/year / 365.25d/yr => ~1.4E-03 ft/day).  The flux rate is 365.25/230 larger,
+#    ~2.2E-03 for just the irrigation season (0.5 ft/year / 230 d/yr), thus the 1.59 Parval
+#    for the irrigation season (parameter RCHirr92i).  In the early 1900's, prior to the MRGCD, 
+#    irrigation was less because of water logging, etc; therefore one-third the amount was assumed
+#    but in the same relative distribution as the 1935 data (see parameter RCHirrp35). 
+PARAMETER         28                       "PARAMETER" NPRCH
+         3        50                       NRCHOP IRCHCB
+RCHmteast        RCH       1.0         1   PARNAM PARTYP Parval NCLU #mt_front recharge 
+RCHmtM           MTzn         1             Mltarra Zonarr IZ     # east side
+RCHmtwest        RCH       1.0         1   PARNAM PARTYP Parval NCLU #mt_front recharge
+RCHmtM           MTzn         2 3           Mltarra Zonarr IZ     # west side
+TRIBsfgal        RCH       5.0         1   PARNAM PARTYP Parval NCLU #trib recharge
+RCHtribM         TRIBzn       1 2           Mltarra Zonarr IZ     #Santa Fe R. & Galisteo Cr.
+TRIBtij          RCH       1.0         1   PARNAM PARTYP Parval NCLU #trib recharge
+RCHtribM         TRIBzn       3             Mltarra Zonarr IZ     #Tijeras Arroyo
+TRIBriop         RCH       1.0         1   PARNAM PARTYP Parval NCLU #trib recharge
+RCHtribM         TRIBzn       4 5 6 7        Mltarra Zonarr IZ    #Rio Puerco
+TRIBrsal         RCH       1.0         1   PARNAM PARTYP Parval NCLU #trib recharge
+RCHtribM         TRIBzn       8             Mltarra Zonarr IZ     #Rio Salado (southern)
+RCHcnl35         RCH      0.31         1   PARNAM PARTYP Parval NCLU # 1935 canal for >= annual 
+RCHcnl35M        ALL          1             Mltarra Zonarr IZ  # stress periods (230/365.25)
+RCHcnl55         RCH      0.31         1   PARNAM PARTYP Parval NCLU # 1955 canal for >= annual 
+RCHcnl55M        ALL          1             Mltarra Zonarr IZ         # stress periods (230/365.25)
+RCHcnl75         RCH      0.31         1   PARNAM PARTYP Parval NCLU # 1975 canal for >= annual
+RCHcnl75M        ALL          1             Mltarra Zonarr IZ         # stress periods (230/365.25)
+RCHcnl92         RCH      0.31         1   PARNAM PARTYP Parval NCLU # 1992 canal for >= annual
+RCHcnl92M        ALL          1             Mltarra Zonarr IZ         # stress periods (230/365.25)
+RCHcnl92i        RCH      0.50         1   PARNAM PARTYP Parval NCLU # 1992 canal for irrigation 
+RCHcnl92M        ALL          1             Mltarra Zonarr IZ         # season stress periods 
+RCHsep70         RCH       1.0         1   PARNAM PARTYP Parval NCLU # 1970 septic tank recharge
+RCHsep70M        ALL          1             Mltarra Zonarr IZ         # for seasonal & annual 
+RCHsep80         RCH       1.0         1   PARNAM PARTYP Parval NCLU # 1980 septic tank recharge
+RCHsep80M        ALL          1             Mltarra Zonarr IZ         # for seasonal & annual 
+RCHsep90         RCH       1.0         1   PARNAM PARTYP Parval NCLU # 1990 septic tank recharge
+RCHsep90M        ALL          1             Mltarra Zonarr IZ         # for seasonal & annual 
+RCHsep00         RCH       1.0         1   PARNAM PARTYP Parval NCLU # 2000 septic tank recharge
+RCHsep00M        ALL          1             Mltarra Zonarr IZ         # for seasonal & annual
+RCHirrp35        RCH      0.33         1   PARNAM PARTYP Parval NCLU # pre-1935 irr seepage (annual)
+RCHirr35M        ALL          1             Mltarra Zonarr IZ         # 1935 data but less irr pre mrgcd
+RCHirr35         RCH      1.00         1   PARNAM PARTYP Parval NCLU # 1935 irr seepage (annual)
+RCHirr35M        ALL          1             Mltarra Zonarr IZ         # annual stress periods
+RCHirr55         RCH      1.00         1   PARNAM PARTYP Parval NCLU # 1955 irr seepage (annual)
+RCHirr55M        ALL          1             Mltarra Zonarr IZ         # annual stress periods
+RCHirr75         RCH      1.00         1   PARNAM PARTYP Parval NCLU # 1975 irr seepage (annual)
+RCHirr75M        ALL          1             Mltarra Zonarr IZ         # annual stress periods
+RCHirr92         RCH      1.00         1   PARNAM PARTYP Parval NCLU # 1992 irr seepage (annual)
+RCHirr92M        ALL          1             Mltarra Zonarr IZ         # annual stress periods
+RCHirr92i        RCH      1.59         1   PARNAM PARTYP Parval NCLU # 1992 irr seepage (irr season)
+RCHirr92M        ALL          1             Mltarra Zonarr IZ         # irrig. season stress periods
+RCHjirr55        RCH      1.00         1   PARNAM PARTYP Parval NCLU # 1955 irr seepage for Jemez R.
+RCHjirr55M       ALL          1             Mltarra Zonarr IZ         # annual stress periods
+RCHjirr75        RCH      1.00         1   PARNAM PARTYP Parval NCLU # 1975 irr seepage for Jemez R.
+RCHjirr75M       ALL          1             Mltarra Zonarr IZ         # annual stress periods
+RCHjirr75i       RCH      1.59         1   PARNAM PARTYP Parval NCLU # 1975 irr seepage for Jemez R.
+RCHjirr75M       ALL          1             Mltarra Zonarr IZ         # irrig. season stress periods
+RCHjcan          RCH      0.63         1   PARNAM PARTYP Parval NCLU # canal seepage along Jemez R.
+RCHjcanM         ALL          1             Mltarra Zonarr IZ         # annual stress periods
+RCHjcani         RCH      1.00         1   PARNAM PARTYP Parval NCLU # canal seepage along Jemez R.
+RCHjcanM         ALL          1             Mltarra Zonarr IZ         # irrig.season stress periods
+RCHzres          RCH      1.00         1   PARNAM PARTYP Parval NCLU # canal seepage along Jemez R.
+RCHzresM         ALL          1             Mltarra Zonarr IZ         # all stress periods
+sewer&H2O RCH .100000000000 1 INSTANCES 54 # PARNAM PARTYP Parval NCLU NUMINST
+p1900-1904
+p1900-1904 sewer 3
+p1905-1909
+p1905-1909 sewer 3
+p1910-1914
+p1910-1914 sewer 3
+p1915-1919
+p1915-1919 sewer 3
+p1920-1924
+p1920-1924 sewer 3
+p1925-1929
+p1925-1929 sewer 3
+p1930-1934
+p1930-1934 sewer 3
+p1935-1939
+p1935-1939 sewer 3
+p1940-1944
+p1940-1944 sewer 3
+p1945-1949
+p1945-1949 sewer 3
+p1950-1954
+p1950-1954 sewer 3 5
+p1955-1959
+p1955-1959 sewer 3 5
+p1960-1964
+p1960-1964 sewer 3 5
+p1965-1969
+p1965-1969 sewer 3 5
+p1970-1974
+p1970-1974 sewer 3 5 7
+p1975
+p1975      sewer 3 5 7
+p1976
+p1976      sewer 3 5 7
+p1977
+p1977      sewer 3 5 7
+p1978
+p1978      sewer 3 5 7
+p1979
+p1979      sewer 3 5 7
+p1980
+p1980      sewer 3 5 7
+p1981
+p1981      sewer 3 5 7
+p1982
+p1982      sewer 3 5 7
+p1983
+p1983      sewer 3 5 7
+p1984
+p1984      sewer 3 5 7
+p1985
+p1985      sewer 3 5 7
+p1986
+p1986      sewer 3 5 7
+p1987
+p1987      sewer 3 5 7
+p1988
+p1988      sewer 3 5 7
+p1989
+p1989      sewer 3 5 7
+p1990
+p1990      sewer 3 5 7
+p1991
+p1991      sewer 3 5 7 9
+p1992
+p1992      sewer 3 5 7 9
+p1993
+p1993      sewer 3 5 7 9
+p1994
+p1994      sewer 3 5 7 9
+p1995
+p1995      sewer 3 5 7 9
+p1996
+p1996      sewer 3 5 7 9
+p1997
+p1997      sewer 3 5 7 9
+p1998
+p1998      sewer 3 5 7 9
+p1999
+p1999      sewer 3 5 7 9
+p2000
+p2000      sewer 3 5 7 9
+p2001
+p2001      sewer 3 5 7 9
+p2002
+p2002      sewer 3 5 7 9
+p2003
+p2003      sewer 3 5 7 9
+p2004
+p2004      sewer 3 5 7 9
+p2005
+p2005      sewer 3 5 7 9
+p2006
+p2006      sewer 3 5 7 9
+p2007
+p2007      sewer 3 5 7 9
+p2008
+p2008      sewer 3 5 7 9
+p2009
+p2009      sewer 3 5 7 9
+p2010
+p2010      sewer 3 5 7 9
+p2011
+p2011      sewer 3 5 7 9
+p2012
+p2012      sewer 3 5 7 9
+p2013
+p2013      sewer 3 5 7 9
+         6                         INRECH--# Pnames active steady-state stress period
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+        11                         INRECH--# Pnames active for 1900-04 stress period
+sewer&H2O p1900-1904 -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHirrp35  -3                      Pname--pre-1935 irrigation seepage
+RCHjirr55  -3                      Pname--1955 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+        11                         INRECH-- 1905-09
+sewer&H2O p1905-1909 -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHirrp35  -3                      Pname--pre-1935 irrigation seepage
+RCHjirr55  -3                      Pname--1955 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+        11                         INRECH-- 1910-14
+sewer&H2O p1910-1914 -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHirrp35  -3                      Pname--pre-1935 irrigation seepage
+RCHjirr55  -3                      Pname--1955 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+        11                         INRECH-- 1915-19
+sewer&H2O p1915-1919  -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHirrp35  -3                      Pname--pre-1935 irrigation seepage
+RCHjirr55  -3                      Pname--1955 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+        11                         INRECH-- 1920-24
+sewer&H2O p1920-1924 -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHirrp35  -3                      Pname--pre-1935 irrigation seepage
+RCHjirr55  -3                      Pname--1955 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+        11                         INRECH-- 1925-29
+sewer&H2O p1925-1929 -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHirrp35  -3                      Pname--pre-1935 irrigation seepage
+RCHjirr55  -3                      Pname--1955 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+        12                         INRECH--# Pnames active for 1930-34 stress period
+sewer&H2O p1930-1934 -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl35   -3                      Pname--1935 canal leakage
+RCHirr35   -3                      Pname--1935 irrigation seepage
+RCHjirr55  -3                      Pname--1955 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+        12                         INRECH-- 1935-39
+sewer&H2O p1935-1939 -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl35   -3                      Pname--1935 canal leakage
+RCHirr35   -3                      Pname--1935 irrigation seepage
+RCHjirr55  -3                      Pname--1955 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+        12                         INRECH-- 1940-44
+sewer&H2O p1940-1944 -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl35   -3                      Pname--1935 canal leakage
+RCHirr35   -3                      Pname--1935 irrigation seepage
+RCHjirr55  -3                      Pname--1955 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+        12                         INRECH-- 1945-49
+sewer&H2O p1945-1949 -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl35   -3                      Pname--1935 canal leakage
+RCHirr35   -3                      Pname--1935 irrigation seepage
+RCHjirr55  -3                      Pname--1955 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+        12                         INRECH--# Pnames active for 1950-54 stress period
+sewer&H2O p1950-1954 -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl55   -3                      Pname--1955 canal leakage
+RCHirr55   -3                      Pname--1955 irrigation seepage
+RCHjirr55  -3                      Pname--1955 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+        12                         INRECH--use previous for 1955-59
+sewer&H2O p1955-1959 -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl55   -3                      Pname--1955 canal leakage
+RCHirr55   -3                      Pname--1955 irrigation seepage
+RCHjirr55  -3                      Pname--1955 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+        13                         INRECH--# Pnames active for 1960-64 stress period
+sewer&H2O p1960-1964 -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl55   -3                      Pname--1955 canal leakage
+RCHirr55   -3                      Pname--1955 irrigation seepage
+RCHjirr55  -3                      Pname--1955 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep70   -3                      Pname--add 1970 septic recharge
+        13                         INRECH--# Pnames active for 1965-69 stress period
+sewer&H2O p1965-1969 -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl75   -3                      Pname--1975 canal leakage
+RCHirr75   -3                      Pname--1975 irrigation seepage
+RCHjirr75  -3                      Pname--1975 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep70   -3                      Pname--1970 septic recharge
+        13                         INRECH-- 1970-74
+sewer&H2O p1970-1974 -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl75   -3                      Pname--1975 canal leakage
+RCHirr75   -3                      Pname--1975 irrigation seepage
+RCHjirr75  -3                      Pname--1975 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep70   -3                      Pname--1970 septic recharge
+        13                         INRECH--# Pnames active for 1975 stress period
+sewer&H2O p1975      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl75   -3                      Pname--1975 canal leakage
+RCHirr75   -3                      Pname--1975 irrigation seepage
+RCHjirr75  -3                      Pname--1975 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep80   -3                      Pname--1980 septic recharge
+        13                         INRECH--use previous for 1976
+sewer&H2O p1976      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl75   -3                      Pname--1975 canal leakage
+RCHirr75   -3                      Pname--1975 irrigation seepage
+RCHjirr75  -3                      Pname--1975 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep80   -3                      Pname--1980 septic recharge
+        13                         INRECH--use previous for 1977
+sewer&H2O p1977      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl75   -3                      Pname--1975 canal leakage
+RCHirr75   -3                      Pname--1975 irrigation seepage
+RCHjirr75  -3                      Pname--1975 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep80   -3                      Pname--1980 septic recharge
+        13                         INRECH--use previous for 1978
+sewer&H2O p1978      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl75   -3                      Pname--1975 canal leakage
+RCHirr75   -3                      Pname--1975 irrigation seepage
+RCHjirr75  -3                      Pname--1975 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep80   -3                      Pname--1980 septic recharge
+        13                         INRECH--use previous for 1979
+sewer&H2O p1979      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl75   -3                      Pname--1975 canal leakage
+RCHirr75   -3                      Pname--1975 irrigation seepage
+RCHjirr75  -3                      Pname--1975 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep80   -3                      Pname--1980 septic recharge
+        13                         INRECH--use previous for 1980
+sewer&H2O p1980      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl75   -3                      Pname--1975 canal leakage
+RCHirr75   -3                      Pname--1975 irrigation seepage
+RCHjirr75  -3                      Pname--1975 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep80   -3                      Pname--1980 septic recharge
+        13                         INRECH--use previous for 1981
+sewer&H2O p1981      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl75   -3                      Pname--1975 canal leakage
+RCHirr75   -3                      Pname--1975 irrigation seepage
+RCHjirr75  -3                      Pname--1975 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep80   -3                      Pname--1980 septic recharge
+        13                         INRECH--use previous for 1982
+sewer&H2O p1982      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl75   -3                      Pname--1975 canal leakage
+RCHirr75   -3                      Pname--1975 irrigation seepage
+RCHjirr75  -3                      Pname--1975 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep80   -3                      Pname--1980 septic recharge
+        13                         INRECH--use previous for 1983
+sewer&H2O p1983      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl75   -3                      Pname--1975 canal leakage
+RCHirr75   -3                      Pname--1975 irrigation seepage
+RCHjirr75  -3                      Pname--1975 irrigation seepage Jemez river
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep80   -3                      Pname--1980 septic recharge
+        13                         INRECH--# Pnames active for 1984 stress period
+sewer&H2O p1984      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92   -3                      Pname--1992 canal leakage -- annual
+RCHirr92   -3                      Pname--1992 irrigation seepage -- annual
+RCHjirr75  -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep80   -3                      Pname--1980 septic recharge
+        13                         INRECH--# Pnames active for 1985 stress period
+sewer&H2O p1985      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92   -3                      Pname--1992 canal leakage -- annual
+RCHirr92   -3                      Pname--1992 irrigation seepage -- annual
+RCHjirr75  -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep90   -3                      Pname--1990 septic recharge
+        13                         INRECH-- 1986
+sewer&H2O p1986      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92   -3                      Pname--1992 canal leakage -- annual
+RCHirr92   -3                      Pname--1992 irrigation seepage -- annual
+RCHjirr75  -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep90   -3                      Pname--1990 septic recharge
+        13                         INRECH-- 1987
+sewer&H2O p1987      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92   -3                      Pname--1992 canal leakage -- annual
+RCHirr92   -3                      Pname--1992 irrigation seepage -- annual
+RCHjirr75  -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep90   -3                      Pname--1990 septic recharge
+        13                         INRECH-- 1988
+sewer&H2O p1988      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92   -3                      Pname--1992 canal leakage -- annual
+RCHirr92   -3                      Pname--1992 irrigation seepage -- annual
+RCHjirr75  -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep90   -3                      Pname--1990 septic recharge
+        13                         INRECH-- 1989
+sewer&H2O p1989      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92   -3                      Pname--1992 canal leakage -- annual
+RCHirr92   -3                      Pname--1992 irrigation seepage -- annual
+RCHjirr75  -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcan    -3                      Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep90   -3                      Pname--1990 septic recharge
+         8                         INRECH--# Pnames active for 1990 Jan-Mar stress period
+sewer&H2O p1990      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep90   -3                      Pname--1990 septic recharge
+        13                         INRECH--# Pnames active for 1990 Mar-Oct stress period
+sewer&H2O p1990      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep90   -3                      Pname--1990 septic recharge
+         8                         INRECH--# Pnames active for Nov 1990 - Mar 1991 stress period
+sewer&H2O p1991      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep90   -3                      Pname--1990 septic recharge
+        13                         INRECH--# Pnames active for 1991 Mar-Oct stress period
+sewer&H2O p1991      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep90   -3                      Pname--1990 septic recharge
+         8                         INRECH--# Pnames active for Nov 1991 - Mar 1992 stress period
+sewer&H2O p1992      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep90   -3                      Pname--1990 septic recharge
+        13                         INRECH--# Pnames active for 1992 Mar-Oct stress period
+sewer&H2O p1992      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep90   -3                      Pname--1990 septic recharge
+         8                         INRECH--# Pnames active for Nov 1992 - Mar 1993 stress period
+sewer&H2O p1993      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep90   -3                      Pname--1990 septic recharge
+        13                         INRECH--# Pnames active for 1993 Mar-Oct stress period
+sewer&H2O p1993      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep90   -3                      Pname--1990 septic recharge
+         8                         INRECH--# Pnames active for Nov 1993 - Mar 1994 stress period
+sewer&H2O p1994      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep90   -3                      Pname--1990 septic recharge
+        13                         INRECH--# Pnames active for 1994 Mar-Oct stress period
+sewer&H2O p1994      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep90   -3                      Pname--1990 septic recharge
+         8                         INRECH--# Pnames active for Nov 1994 - Mar 1995 stress period
+sewer&H2O p1995      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep90   -3                      Pname--1990 septic recharge
+        13                         INRECH--# Pnames active for 1995 Mar-Oct stress period
+sewer&H2O p1995      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep90   -3                      Pname--1990 septic recharge
+         8                         INRECH--# Pnames active for Nov 1995 - Mar 1996 stress period
+sewer&H2O p1996      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep90   -3                      Pname--1990 septic recharge
+        13                         INRECH--# Pnames active for 1996 Mar-Oct stress period
+sewer&H2O p1996      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep90   -3                      Pname--1990 septic recharge
+         8                         INRECH--# Pnames active for Nov 1996 - Mar 1997 stress period
+sewer&H2O p1997      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep90   -3                      Pname--1990 septic recharge
+        13                         INRECH--# Pnames active for 1997 Mar-Oct stress period
+sewer&H2O p1997      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep90   -3                      Pname--1990 septic recharge
+         8                         INRECH--# Pnames active for Nov 1997 - Mar 1998 stress period
+sewer&H2O p1998      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep90   -3                      Pname--1990 septic recharge
+        13                         INRECH--# Pnames active for 1998 Mar-Oct stress period
+sewer&H2O p1998      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep90   -3                      Pname--1990 septic recharge
+         8                         INRECH--# Pnames active for Nov 1998 - Mar 1999 stress period
+sewer&H2O p1999      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep90   -3                      Pname--1990 septic recharge
+        13                         INRECH--# Pnames active for 1999 Mar-Oct stress period
+sewer&H2O p1999      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep90   -3                      Pname--1990 septic recharge
+         8                         INRECH--# Pnames active for Nov 1999 - Mar 2000 stress period
+sewer&H2O p2000      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep90   -3                      Pname--1990 septic recharge
+        13                         INRECH--# Pnames active for 2000 Mar-Oct stress period
+sewer&H2O p2000      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep00   -3                      Pname--2000 septic recharge
+         8                         INRECH--# Pnames active for Nov 2000 - Mar 2001 stress period
+sewer&H2O p2001      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep00   -3                      Pname--2000 septic recharge
+        13                         INRECH--# Pnames active for 2001 Mar-Oct stress period
+sewer&H2O p2001      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep00   -3                      Pname--2000 septic recharge
+         8                         INRECH--# Pnames active for Nov 2001 - Mar 2002 stress period
+sewer&H2O p2002      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep00   -3                      Pname--2000 septic recharge
+        13                         INRECH--# Pnames active for 2002 Mar-Oct stress period
+sewer&H2O p2002      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep00   -3                      Pname--2000 septic recharge
+         8                         INRECH--# Pnames active for Nov 2002 - Mar 2003 stress period
+sewer&H2O p2003      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep00   -3                      Pname--2000 septic recharge
+        13                         INRECH--# Pnames active for 2003 Mar-Oct stress period
+sewer&H2O p2003      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep00   -3                      Pname--2000 septic recharge
+         8                         INRECH--# Pnames active for Nov 2003 - Mar 2004 stress period
+sewer&H2O p2004      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep00   -3                      Pname--2000 septic recharge
+        13                         INRECH--# Pnames active for 2004
+sewer&H2O p2004      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep00   -3                      Pname--2000 septic recharge
+         8                         INRECH--# Pnames active for 2005
+sewer&H2O p2005      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep00   -3                      Pname--2000 septic recharge
+        13                         INRECH--# Pnames active for 2005
+sewer&H2O p2005      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep00   -3                      Pname--2000 septic recharge
+         8                         INRECH--# Pnames active for 2006
+sewer&H2O p2006      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep00   -3                      Pname--2000 septic recharge
+        13                         INRECH--# Pnames active for 2006
+sewer&H2O p2006      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep00   -3                      Pname--2000 septic recharge
+         8                         INRECH--# Pnames active for 2007
+sewer&H2O p2007      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep00   -3                      Pname--2000 septic recharge
+        13                         INRECH--# Pnames active for 2007
+sewer&H2O p2007      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep00   -3                      Pname--2000 septic recharge
+         8                         INRECH--# Pnames active for 2008
+sewer&H2O p2008      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep00   -3                      Pname--2000 septic recharge
+        13                         INRECH--# Pnames active for 2008
+sewer&H2O p2008      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep00   -3                      Pname--2000 septic recharge
+         8                         INRECH--# Pnames active for 2008-2009
+sewer&H2O p2009      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep00   -3                      Pname--2000 septic recharge
+        13                         INRECH--# Pnames active for 2009
+sewer&H2O p2009      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep00   -3                      Pname--2000 septic recharge
+         8                         INRECH--# Pnames active for 2009-2010
+sewer&H2O p2010      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep00   -3                      Pname--2000 septic recharge
+        13                         INRECH--# Pnames active for 2010
+sewer&H2O p2010      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep00   -3                      Pname--2000 septic recharge
+         8                         INRECH--# Pnames active for 2010-2011
+sewer&H2O p2011      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep00   -3                      Pname--2000 septic recharge
+        13                         INRECH--# Pnames active for 2011
+sewer&H2O p2011      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep00   -3                      Pname--2000 septic recharge
+         8                         INRECH--# Pnames active for 2011-2012
+sewer&H2O p2012      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep00   -3                      Pname--2000 septic recharge
+        13                         INRECH--# Pnames active for 2012
+sewer&H2O p2012      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep00   -3                      Pname--2000 septic recharge
+         8                         INRECH--# Pnames active for 2012-2013
+sewer&H2O p2013      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHsep00   -3                      Pname--2000 septic recharge
+        13                         INRECH--# Pnames active for 2013
+sewer&H2O p2012      -12                     Pname Instnam IRCHPF
+RCHmteast  -3                      Pname--mountain-front recharge -- east side
+RCHmtwest  -3                      Pname--mountain-front recharge -- west side
+TRIBsfgal  -3                      Pname--tributary recharge Santa Fe R. & Galisteo Cr.
+TRIBtij    -3                      Pname--tributary recharge Tijeras Arroyo
+TRIBriop   -3                      Pname--tributary recharge Rio Puerco
+TRIBrsal   -3                      Pname--tributary recharge Rio Salado (southern)
+RCHcnl92i  -3                      Pname--92 canal leakage -- irrigation season
+RCHirr92i  -3                      Pname--1992 irrigation seepage -- irrigation season
+RCHjirr75i -3                      Pname--1975 irrigation seepage Jemez river (92 not available)
+RCHjcani   -3                       Pname-- canal seepage along Jemez R.
+RCHzres    -3                      Pname-- Zia Reservoir seepage
+RCHsep00   -3                      Pname--2000 septic recharge

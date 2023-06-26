@@ -1,0 +1,44 @@
+
+
+image: "python:3.8"
+
+before_script:
+  - apt-get update -qy
+  - apt-get install -y gfortran gcc
+  - gfortran --version
+  - python --version
+  - pip install numpy
+  - pip install flopy
+  - pip install https://github.com/modflowpy/pymake/zipball/master 
+  - pip install nose
+  - pip install pandas
+  
+stages:
+  - Validate
+  - Build
+  - Test
+  
+Validate Inventory:
+    stage: Validate
+    image: ${INTERNAL_REGISTRY}ghsc/hazdev/inventory-validator:master
+    script:
+        - validate.sh code.json
+    tags:
+        - chs-shared  
+
+build heavy:
+  stage: Build
+  script:
+  - cd autotest
+  - chmod a+x make_linux_gfortran.sh
+  - sed -i -e 's/\r$//' make_linux_gfortran.sh
+  - ./make_linux_gfortran.sh
+  
+run autotests:
+  stage: Test
+  script:
+  - cd autotest
+  - chmod a+x make_linux_gfortran.sh
+  - sed -i -e 's/\r$//' make_linux_gfortran.sh
+  - ./make_linux_gfortran.sh
+  - nosetests -v -s

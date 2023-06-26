@@ -1,0 +1,36 @@
+# ZONE file for MF2005 Back to Original
+ 17                NZN
+Kzone1                K zones for layer 1
+OPEN/CLOSE ../externalfiles/arrays/ZONE1.arz 1 (40i4) -1
+Kzone2                K zones for layer 2
+OPEN/CLOSE ../externalfiles/arrays/ZONE2.arz 1 (40i4) -1
+Kzone3                K zones for layer 3
+OPEN/CLOSE ../externalfiles/arrays/ZONE3.arz 1 (40i4) -1
+Kzone4                K zones for layer 4
+OPEN/CLOSE ../externalfiles/arrays/MOD_ZONE4.arz 1 (40i4) -1
+Kzone5                K zones for layer 5
+OPEN/CLOSE ../externalfiles/arrays/ZONE5.arz 1 (40i4) -1
+Kzone6                K zones for layer 6
+OPEN/CLOSE ../externalfiles/arrays/ZONE6.arz 1 (40i4) -1
+Kzone7                K zones for layer 7
+OPEN/CLOSE ../externalfiles/arrays/ZONE7.arz 1 (40i4) -1
+Kzone8                K zones for layer 8
+OPEN/CLOSE ../externalfiles/arrays/ZONE8.arz 1 (40i4) -1
+Kzone9                K zones for layer 9
+OPEN/CLOSE ../externalfiles/arrays/ZONE9.arz 1 (40i4) -1
+HANIzn1               Horizontal anisotropy zones for layers 1 & 2
+OPEN/CLOSE ../externalfiles/arrays/HANIZN1.arz 1 (80i1) -1
+HANIzn3               Horizontal anisotropy zones for layers 3 thru 8
+OPEN/CLOSE ../externalfiles/arrays/HANIZN3.arz 1 (80i1) -1
+JEMETzn               Zone array to mask et beneath Jemez Reservoir 
+OPEN/CLOSE ../externalfiles/arrays/JEMETZN.arz 1 (80i1) -1
+TRIBzn                Zone array for tributary recharge
+OPEN/CLOSE ../externalfiles/arrays/TRIB.arz 1 (80i1) -1
+MTzn                  Zone array for mountain-front recharge
+OPEN/CLOSE ../externalfiles/arrays/MT.arz 1 (80i1) -1
+sewer                 Zone array for ABQ sewers & water lines
+OPEN/CLOSE ../externalfiles/arrays/SEWER.arz 1 (160i1) -1
+VKzone1                VK zones for layer 1
+OPEN/CLOSE ../externalfiles/arrays/VKZONE1.array 1 (160i1) -1
+VKzone2                VK zones for layer 2
+OPEN/CLOSE ../externalfiles/arrays/VKZONE2.array 1 (160i1) -1

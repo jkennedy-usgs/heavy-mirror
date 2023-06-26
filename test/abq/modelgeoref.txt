@@ -1,0 +1,53 @@
+#Publication:
+#Hydrogeologic framework and delineation of transient areas contributing recharge and zones of
+contribution to selected wells in the Upper Santa Fe Group Aquifer, southeastern Albuquerque, New Mexico, 1900-2050: U.S. Geological Survey
+Scientific Investigations Report 2019-5052, 73 p. https://dx.doi.org/10.3133/sir20195052
+#
+#
+#Data Release:
+#MODFLOW-LGR2 groundwater-flow model used to delineate transient areas
+#contributing recharge and zones of contribution to selected wells in southeastern
+#Albuquerque, New Mexico: U.S. Geological Survey data release. https://dx.doi.org/10.5066/F79P303S 
+#
+#Child model:
+#Datum
+#EPSG 4269
+#European Petroleum Survey Group (EPSG) spatial reference code: NAD83, North American Datum 1983
+upper_left  -106.61875745 35.16513215
+upper_right -106.50874529 35.16495897
+lower_right -106.50925244 34.99409472
+lower_left: -106.61903227 34.99426252
+#
+#Middle Rio Grande Basin model (Regional or Parent):
+#Datum
+#EPSG 4269
+#European Petroleum Survey Group (EPSG) spatial reference code: NAD83, North American Datum 1983
+upper_left  -107.11056050 35.67279542
+upper_right -106.22493643 35.67220052
+lower_right -106.23385475 34.26927810
+lower_left  -107.10443618 34.26985781
+#
+#
+#Additional information that may be helpful:
+#The Child coordinates correspond to Parent model grid rows and columns as follows:
+#               Regional           Child
+#upper_left  Row 114 Col 90     Row 1   Col 1
+#upper_right Row 114 Col 109    Row 1   Col 80
+#lower_right Row 151 Col 109    Row 152 Col 80
+#lower_left  Row 151 Col 90     Row 152 Col 1
+#
+#From original regional model archive:
+#The modelgrid was originally generated in a Lambert Azimuthal coordinate
+#system with the ARC utility MODELGRID with the following grid specification file:
+#
+#************************************************************************************
+#312 160            
+#0.0
+# -32570   74870   /* coordinates for lambert azimuthal equal-area projection
+#312*500
+#END
+#160*500
+#END
+#/* the projection origin is near middle of Albuquerque Basin at 35 00 00 & -106 45 00
+#************************************************************************************
+

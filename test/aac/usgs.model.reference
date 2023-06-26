@@ -1,0 +1,10 @@
+xul  9.448776968801E+004 	# upper left x-coordinate
+yul  3.655393444388E+006 	# upper left y-coordinate
+rotation  0.000000000000E+000 	# model grid rotation (degrees)
+length_units meters		# model length units
+time_units years		# model time units
+start_date 5/1/1942		# state date of the model
+start_time 0:0:0		# start time of the model
+model modflow-nwt		# MODFLOW model type
+epsg 6341			# epsg code
+    

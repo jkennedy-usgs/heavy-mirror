@@ -1,0 +1,25 @@
+# Parameter file for parent
+23
+HANIyes    1.5
+HANIno     1.
+HANItrf    5.
+VANI1      1.06
+VANI2      132
+SSall      2.0E-6
+Syall      .2
+Knw        .5
+Ksdfm      .05
+Kintr      1.
+Kvolc      8.
+Ksdmcwest  8.
+Ksdm       1.4
+Ksdmc      7.3
+Kalluv     41.
+Kaxial1    30.
+Kaxial2    9.7
+Ksdeo      5.
+Ksilts     7.
+Kdirt      51.
+Kcgsv      12.
+Kpdmt      12.
+sewer&H2O  .1

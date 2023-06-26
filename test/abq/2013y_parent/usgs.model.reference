@@ -1,0 +1,10 @@
+# parent model grid
+xul -107.11056050   # x-coordinate of the upper left of the model grid
+yul   35.67279542   # y-coordinate of the upper left of the model grid
+rotation 0          # degrees from horizontal
+length_units feet   # length unit of the model grid
+time_units days     # time unit of the model grid
+start_date 1/1/1900 # state date of the model
+start_time 00:00:00 # start time of the model
+model MODFLOW-LGR2  # MODFLOW model type
+espg 4269

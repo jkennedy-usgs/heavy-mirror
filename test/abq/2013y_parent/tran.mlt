@@ -1,0 +1,164 @@
+# Multiplier File for MF2005
+  81                   NML
+RCHmtM                     #Mult array for mt_front recharge
+OPEN/CLOSE ../externalfiles/arrays/MTRCH.arm 1.0 (10e12.4) -1
+RCHtribM                   #Mult array for tributary recharge
+OPEN/CLOSE ../externalfiles/arrays/TRIBRCH.arm 1.0 (8f10.7) -1
+RCHcnlp35M                 #Mult array for canal leakage pre 1935
+OPEN/CLOSE ../externalfiles/arrays/CANRHP35.arm 1.0 (8f10.7) -1
+RCHcnl35M                  #Mult array for canal leakage 1935-55
+OPEN/CLOSE ../externalfiles/arrays/CANRCH35.arm 1.0 (8f10.7) -1    
+RCHcnl55M                  #Mult array for canal leakage 1955-75
+OPEN/CLOSE ../externalfiles/arrays/CANRCH55.arm 1.0 (8f10.7) -1    
+RCHcnl75M                  #Mult array for canal leakage 1975-92
+OPEN/CLOSE ../externalfiles/arrays/CANRCH75.arm 1.0 (8f10.7) -1
+RCHcnl92M                  #Mult array for canal leakage 1992-current
+OPEN/CLOSE ../externalfiles/arrays/CANRCH92.arm 1.0 (8f10.7) -1
+RCHsep70M                  #Mult array for 1970 septic tank recharge
+OPEN/CLOSE ../externalfiles/arrays/SEPRCH70.arm 1.0 (8f10.7) -1
+RCHsep80M                  #Mult array for 1980 septic tank recharge
+OPEN/CLOSE ../externalfiles/arrays/SEPRCH80.arm 1.0 (8f10.7) -1
+RCHsep90M                  #Mult array for 1990 septic tank recharge
+OPEN/CLOSE ../externalfiles/arrays/SEPRCH90.arm 1.0 (8f10.7) -1
+RCHsep00M                  #Mult array for 2000 septic tank recharge
+OPEN/CLOSE ../externalfiles/arrays/SEPRCH00.arm 1.0 (8f10.7) -1
+ETrg35M                    #Mult array for max ET Rio Grande (proportion of cell area)
+OPEN/CLOSE ../externalfiles/arrays/ET35.arm 1.0 (12f6.3) -1
+ETrg55M                    #Mult array for max ET Rio Grande (proportion of cell area)
+OPEN/CLOSE ../externalfiles/arrays/ET55.arm 1.0 (12f6.3) -1
+ETrg75M                    #Mult array for max ET Rio Grande (proportion of cell area)
+OPEN/CLOSE ../externalfiles/arrays/ET75.arm 1.0 (12f6.3) -1
+ETrg92M                    #Mult array for max ET Rio Grande (proportion of cell area)
+OPEN/CLOSE ../externalfiles/arrays/ET92.arm 1.0 (12f6.3) -1
+ETjem55M                   #Mult array for max ET Jemez R (proportion of cell area)
+OPEN/CLOSE ../externalfiles/arrays/JEM55ET.arm 1.0 (12f6.3) -1
+ETjem75M                   #Mult array for max ET Jemez R (proportion of cell area)
+OPEN/CLOSE ../externalfiles/arrays/JEM75ET.arm 1.0 (12f6.3) -1
+RCHirr35M                  #Mult array for 1935 irrigation return flow 
+OPEN/CLOSE ../externalfiles/arrays/IRRIG35.arm 1.0 (8F10.7) -1
+RCHirr55M                  #Mult array for 1955 irrigation return flow
+OPEN/CLOSE ../externalfiles/arrays/IRRIG55.arm 1.0 (8F10.7) -1
+RCHirr75M                  #Mult array for 1975 irrigation return flow
+OPEN/CLOSE ../externalfiles/arrays/IRRIG75.arm 1.0 (8F10.7) -1
+RCHirr92M                  #Mult array for 1992 irrigation return flow
+OPEN/CLOSE ../externalfiles/arrays/IRRIG92.arm 1.0 (8F10.7) -1
+RCHjirr55M                 #Mult array for 1955 irrigation return along Jemez River
+OPEN/CLOSE ../externalfiles/arrays/JEMIRR55.arm 1.0 (8F10.7) -1
+RCHjirr75M                 #Mult array for 1975 irrigation return along Jemez River
+OPEN/CLOSE ../externalfiles/arrays/JEMIRR75.arm 1.0 (8F10.7) -1
+RCHjcanM                   #Mult array for canal leakage along Jemez River
+OPEN/CLOSE ../externalfiles/arrays/CANJEM.arm 1.0 (8F10.7) -1
+RCHzresM                   #Mult array for leakage from Zia Reservoir, near Jemez River
+OPEN/CLOSE ../externalfiles/arrays/ZIARES.arm 1.0 (8F10.7) -1
+KNEAST_M                   # reduce Ks in NE part of SD Bsn
+OPEN/CLOSE ../externalfiles/arrays/NEMULT.arm 1.0 (10f8.5)  -1
+KNEAST5_M                   # reduce Ks in NE part of SD Bsn
+OPEN/CLOSE ../externalfiles/arrays/NEMULT5.arm 1.0 (10f8.5)  -1
+p1900-1904
+CONSTANT 9.87E-05
+p1905-1909
+CONSTANT 1.85E-04
+p1910-1914
+CONSTANT 2.71E-04
+p1915-1919
+CONSTANT 3.57E-04
+p1920-1924
+CONSTANT 4.43E-04
+p1925-1929
+CONSTANT 5.29E-04
+p1930-1934
+CONSTANT 6.51E-04
+p1935-1939
+CONSTANT 1.19E-03
+p1940-1944
+CONSTANT 1.75E-03
+p1945-1949
+CONSTANT 3.23E-03
+p1950-1954
+CONSTANT 2.24E-03
+p1955-1959
+CONSTANT 3.32E-03
+p1960-1964
+CONSTANT 4.93E-03
+p1965-1969
+CONSTANT 5.88E-03
+p1970-1974
+CONSTANT 2.65E-03
+p1975
+CONSTANT 3.10E-03
+p1976
+CONSTANT 3.54E-03
+p1977
+CONSTANT 3.41E-03
+p1978
+CONSTANT 3.39E-03
+p1979
+CONSTANT 3.42E-03
+p1980
+CONSTANT 3.53E-03
+p1981
+CONSTANT 3.59E-03
+p1982
+CONSTANT 3.66E-03
+p1983
+CONSTANT 3.85E-03
+p1984
+CONSTANT 3.96E-03
+p1985
+CONSTANT 3.96E-03
+p1986
+CONSTANT 4.12E-03
+p1987
+CONSTANT 4.25E-03
+p1988
+CONSTANT 4.45E-03
+p1989
+CONSTANT 5.15E-03
+p1990
+CONSTANT 4.63E-03
+p1991
+CONSTANT 3.22E-03
+p1992
+CONSTANT 3.50E-03
+p1993
+CONSTANT 3.69E-03
+p1994
+CONSTANT 3.71E-03
+p1995
+CONSTANT 3.72E-03
+p1996
+CONSTANT 3.59E-03
+p1997
+CONSTANT 3.30E-03
+p1998
+CONSTANT 3.40E-03
+p1999
+CONSTANT 3.30E-03
+p2000
+CONSTANT 3.43E-03
+p2001
+CONSTANT 3.31E-03
+p2002
+CONSTANT 3.21E-03
+p2003
+CONSTANT 3.22E-03
+p2004
+CONSTANT 3.02E-03
+p2005
+CONSTANT 2.99E-03
+p2006
+CONSTANT 2.91E-03
+p2007
+CONSTANT 2.98E-03
+p2008
+CONSTANT 2.98E-03
+p2009
+CONSTANT 2.98E-03
+p2010
+CONSTANT 2.98E-03
+p2011
+CONSTANT 2.98E-03
+p2012
+CONSTANT 2.98E-03
+p2013
+CONSTANT 2.98E-03

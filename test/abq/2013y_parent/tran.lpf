@@ -1,0 +1,228 @@
+#  Layer-Property Flow package for MF2005
+  50 4500. 22 NOCVCORRECTION
+ 1 1 1 1 0 0 0 0 0       LAYTYP(NLAY) #1-4 convertable, 5-9 confined
+ 0 0 0 0 0 0 0 0 0       LAYAVG(NLAY) #harmonic mean for all layers
+ 0 0 0 0 0 0 0 0 0       CHANI(NLAY)  #use HANI for all layers
+ 1 1 1 1 1 1 1 1 1       LYVKA(NLAY)  #use Kh/Kv (VANI) for VKA - all layers
+ 0 0 0 0 0 0 0 0 0       LAYWET(NLAY) #wetting is inactive - all layers -- item 7 not used
+Knw        HK  0.5   9                             NW part of SD Bsn
+    1  NONE    Kzone1  177  277  377             #NONE means no mult array
+    2  NONE    Kzone2  177  277  377
+    3  NONE    Kzone3  177  277  377
+    4  NONE    Kzone4  177  277  377
+    5  NONE    Kzone5  177  277  377
+    6  NONE    Kzone6  177  277  377
+    7  NONE    Kzone7  177  277  377
+    8  NONE    Kzone8  177  277  377
+    9  NONE    Kzone9  177  277  377
+Ksdm       HK  1.5   9                         
+    1  NONE    Kzone1  107  207  307  399  299 
+    2  NONE    Kzone2  107  207  307  399  299 
+    3  NONE    Kzone3  107  207  307  399  299
+    4  NONE    Kzone4  107  207  307  399  299 
+    5  NONE    Kzone5  107  207  307  399  299
+    6  NONE    Kzone6  107  207  307  399  299
+    7  NONE    Kzone7  107  207  307  399  299
+    8  NONE    Kzone8  107  207  307  399  299
+    9  NONE    Kzone9  107  207  307  399  299
+Ksdmc     HK   8.   7                    
+    1  KNEAST_M    Kzone1  109  209  309  120  220  320
+    2  KNEAST_M    Kzone2  109  209  309  120  220  320
+    3  KNEAST_M    Kzone3  109  209  309  120  220  320
+    4  KNEAST_M    Kzone4  109  209  309  120  220  320
+    5  KNEAST_M    Kzone5  109  209  309  120  220  320
+    6  KNEAST_M    Kzone6  109  209  309  120  220  320
+    7  KNEAST_M    Kzone7  109  209  309  120  220  320
+Kaxial2   HK   15.   7     buffer around high K axial deposits 
+    1  KNEAST5_M    Kzone1  140  240  340  130  230  330
+    2  KNEAST5_M    Kzone2  140  240  340  130  230  330
+    3  KNEAST5_M    Kzone3  140  240  340  130  230  330
+    4  KNEAST5_M    Kzone4  140  240  340  130  230  330
+    5  KNEAST5_M    Kzone5  140  240  340  130  230  330
+    6  KNEAST5_M    Kzone6  140  240  340  130  230  330
+    7  KNEAST5_M    Kzone7  140  240  340  130  230  330
+Kaxial1   HK   30.   5     high K axial channel deposits 
+    1  NONE    Kzone1  150  250  350
+    2  NONE    Kzone2  150  250  350
+    3  NONE    Kzone3  150  250  350
+    4  NONE    Kzone4  150  250  350
+    5  NONE    Kzone5  150  250  350
+Kalluv    HK   45.   2     inner valley alluvium   
+    1  NONE    Kzone1  180  280  380
+    2  NONE    Kzone2  180  280  380
+Ksdfm     HK   0.05  9     fine-med sand     
+    1  NONE    Kzone1  106  206  306
+    2  NONE    Kzone2  106  206  306
+    3  NONE    Kzone3  106  206  306
+    4  NONE    Kzone4  106  206  306
+    5  NONE    Kzone5  106  206  306
+    6  NONE    Kzone6  106  206  306
+    7  NONE    Kzone7  106  206  306
+    8  NONE    Kzone8  106  206  306
+    9  NONE    Kzone9  106  206  306
+Kcgsv     HK   0.5   9                        
+    1  NONE    Kzone1  104  204  304
+    2  NONE    Kzone2  104  204  304
+    3  NONE    Kzone3  104  204  304
+    4  NONE    Kzone4  104  204  304
+    5  NONE    Kzone5  104  204  304
+    6  NONE    Kzone6  104  204  304
+    7  NONE    Kzone7  104  204  304
+    8  NONE    Kzone8  104  204  304
+    9  NONE    Kzone9  104  204  304
+Kdirt  HK   2.   1                  
+    4  NONE    Kzone4  415
+Ksilts HK   2.   9                  
+    1  NONE    Kzone1  108  208  308  115  215  315
+    2  NONE    Kzone2  108  208  308  115  215  315
+    3  NONE    Kzone3  108  208  308  115  215  315
+    4  NONE    Kzone4  108  208  308  115       315
+    5  NONE    Kzone5  108  208  308  115  215  315
+    6  NONE    Kzone6  108  208  308  115  215  315
+    7  NONE    Kzone7  108  208  308  115  215  315
+    8  NONE    Kzone8  108  208  308  115  215  315
+    9  NONE    Kzone9  108  208  308  115  215  315
+Kintr     HK  1.    9                
+    1  NONE    Kzone1  198  298  398
+    2  NONE    Kzone2  198  298  398
+    3  NONE    Kzone3  198  298  398
+    4  NONE    Kzone4  198  298  398
+    5  NONE    Kzone5  198  298  398
+    6  NONE    Kzone6  198  298  398
+    7  NONE    Kzone7  198  298  398
+    8  NONE    Kzone8  198  298  398
+    9  NONE    Kzone9  198  298  398
+Kvolc     HK    8.   9                 
+    1  NONE    Kzone1  199
+    2  NONE    Kzone2  199
+    3  NONE    Kzone3  199
+    4  NONE    Kzone4  199
+    5  NONE    Kzone5  199
+    6  NONE    Kzone6  199
+    7  NONE    Kzone7  199
+    8  NONE    Kzone8  199
+    9  NONE    Kzone9  199
+Ksdeo     HK   8.    9               
+    1  NONE    Kzone1  105  205  305
+    2  NONE    Kzone2  105  205  305
+    3  NONE    Kzone3  105  205  305
+    4  NONE    Kzone4  105  205  305
+    5  NONE    Kzone5  105  205  305
+    6  NONE    Kzone6  105  205  305
+    7  NONE    Kzone7  105  205  305
+    8  NONE    Kzone8  105  205  305
+    9  NONE    Kzone9  105  205  305
+Kpdmt     HK  0.5    9                
+    1  NONE    Kzone1  103  203  303
+    2  NONE    Kzone2  103  203  303
+    3  NONE    Kzone3  103  203  303
+    4  NONE    Kzone4  103  203  303
+    5  NONE    Kzone5  103  203  303
+    6  NONE    Kzone6  103  203  303
+    7  NONE    Kzone7  103  203  303
+    8  NONE    Kzone8  103  203  303
+    9  NONE    Kzone9  103  203  303
+Ksdmcwest  HK  8.   7  Ksdmc only west of river & S of Santo Domingo subbasin (now same as Ksdmc)
+    1  NONE    Kzone1  509  609  520  620       
+    2  NONE    Kzone2  509  609  520  620
+    3  NONE    Kzone3  509  609  520  620
+    4  NONE    Kzone4  509  609  520  620
+    5  NONE    Kzone5  509  609  520  620
+    6  NONE    Kzone6  509  609  520  620
+    7  NONE    Kzone7  509  609  520  620
+HANIyes   HANI  2.  8    Horiz anisotrpy except in Santo Domingo Bsn & basin margins
+    1  NONE   HANIzn1 2 3   SD basin=1,
+    2  NONE   HANIzn1 2 3    Alb basin=2 Belen basin=3
+    3  NONE   HANIzn3 2 3  
+    4  NONE   HANIzn3 2 3  
+    5  NONE   HANIzn3 2 3  
+    6  NONE   HANIzn3 2 3  
+    7  NONE   HANIzn3 2 3  
+    8  NONE   HANIzn3 2 3  
+HANIno   HANI    1. 9    no  Horiz anisotrpy in Santo Domingo Subbasin & basin margins      
+    1  NONE   HANIzn1 1 4 5 6 8        recent alluvium in lays 1 & 2 =8
+    2  NONE   HANIzn1 1 4 5 6 8        margins of basin is 4,5,&6 (subbsn#+1)
+    3  NONE   HANIzn3 1 4 5 6 
+    4  NONE   HANIzn3 1 4 5 6
+    5  NONE   HANIzn3 1 4 5 6
+    6  NONE   HANIzn3 1 4 5 6
+    7  NONE   HANIzn3 1 4 5 6
+    8  NONE   HANIzn3 1 4 5 6
+    9  NONE   ALL               no anisotropy in all layer 9
+HANItrf   HANI    5. 8      larger Horiz anisotrpy in west water-level trough area    
+    1  NONE   HANIzn1 7 9        trough area = 7 & 9
+    2  NONE   HANIzn1 7 9        
+    3  NONE   HANIzn3 7 9 
+    4  NONE   HANIzn3 7 9
+    5  NONE   HANIzn3 7 9
+    6  NONE   HANIzn3 7 9
+    7  NONE   HANIzn3 7 9
+    8  NONE   HANIzn3 7 9
+VANI1    VANI 150. 2
+    1  NONE  VKzone1  1
+    2  NONE  VKzone2  1
+VANI2    VANI 150. 9
+    1  NONE  VKzone1  2
+    2  NONE  VKzone2  2
+    3  NONE  ALL
+    4  NONE  ALL
+    5  NONE  ALL
+    6  NONE  ALL
+    7  NONE  ALL
+    8  NONE  ALL
+    9  NONE  ALL
+SSall      SS   2E-06 9
+    1  NONE  ALL
+    2  NONE  ALL
+    3  NONE  ALL
+    4  NONE  ALL
+    5  NONE  ALL
+    6  NONE  ALL
+    7  NONE  ALL
+    8  NONE  ALL
+    9  NONE  ALL
+Syall      SY   0.2  4          top 4 layers convertible
+    1  NONE  ALL
+    2  NONE  ALL
+    3  NONE  ALL
+    4  NONE  ALL
+-3           only print codes - Ks                LAYER 1
+-8           only print codes - Horiz anisotropy
+-7           only print codes -  Kh/Kv
+-3           only print codes -  Ss
+-3           only print codes -  Sy
+-3           only print codes - Ks                LAYER 2
+-8           only print codes - Horiz anisotropy
+-7           only print codes -  Kh/Kv
+-3           only print codes -  Ss
+-3           only print codes -  Sy
+-3           only print codes - Ks                LAYER 3
+-8           only print codes - Horiz anisotropy
+-7           only print codes -  Kh/Kv
+-3           only print codes -  Ss
+-3           only print codes -  Sy
+-3           only print codes - Ks                LAYER 4
+-8           only print codes - Horiz anisotropy
+-7           only print codes -  Kh/Kv
+-3           only print codes -  Ss
+-3           only print codes -  Sy
+-3           only print codes - Ks                LAYER 5
+-8           only print codes - Horiz anisotropy
+-7           only print codes -  Kh/Kv
+-3           only print codes -  Ss
+-3           only print codes - Ks                LAYER 6
+-8           only print codes - Horiz anisotropy
+-7           only print codes -  Kh/Kv
+-3           only print codes -  Ss
+-3           only print codes - Ks                LAYER 7
+-8           only print codes - Horiz anisotropy
+-7           only print codes -  Kh/Kv
+-3           only print codes -  Ss
+-3           only print codes - Ks                LAYER 8
+-8           only print codes - Horiz anisotropy
+-7           only print codes -  Kh/Kv
+-3           only print codes -  Ss
+-3           only print codes - Ks                LAYER 9
+-8           only print codes - Horiz anisotropy
+-7           only print codes -  Kh/Kv
+-3           only print codes -  Ss

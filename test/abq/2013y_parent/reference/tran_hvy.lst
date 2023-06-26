@@ -1,0 +1,3468 @@
+                                   -HEAVY-   
+      U.S. GEOLOGICAL SURVEY MODELING TOOL FOR FORWARD MODELING MICROGRAVITY WITH MODFLOW
+                            VERSION 1.0.0 2023-02-25
+                    FOR MODFLOW-2005 AND MODFLOW-NWT
+
+ LIST FILE: tran_hvy.lst
+                         UNIT    2
+
+ OPENING tran.bas
+ FILE TYPE:BAS6   UNIT   13   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING tran_none.oc
+ FILE TYPE:OC   UNIT   16   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING tran.lpf
+ FILE TYPE:LPF   UNIT   31   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING model1.hvy
+ FILE TYPE:HVY   UNIT   14   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING tran.dis
+ FILE TYPE:DIS   UNIT   11   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING tran.zon
+ FILE TYPE:ZONE   UNIT   23   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING tran.mlt
+ FILE TYPE:MULT   UNIT   24   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING tran.hds
+ FILE TYPE:HEAD   UNIT   51   STATUS:UNKNOWN
+ FORMAT:UNFORMATTED            ACCESS:STREAM              
+
+ OPENING tran_hvy.out
+ FILE TYPE:DATA   UNIT   81   STATUS:UNKNOWN
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ BAS -- BASIC PACKAGE, VERSION 1.1.5, 9/10/2019 INPUT READ FROM UNIT   13
+
+ MODFLOW was compiled using uniform precision
+ Precision of REAL and DOUBLE PRECISION variables:          15
+
+ DISCRETIZATION INPUT DATA READ FROM UNIT   11
+ # Discretization file for parent grid
+    9 LAYERS       312 ROWS       160 COLUMNS
+   79 STRESS PERIOD(S) IN SIMULATION
+ MODEL TIME UNIT IS DAYS
+ MODEL LENGTH UNIT IS FEET
+  Confining bed flag for each layer:
+   0   0   0   0   0   0   0   0   0
+
+                     DELR =   1640.42    
+
+                     DELC =   1640.42    
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/SURF_elev.arr                                                                                                                                                                   
+
+
+
+           TOP ELEVATION OF LAYER 1
+ READING ON UNIT   99 WITH FORMAT: (10F8.1)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/NEWBOT1.arr                                                                                                                                                                     
+
+
+
+             MODEL LAYER BOTTOM EL. FOR LAYER   1
+ READING ON UNIT   99 WITH FORMAT: (10F8.1)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/NEWBOT2.arr                                                                                                                                                                     
+
+
+
+             MODEL LAYER BOTTOM EL. FOR LAYER   2
+ READING ON UNIT   99 WITH FORMAT: (10F8.1)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/NEWBOT3.arr                                                                                                                                                                     
+
+
+
+             MODEL LAYER BOTTOM EL. FOR LAYER   3
+ READING ON UNIT   99 WITH FORMAT: (10F8.1)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/NEWBOT4.arr                                                                                                                                                                     
+
+
+
+             MODEL LAYER BOTTOM EL. FOR LAYER   4
+ READING ON UNIT   99 WITH FORMAT: (10F8.1)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/BOT5.arr                                                                                                                                                                        
+
+
+
+             MODEL LAYER BOTTOM EL. FOR LAYER   5
+ READING ON UNIT   99 WITH FORMAT: (10F8.1)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/BOT6.arr                                                                                                                                                                        
+
+
+
+             MODEL LAYER BOTTOM EL. FOR LAYER   6
+ READING ON UNIT   99 WITH FORMAT: (10F8.1)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/BOT7.arr                                                                                                                                                                        
+
+
+
+             MODEL LAYER BOTTOM EL. FOR LAYER   7
+ READING ON UNIT   99 WITH FORMAT: (10F8.1)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/BOT8.arr                                                                                                                                                                        
+
+
+
+             MODEL LAYER BOTTOM EL. FOR LAYER   8
+ READING ON UNIT   99 WITH FORMAT: (10F8.1)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/BOT9.arr                                                                                                                                                                        
+
+
+
+             MODEL LAYER BOTTOM EL. FOR LAYER   9
+ READING ON UNIT   99 WITH FORMAT: (10F8.1)            
+
+
+ STRESS PERIOD     LENGTH       TIME STEPS     MULTIPLIER FOR DELT    SS FLAG
+ ----------------------------------------------------------------------------
+        1         0.000000          1                    1.000         SS
+        2         1827.000          8                    1.500         TR
+        3         1826.000          8                    1.500         TR
+        4         1826.000          8                    1.500         TR
+        5         1826.000          8                    1.500         TR
+        6         1827.000          8                    1.500         TR
+        7         1826.000          8                    1.500         TR
+        8         1826.000          8                    1.500         TR
+        9         1826.000          8                    1.500         TR
+       10         1827.000          8                    1.500         TR
+       11         1826.000          8                    1.500         TR
+       12         1826.000          8                    1.500         TR
+       13         1826.000          8                    1.500         TR
+       14         1827.000          8                    1.500         TR
+       15         1826.000          8                    1.500         TR
+       16         1826.000          8                    1.500         TR
+       17         365.0000          6                    1.500         TR
+       18         366.0000          6                    1.500         TR
+       19         365.0000          6                    1.500         TR
+       20         365.0000          6                    1.500         TR
+       21         365.0000          6                    1.500         TR
+       22         366.0000          6                    1.500         TR
+       23         365.0000          6                    1.500         TR
+       24         365.0000          6                    1.500         TR
+       25         365.0000          6                    1.500         TR
+       26         366.0000          6                    1.500         TR
+       27         365.0000          6                    1.500         TR
+       28         365.0000          6                    1.500         TR
+       29         365.0000          6                    1.500         TR
+       30         366.0000          6                    1.500         TR
+       31         365.0000          6                    1.500         TR
+       32         74.00000          3                    1.500         TR
+       33         230.0000          5                    1.500         TR
+       34         135.0000          4                    1.500         TR
+       35         230.0000          5                    1.500         TR
+       36         136.0000          4                    1.500         TR
+       37         230.0000          5                    1.500         TR
+       38         135.0000          4                    1.500         TR
+       39         230.0000          5                    1.500         TR
+       40         135.0000          4                    1.500         TR
+       41         230.0000          5                    1.500         TR
+       42         135.0000          4                    1.500         TR
+       43         230.0000          5                    1.500         TR
+       44         136.0000          4                    1.500         TR
+       45         230.0000          5                    1.500         TR
+       46         135.0000          4                    1.500         TR
+       47         230.0000          5                    1.500         TR
+       48         135.0000          4                    1.500         TR
+       49         230.0000          5                    1.500         TR
+       50         135.0000          4                    1.500         TR
+       51         230.0000          5                    1.500         TR
+       52         136.0000          4                    1.500         TR
+       53         230.0000          5                    1.500         TR
+       54         135.0000          4                    1.500         TR
+       55         230.0000          5                    1.500         TR
+       56         135.0000          4                    1.500         TR
+       57         230.0000          5                    1.500         TR
+       58         135.0000          4                    1.500         TR
+       59         230.0000          5                    1.500         TR
+       60         136.0000          4                    1.500         TR
+       61         230.0000          5                    1.500         TR
+       62         135.0000          4                    1.500         TR
+       63         230.0000          5                    1.500         TR
+       64         135.0000          4                    1.500         TR
+       65         230.0000          5                    1.500         TR
+       66         135.0000          4                    1.500         TR
+       67         230.0000          5                    1.500         TR
+       68         136.0000          4                    1.500         TR
+       69         230.0000          5                    1.500         TR
+       70         135.0000          4                    1.500         TR
+       71         230.0000          5                    1.500         TR
+       72         135.0000          4                    1.500         TR
+       73         230.0000          5                    1.500         TR
+       74         135.0000          4                    1.500         TR
+       75         230.0000          5                    1.500         TR
+       76         136.0000          4                    1.500         TR
+       77         230.0000          5                    1.500         TR
+       78         135.0000          4                    1.500         TR
+       79         230.0000          5                    1.500         TR
+
+ COMBINED STEADY-STATE AND TRANSIENT SIMULATION
+
+
+
+
+ # Basic package input for MODFLOW2005 Back to Original                          
+ THE PRINTTIME OPTION HAS BEEN SELECTED
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/ZONE1.arz                                                                                                                                                                       
+
+
+
+                     BOUNDARY ARRAY FOR LAYER   1
+ READING ON UNIT   99 WITH FORMAT: (40I4)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/ZONE2.arz                                                                                                                                                                       
+
+
+
+                     BOUNDARY ARRAY FOR LAYER   2
+ READING ON UNIT   99 WITH FORMAT: (40I4)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/ZONE3.arz                                                                                                                                                                       
+
+
+
+                     BOUNDARY ARRAY FOR LAYER   3
+ READING ON UNIT   99 WITH FORMAT: (40I4)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/MOD_ZONE4.arz                                                                                                                                                                   
+
+
+
+                     BOUNDARY ARRAY FOR LAYER   4
+ READING ON UNIT   99 WITH FORMAT: (40I4)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/IBND5.array                                                                                                                                                                     
+
+
+
+                     BOUNDARY ARRAY FOR LAYER   5
+ READING ON UNIT   99 WITH FORMAT: (160I1)             
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/IBND6.array                                                                                                                                                                     
+
+
+
+                     BOUNDARY ARRAY FOR LAYER   6
+ READING ON UNIT   99 WITH FORMAT: (160I1)             
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/IBND7.array                                                                                                                                                                     
+
+
+
+                     BOUNDARY ARRAY FOR LAYER   7
+ READING ON UNIT   99 WITH FORMAT: (160I1)             
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/IBND8.array                                                                                                                                                                     
+
+
+
+                     BOUNDARY ARRAY FOR LAYER   8
+ READING ON UNIT   99 WITH FORMAT: (160I1)             
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/IBND9.array                                                                                                                                                                     
+
+
+
+                     BOUNDARY ARRAY FOR LAYER   9
+ READING ON UNIT   99 WITH FORMAT: (160I1)             
+
+ AQUIFER HEAD WILL BE SET TO   0.0000     AT ALL NO-FLOW NODES (IBOUND=0).
+
+ OUTPUT CONTROL IS SPECIFIED ONLY AT TIME STEPS FOR WHICH OUTPUT IS DESIRED
+
+ ZONE OPTION, INPUT READ FROM UNIT   23
+ # ZONE file for MF2005 Back to Original
+    17 ZONE ARRAYS
+
+ MULTIPLIER OPTION, INPUT READ FROM UNIT   24
+ # Multiplier File for MF2005
+  81 MULTIPLIER ARRAYS
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/MTRCH.arm                                                                                                                                                                       
+
+
+
+            MULT. ARRAY: RCHmtM    
+ READING ON UNIT   99 WITH FORMAT: (10E12.4)           
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/TRIBRCH.arm                                                                                                                                                                     
+
+
+
+            MULT. ARRAY: RCHtribM  
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/CANRHP35.arm                                                                                                                                                                    
+
+
+
+            MULT. ARRAY: RCHcnlp35M
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/CANRCH35.arm                                                                                                                                                                    
+
+
+
+            MULT. ARRAY: RCHcnl35M 
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/CANRCH55.arm                                                                                                                                                                    
+
+
+
+            MULT. ARRAY: RCHcnl55M 
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/CANRCH75.arm                                                                                                                                                                    
+
+
+
+            MULT. ARRAY: RCHcnl75M 
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/CANRCH92.arm                                                                                                                                                                    
+
+
+
+            MULT. ARRAY: RCHcnl92M 
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/SEPRCH70.arm                                                                                                                                                                    
+
+
+
+            MULT. ARRAY: RCHsep70M 
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/SEPRCH80.arm                                                                                                                                                                    
+
+
+
+            MULT. ARRAY: RCHsep80M 
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/SEPRCH90.arm                                                                                                                                                                    
+
+
+
+            MULT. ARRAY: RCHsep90M 
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/SEPRCH00.arm                                                                                                                                                                    
+
+
+
+            MULT. ARRAY: RCHsep00M 
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/ET35.arm                                                                                                                                                                        
+
+
+
+            MULT. ARRAY: ETrg35M   
+ READING ON UNIT   99 WITH FORMAT: (12F6.3)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/ET55.arm                                                                                                                                                                        
+
+
+
+            MULT. ARRAY: ETrg55M   
+ READING ON UNIT   99 WITH FORMAT: (12F6.3)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/ET75.arm                                                                                                                                                                        
+
+
+
+            MULT. ARRAY: ETrg75M   
+ READING ON UNIT   99 WITH FORMAT: (12F6.3)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/ET92.arm                                                                                                                                                                        
+
+
+
+            MULT. ARRAY: ETrg92M   
+ READING ON UNIT   99 WITH FORMAT: (12F6.3)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/JEM55ET.arm                                                                                                                                                                     
+
+
+
+            MULT. ARRAY: ETjem55M  
+ READING ON UNIT   99 WITH FORMAT: (12F6.3)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/JEM75ET.arm                                                                                                                                                                     
+
+
+
+            MULT. ARRAY: ETjem75M  
+ READING ON UNIT   99 WITH FORMAT: (12F6.3)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/IRRIG35.arm                                                                                                                                                                     
+
+
+
+            MULT. ARRAY: RCHirr35M 
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/IRRIG55.arm                                                                                                                                                                     
+
+
+
+            MULT. ARRAY: RCHirr55M 
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/IRRIG75.arm                                                                                                                                                                     
+
+
+
+            MULT. ARRAY: RCHirr75M 
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/IRRIG92.arm                                                                                                                                                                     
+
+
+
+            MULT. ARRAY: RCHirr92M 
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/JEMIRR55.arm                                                                                                                                                                    
+
+
+
+            MULT. ARRAY: RCHjirr55M
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/JEMIRR75.arm                                                                                                                                                                    
+
+
+
+            MULT. ARRAY: RCHjirr75M
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/CANJEM.arm                                                                                                                                                                      
+
+
+
+            MULT. ARRAY: RCHjcanM  
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/ZIARES.arm                                                                                                                                                                      
+
+
+
+            MULT. ARRAY: RCHzresM  
+ READING ON UNIT   99 WITH FORMAT: (8F10.7)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/NEMULT.arm                                                                                                                                                                      
+
+
+
+            MULT. ARRAY: KNEAST_M  
+ READING ON UNIT   99 WITH FORMAT: (10F8.5)            
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/NEMULT5.arm                                                                                                                                                                     
+
+
+
+            MULT. ARRAY: KNEAST5_M 
+ READING ON UNIT   99 WITH FORMAT: (10F8.5)            
+
+  MULT. ARRAY: p1900-1904 =  9.870000E-05
+
+  MULT. ARRAY: p1905-1909 =  1.850000E-04
+
+  MULT. ARRAY: p1910-1914 =  2.710000E-04
+
+  MULT. ARRAY: p1915-1919 =  3.570000E-04
+
+  MULT. ARRAY: p1920-1924 =  4.430000E-04
+
+  MULT. ARRAY: p1925-1929 =  5.290000E-04
+
+  MULT. ARRAY: p1930-1934 =  6.510000E-04
+
+  MULT. ARRAY: p1935-1939 =  1.190000E-03
+
+  MULT. ARRAY: p1940-1944 =  1.750000E-03
+
+  MULT. ARRAY: p1945-1949 =  3.230000E-03
+
+  MULT. ARRAY: p1950-1954 =  2.240000E-03
+
+  MULT. ARRAY: p1955-1959 =  3.320000E-03
+
+  MULT. ARRAY: p1960-1964 =  4.930000E-03
+
+  MULT. ARRAY: p1965-1969 =  5.880000E-03
+
+  MULT. ARRAY: p1970-1974 =  2.650000E-03
+
+  MULT. ARRAY: p1975      =  3.100000E-03
+
+  MULT. ARRAY: p1976      =  3.540000E-03
+
+  MULT. ARRAY: p1977      =  3.410000E-03
+
+  MULT. ARRAY: p1978      =  3.390000E-03
+
+  MULT. ARRAY: p1979      =  3.420000E-03
+
+  MULT. ARRAY: p1980      =  3.530000E-03
+
+  MULT. ARRAY: p1981      =  3.590000E-03
+
+  MULT. ARRAY: p1982      =  3.660000E-03
+
+  MULT. ARRAY: p1983      =  3.850000E-03
+
+  MULT. ARRAY: p1984      =  3.960000E-03
+
+  MULT. ARRAY: p1985      =  3.960000E-03
+
+  MULT. ARRAY: p1986      =  4.120000E-03
+
+  MULT. ARRAY: p1987      =  4.250000E-03
+
+  MULT. ARRAY: p1988      =  4.450000E-03
+
+  MULT. ARRAY: p1989      =  5.150000E-03
+
+  MULT. ARRAY: p1990      =  4.630000E-03
+
+  MULT. ARRAY: p1991      =  3.220000E-03
+
+  MULT. ARRAY: p1992      =  3.500000E-03
+
+  MULT. ARRAY: p1993      =  3.690000E-03
+
+  MULT. ARRAY: p1994      =  3.710000E-03
+
+  MULT. ARRAY: p1995      =  3.720000E-03
+
+  MULT. ARRAY: p1996      =  3.590000E-03
+
+  MULT. ARRAY: p1997      =  3.300000E-03
+
+  MULT. ARRAY: p1998      =  3.400000E-03
+
+  MULT. ARRAY: p1999      =  3.300000E-03
+
+  MULT. ARRAY: p2000      =  3.430000E-03
+
+  MULT. ARRAY: p2001      =  3.310000E-03
+
+  MULT. ARRAY: p2002      =  3.210000E-03
+
+  MULT. ARRAY: p2003      =  3.220000E-03
+
+  MULT. ARRAY: p2004      =  3.020000E-03
+
+  MULT. ARRAY: p2005      =  2.990000E-03
+
+  MULT. ARRAY: p2006      =  2.910000E-03
+
+  MULT. ARRAY: p2007      =  2.980000E-03
+
+  MULT. ARRAY: p2008      =  2.980000E-03
+
+  MULT. ARRAY: p2009      =  2.980000E-03
+
+  MULT. ARRAY: p2010      =  2.980000E-03
+
+  MULT. ARRAY: p2011      =  2.980000E-03
+
+  MULT. ARRAY: p2012      =  2.980000E-03
+
+  MULT. ARRAY: p2013      =  2.980000E-03
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/ZONE1.arz                                                                                                                                                                       
+
+
+
+             ZONE ARRAY: Kzone1    
+ READING ON UNIT   99 WITH FORMAT: (40I4)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/ZONE2.arz                                                                                                                                                                       
+
+
+
+             ZONE ARRAY: Kzone2    
+ READING ON UNIT   99 WITH FORMAT: (40I4)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/ZONE3.arz                                                                                                                                                                       
+
+
+
+             ZONE ARRAY: Kzone3    
+ READING ON UNIT   99 WITH FORMAT: (40I4)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/MOD_ZONE4.arz                                                                                                                                                                   
+
+
+
+             ZONE ARRAY: Kzone4    
+ READING ON UNIT   99 WITH FORMAT: (40I4)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/ZONE5.arz                                                                                                                                                                       
+
+
+
+             ZONE ARRAY: Kzone5    
+ READING ON UNIT   99 WITH FORMAT: (40I4)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/ZONE6.arz                                                                                                                                                                       
+
+
+
+             ZONE ARRAY: Kzone6    
+ READING ON UNIT   99 WITH FORMAT: (40I4)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/ZONE7.arz                                                                                                                                                                       
+
+
+
+             ZONE ARRAY: Kzone7    
+ READING ON UNIT   99 WITH FORMAT: (40I4)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/ZONE8.arz                                                                                                                                                                       
+
+
+
+             ZONE ARRAY: Kzone8    
+ READING ON UNIT   99 WITH FORMAT: (40I4)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/ZONE9.arz                                                                                                                                                                       
+
+
+
+             ZONE ARRAY: Kzone9    
+ READING ON UNIT   99 WITH FORMAT: (40I4)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/HANIZN1.arz                                                                                                                                                                     
+
+
+
+             ZONE ARRAY: HANIzn1   
+ READING ON UNIT   99 WITH FORMAT: (80I1)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/HANIZN3.arz                                                                                                                                                                     
+
+
+
+             ZONE ARRAY: HANIzn3   
+ READING ON UNIT   99 WITH FORMAT: (80I1)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/JEMETZN.arz                                                                                                                                                                     
+
+
+
+             ZONE ARRAY: JEMETzn   
+ READING ON UNIT   99 WITH FORMAT: (80I1)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/TRIB.arz                                                                                                                                                                        
+
+
+
+             ZONE ARRAY: TRIBzn    
+ READING ON UNIT   99 WITH FORMAT: (80I1)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/MT.arz                                                                                                                                                                          
+
+
+
+             ZONE ARRAY: MTzn      
+ READING ON UNIT   99 WITH FORMAT: (80I1)              
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/SEWER.arz                                                                                                                                                                       
+
+
+
+             ZONE ARRAY: sewer     
+ READING ON UNIT   99 WITH FORMAT: (160I1)             
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/VKZONE1.array                                                                                                                                                                   
+
+
+
+             ZONE ARRAY: VKzone1   
+ READING ON UNIT   99 WITH FORMAT: (160I1)             
+
+ OPENING FILE ON UNIT   99:
+ ../externalfiles/arrays/VKZONE2.array                                                                                                                                                                   
+
+
+
+             ZONE ARRAY: VKzone2   
+ READING ON UNIT   99 WITH FORMAT: (160I1)             
+
+ LPF -- LAYER-PROPERTY FLOW PACKAGE, VERSION 7, 5/2/2005
+         INPUT READ FROM UNIT   31
+ #  Layer-Property Flow package for MF2005
+ HEAD AT CELLS THAT CONVERT TO DRY=   4500.0    
+    22 Named Parameters     
+
+   LAYER FLAGS:
+ LAYER       LAYTYP        LAYAVG         CHANI        LAYVKA        LAYWET
+ ---------------------------------------------------------------------------
+    1             1             0     0.000E+00             1             0
+    2             1             0     0.000E+00             1             0
+    3             1             0     0.000E+00             1             0
+    4             1             0     0.000E+00             1             0
+    5             0             0     0.000E+00             1             0
+    6             0             0     0.000E+00             1             0
+    7             0             0     0.000E+00             1             0
+    8             0             0     0.000E+00             1             0
+    9             0             0     0.000E+00             1             0
+
+   INTERPRETATION OF LAYER FLAGS:
+                        INTERBLOCK     HORIZONTAL    DATA IN
+         LAYER TYPE   TRANSMISSIVITY   ANISOTROPY   ARRAY VKA   WETTABILITY
+ LAYER      (LAYTYP)      (LAYAVG)       (CHANI)      (LAYVKA)      (LAYWET)
+ ---------------------------------------------------------------------------
+    1   CONVERTIBLE      HARMONIC      VARIABLE    ANISOTROPY  NON-WETTABLE
+    2   CONVERTIBLE      HARMONIC      VARIABLE    ANISOTROPY  NON-WETTABLE
+    3   CONVERTIBLE      HARMONIC      VARIABLE    ANISOTROPY  NON-WETTABLE
+    4   CONVERTIBLE      HARMONIC      VARIABLE    ANISOTROPY  NON-WETTABLE
+    5      CONFINED      HARMONIC      VARIABLE    ANISOTROPY  NON-WETTABLE
+    6      CONFINED      HARMONIC      VARIABLE    ANISOTROPY  NON-WETTABLE
+    7      CONFINED      HARMONIC      VARIABLE    ANISOTROPY  NON-WETTABLE
+    8      CONFINED      HARMONIC      VARIABLE    ANISOTROPY  NON-WETTABLE
+    9      CONFINED      HARMONIC      VARIABLE    ANISOTROPY  NON-WETTABLE
+
+ WETTING CAPABILITY IS NOT ACTIVE IN ANY LAYER
+
+ PARAMETERS DEFINED IN THE LPF PACKAGE
+  PARAMETER NOT DEEDED FOR HEAVY: Knw       
+  PARAMETER NOT DEEDED FOR HEAVY: Ksdm      
+  PARAMETER NOT DEEDED FOR HEAVY: Ksdmc     
+  PARAMETER NOT DEEDED FOR HEAVY: Kaxial2   
+  PARAMETER NOT DEEDED FOR HEAVY: Kaxial1   
+  PARAMETER NOT DEEDED FOR HEAVY: Kalluv    
+  PARAMETER NOT DEEDED FOR HEAVY: Ksdfm     
+  PARAMETER NOT DEEDED FOR HEAVY: Kcgsv     
+  PARAMETER NOT DEEDED FOR HEAVY: Kdirt     
+  PARAMETER NOT DEEDED FOR HEAVY: Ksilts    
+  PARAMETER NOT DEEDED FOR HEAVY: Kintr     
+  PARAMETER NOT DEEDED FOR HEAVY: Kvolc     
+  PARAMETER NOT DEEDED FOR HEAVY: Ksdeo     
+  PARAMETER NOT DEEDED FOR HEAVY: Kpdmt     
+  PARAMETER NOT DEEDED FOR HEAVY: Ksdmcwest 
+  PARAMETER NOT DEEDED FOR HEAVY: HANIyes   
+  PARAMETER NOT DEEDED FOR HEAVY: HANIno    
+  PARAMETER NOT DEEDED FOR HEAVY: HANItrf   
+  PARAMETER NOT DEEDED FOR HEAVY: VANI1     
+  PARAMETER NOT DEEDED FOR HEAVY: VANI2     
+
+ PARAMETER NAME:SSall        TYPE:SS     CLUSTERS:   9
+ Parameter value from package file is:   2.00000E-06
+                LAYER:   1    MULTIPLIER ARRAY: NONE    ZONE ARRAY: ALL
+                LAYER:   2    MULTIPLIER ARRAY: NONE    ZONE ARRAY: ALL
+                LAYER:   3    MULTIPLIER ARRAY: NONE    ZONE ARRAY: ALL
+                LAYER:   4    MULTIPLIER ARRAY: NONE    ZONE ARRAY: ALL
+                LAYER:   5    MULTIPLIER ARRAY: NONE    ZONE ARRAY: ALL
+                LAYER:   6    MULTIPLIER ARRAY: NONE    ZONE ARRAY: ALL
+                LAYER:   7    MULTIPLIER ARRAY: NONE    ZONE ARRAY: ALL
+                LAYER:   8    MULTIPLIER ARRAY: NONE    ZONE ARRAY: ALL
+                LAYER:   9    MULTIPLIER ARRAY: NONE    ZONE ARRAY: ALL
+
+ PARAMETER NAME:Syall        TYPE:SY     CLUSTERS:   4
+ Parameter value from package file is:   0.20000    
+                LAYER:   1    MULTIPLIER ARRAY: NONE    ZONE ARRAY: ALL
+                LAYER:   2    MULTIPLIER ARRAY: NONE    ZONE ARRAY: ALL
+                LAYER:   3    MULTIPLIER ARRAY: NONE    ZONE ARRAY: ALL
+                LAYER:   4    MULTIPLIER ARRAY: NONE    ZONE ARRAY: ALL
+
+         SPECIFIC STORAGE FOR LAYER   1 WILL BE DEFINED BY PARAMETERS
+ (PRINT FLAG=  -3)
+
+         SPECIFIC STORAGE is defined by the following parameters:
+ SSall     
+
+         SPECIFIC STORAGE =  2.000000E-06 FOR LAYER   1
+
+           SPECIFIC YIELD FOR LAYER   1 WILL BE DEFINED BY PARAMETERS
+ (PRINT FLAG=  -8)
+
+           SPECIFIC YIELD is defined by the following parameters:
+ Syall     
+
+           SPECIFIC YIELD =  0.200000     FOR LAYER   1
+
+         SPECIFIC STORAGE FOR LAYER   2 WILL BE DEFINED BY PARAMETERS
+ (PRINT FLAG=  -7)
+
+         SPECIFIC STORAGE is defined by the following parameters:
+ SSall     
+
+         SPECIFIC STORAGE =  2.000000E-06 FOR LAYER   2
+
+           SPECIFIC YIELD FOR LAYER   2 WILL BE DEFINED BY PARAMETERS
+ (PRINT FLAG=  -3)
+
+           SPECIFIC YIELD is defined by the following parameters:
+ Syall     
+
+           SPECIFIC YIELD =  0.200000     FOR LAYER   2
+
+         SPECIFIC STORAGE FOR LAYER   3 WILL BE DEFINED BY PARAMETERS
+ (PRINT FLAG=  -3)
+
+         SPECIFIC STORAGE is defined by the following parameters:
+ SSall     
+
+         SPECIFIC STORAGE =  2.000000E-06 FOR LAYER   3
+
+           SPECIFIC YIELD FOR LAYER   3 WILL BE DEFINED BY PARAMETERS
+ (PRINT FLAG=  -3)
+
+           SPECIFIC YIELD is defined by the following parameters:
+ Syall     
+
+           SPECIFIC YIELD =  0.200000     FOR LAYER   3
+
+         SPECIFIC STORAGE FOR LAYER   4 WILL BE DEFINED BY PARAMETERS
+ (PRINT FLAG=  -8)
+
+         SPECIFIC STORAGE is defined by the following parameters:
+ SSall     
+
+         SPECIFIC STORAGE =  2.000000E-06 FOR LAYER   4
+
+           SPECIFIC YIELD FOR LAYER   4 WILL BE DEFINED BY PARAMETERS
+ (PRINT FLAG=  -7)
+
+           SPECIFIC YIELD is defined by the following parameters:
+ Syall     
+
+           SPECIFIC YIELD =  0.200000     FOR LAYER   4
+
+         SPECIFIC STORAGE FOR LAYER   5 WILL BE DEFINED BY PARAMETERS
+ (PRINT FLAG=  -3)
+
+         SPECIFIC STORAGE is defined by the following parameters:
+ SSall     
+
+         SPECIFIC STORAGE =  2.000000E-06 FOR LAYER   5
+
+         SPECIFIC STORAGE FOR LAYER   6 WILL BE DEFINED BY PARAMETERS
+ (PRINT FLAG=  -3)
+
+         SPECIFIC STORAGE is defined by the following parameters:
+ SSall     
+
+         SPECIFIC STORAGE =  2.000000E-06 FOR LAYER   6
+
+         SPECIFIC STORAGE FOR LAYER   7 WILL BE DEFINED BY PARAMETERS
+ (PRINT FLAG=  -3)
+
+         SPECIFIC STORAGE is defined by the following parameters:
+ SSall     
+
+         SPECIFIC STORAGE =  2.000000E-06 FOR LAYER   7
+
+         SPECIFIC STORAGE FOR LAYER   8 WILL BE DEFINED BY PARAMETERS
+ (PRINT FLAG=  -8)
+
+         SPECIFIC STORAGE is defined by the following parameters:
+ SSall     
+
+         SPECIFIC STORAGE =  2.000000E-06 FOR LAYER   8
+
+         SPECIFIC STORAGE FOR LAYER   9 WILL BE DEFINED BY PARAMETERS
+ (PRINT FLAG=  -7)
+
+         SPECIFIC STORAGE is defined by the following parameters:
+ SSall     
+
+         SPECIFIC STORAGE =  2.000000E-06 FOR LAYER   9
+
+ HEAVY MICROGRAVITY FORWARD MODEL VERSION 1.0.0, 2/25/2023
+         INPUT read FROM UNIT   14
+ MICROGRAVITY OUTPUT WILL BE SAVED ON UNIT   81
+ GENERATING STATIONS ON A GRID. COMMAND STRING: 50                              
+
+   HEAVY-GENERATED GRAVITY OBSERVATION LOCATIONS:
+ PRLBL                   ZLOC          XLOC          YLOC
+ --------------------------------------------------------
+ G_1_1                  0.000       250.000    155750.011
+ G_1_2                  0.000       250.000    152576.541
+ G_1_3                  0.000       250.000    149403.072
+ G_1_4                  0.000       250.000    146229.602
+ G_1_5                  0.000       250.000    143056.133
+ G_1_6                  0.000       250.000    139882.663
+ G_1_7                  0.000       250.000    136709.193
+ G_1_8                  0.000       250.000    133535.724
+ G_1_9                  0.000       250.000    130362.254
+ G_1_10                 0.000       250.000    127188.785
+ G_1_11                 0.000       250.000    124015.315
+ G_1_12                 0.000       250.000    120841.845
+ G_1_13                 0.000       250.000    117668.376
+ G_1_14                 0.000       250.000    114494.906
+ G_1_15                 0.000       250.000    111321.436
+ G_1_16                 0.000       250.000    108147.967
+ G_1_17                 0.000       250.000    104974.497
+ G_1_18                 0.000       250.000    101801.028
+ G_1_19                 0.000       250.000     98627.558
+ G_1_20                 0.000       250.000     95454.088
+ G_1_21                 0.000       250.000     92280.619
+ G_1_22                 0.000       250.000     89107.149
+ G_1_23                 0.000       250.000     85933.680
+ G_1_24                 0.000       250.000     82760.210
+ G_1_25                 0.000       250.000     79586.740
+ G_1_26                 0.000       250.000     76413.271
+ G_1_27                 0.000       250.000     73239.801
+ G_1_28                 0.000       250.000     70066.332
+ G_1_29                 0.000       250.000     66892.862
+ G_1_30                 0.000       250.000     63719.392
+ G_1_31                 0.000       250.000     60545.923
+ G_1_32                 0.000       250.000     57372.453
+ G_1_33                 0.000       250.000     54198.983
+ G_1_34                 0.000       250.000     51025.514
+ G_1_35                 0.000       250.000     47852.044
+ G_1_36                 0.000       250.000     44678.575
+ G_1_37                 0.000       250.000     41505.105
+ G_1_38              1671.737       250.000     38331.635
+ G_1_39              1652.412       250.000     35158.166
+ G_1_40                 0.000       250.000     31984.696
+ G_1_41                 0.000       250.000     28811.227
+ G_1_42                 0.000       250.000     25637.757
+ G_1_43                 0.000       250.000     22464.287
+ G_1_44                 0.000       250.000     19290.818
+ G_1_45                 0.000       250.000     16117.348
+ G_1_46                 0.000       250.000     12943.878
+ G_1_47                 0.000       250.000      9770.409
+ G_1_48                 0.000       250.000      6596.939
+ G_1_49                 0.000       250.000      3423.470
+ G_1_50                 0.000       250.000       250.000
+ G_2_1                  0.000      1872.449    155750.011
+ G_2_2                  0.000      1872.449    152576.541
+ G_2_3                  0.000      1872.449    149403.072
+ G_2_4                  0.000      1872.449    146229.602
+ G_2_5                  0.000      1872.449    143056.133
+ G_2_6                  0.000      1872.449    139882.663
+ G_2_7                  0.000      1872.449    136709.193
+ G_2_8                  0.000      1872.449    133535.724
+ G_2_9                  0.000      1872.449    130362.254
+ G_2_10                 0.000      1872.449    127188.785
+ G_2_11                 0.000      1872.449    124015.315
+ G_2_12                 0.000      1872.449    120841.845
+ G_2_13                 0.000      1872.449    117668.376
+ G_2_14                 0.000      1872.449    114494.906
+ G_2_15                 0.000      1872.449    111321.436
+ G_2_16                 0.000      1872.449    108147.967
+ G_2_17                 0.000      1872.449    104974.497
+ G_2_18                 0.000      1872.449    101801.028
+ G_2_19                 0.000      1872.449     98627.558
+ G_2_20                 0.000      1872.449     95454.088
+ G_2_21                 0.000      1872.449     92280.619
+ G_2_22                 0.000      1872.449     89107.149
+ G_2_23                 0.000      1872.449     85933.680
+ G_2_24                 0.000      1872.449     82760.210
+ G_2_25                 0.000      1872.449     79586.740
+ G_2_26                 0.000      1872.449     76413.271
+ G_2_27                 0.000      1872.449     73239.801
+ G_2_28                 0.000      1872.449     70066.332
+ G_2_29                 0.000      1872.449     66892.862
+ G_2_30                 0.000      1872.449     63719.392
+ G_2_31                 0.000      1872.449     60545.923
+ G_2_32                 0.000      1872.449     57372.453
+ G_2_33                 0.000      1872.449     54198.983
+ G_2_34                 0.000      1872.449     51025.514
+ G_2_35              1702.857      1872.449     47852.044
+ G_2_36              1712.763      1872.449     44678.575
+ G_2_37              1681.460      1872.449     41505.105
+ G_2_38              1652.290      1872.449     38331.635
+ G_2_39              1639.763      1872.449     35158.166
+ G_2_40              1645.798      1872.449     31984.696
+ G_2_41                 0.000      1872.449     28811.227
+ G_2_42                 0.000      1872.449     25637.757
+ G_2_43                 0.000      1872.449     22464.287
+ G_2_44                 0.000      1872.449     19290.818
+ G_2_45                 0.000      1872.449     16117.348
+ G_2_46                 0.000      1872.449     12943.878
+ G_2_47                 0.000      1872.449      9770.409
+ G_2_48                 0.000      1872.449      6596.939
+ G_2_49                 0.000      1872.449      3423.470
+ G_2_50                 0.000      1872.449       250.000
+ G_3_1                  0.000      3494.898    155750.011
+ G_3_2                  0.000      3494.898    152576.541
+ G_3_3                  0.000      3494.898    149403.072
+ G_3_4                  0.000      3494.898    146229.602
+ G_3_5                  0.000      3494.898    143056.133
+ G_3_6                  0.000      3494.898    139882.663
+ G_3_7                  0.000      3494.898    136709.193
+ G_3_8                  0.000      3494.898    133535.724
+ G_3_9                  0.000      3494.898    130362.254
+ G_3_10                 0.000      3494.898    127188.785
+ G_3_11                 0.000      3494.898    124015.315
+ G_3_12                 0.000      3494.898    120841.845
+ G_3_13                 0.000      3494.898    117668.376
+ G_3_14                 0.000      3494.898    114494.906
+ G_3_15                 0.000      3494.898    111321.436
+ G_3_16                 0.000      3494.898    108147.967
+ G_3_17                 0.000      3494.898    104974.497
+ G_3_18                 0.000      3494.898    101801.028
+ G_3_19                 0.000      3494.898     98627.558
+ G_3_20                 0.000      3494.898     95454.088
+ G_3_21                 0.000      3494.898     92280.619
+ G_3_22                 0.000      3494.898     89107.149
+ G_3_23                 0.000      3494.898     85933.680
+ G_3_24                 0.000      3494.898     82760.210
+ G_3_25                 0.000      3494.898     79586.740
+ G_3_26                 0.000      3494.898     76413.271
+ G_3_27                 0.000      3494.898     73239.801
+ G_3_28                 0.000      3494.898     70066.332
+ G_3_29              1606.357      3494.898     66892.862
+ G_3_30              1592.001      3494.898     63719.392
+ G_3_31              1583.619      3494.898     60545.923
+ G_3_32              1598.554      3494.898     57372.453
+ G_3_33              1636.258      3494.898     54198.983
+ G_3_34              1670.975      3494.898     51025.514
+ G_3_35              1732.239      3494.898     47852.044
+ G_3_36              1680.362      3494.898     44678.575
+ G_3_37              1671.462      3494.898     41505.105
+ G_3_38              1635.496      3494.898     38331.635
+ G_3_39              1627.266      3494.898     35158.166
+ G_3_40              1624.005      3494.898     31984.696
+ G_3_41              1633.880      3494.898     28811.227
+ G_3_42                 0.000      3494.898     25637.757
+ G_3_43                 0.000      3494.898     22464.287
+ G_3_44                 0.000      3494.898     19290.818
+ G_3_45                 0.000      3494.898     16117.348
+ G_3_46                 0.000      3494.898     12943.878
+ G_3_47                 0.000      3494.898      9770.409
+ G_3_48                 0.000      3494.898      6596.939
+ G_3_49                 0.000      3494.898      3423.470
+ G_3_50                 0.000      3494.898       250.000
+ G_4_1                  0.000      5117.347    155750.011
+ G_4_2                  0.000      5117.347    152576.541
+ G_4_3                  0.000      5117.347    149403.072
+ G_4_4                  0.000      5117.347    146229.602
+ G_4_5                  0.000      5117.347    143056.133
+ G_4_6                  0.000      5117.347    139882.663
+ G_4_7                  0.000      5117.347    136709.193
+ G_4_8                  0.000      5117.347    133535.724
+ G_4_9                  0.000      5117.347    130362.254
+ G_4_10                 0.000      5117.347    127188.785
+ G_4_11                 0.000      5117.347    124015.315
+ G_4_12                 0.000      5117.347    120841.845
+ G_4_13                 0.000      5117.347    117668.376
+ G_4_14                 0.000      5117.347    114494.906
+ G_4_15                 0.000      5117.347    111321.436
+ G_4_16                 0.000      5117.347    108147.967
+ G_4_17                 0.000      5117.347    104974.497
+ G_4_18                 0.000      5117.347    101801.028
+ G_4_19                 0.000      5117.347     98627.558
+ G_4_20                 0.000      5117.347     95454.088
+ G_4_21                 0.000      5117.347     92280.619
+ G_4_22                 0.000      5117.347     89107.149
+ G_4_23                 0.000      5117.347     85933.680
+ G_4_24                 0.000      5117.347     82760.210
+ G_4_25                 0.000      5117.347     79586.740
+ G_4_26                 0.000      5117.347     76413.271
+ G_4_27                 0.000      5117.347     73239.801
+ G_4_28                 0.000      5117.347     70066.332
+ G_4_29              1615.745      5117.347     66892.862
+ G_4_30              1567.343      5117.347     63719.392
+ G_4_31              1557.955      5117.347     60545.923
+ G_4_32              1582.369      5117.347     57372.453
+ G_4_33              1609.039      5117.347     54198.983
+ G_4_34              1653.022      5117.347     51025.514
+ G_4_35              1717.609      5117.347     47852.044
+ G_4_36              1694.048      5117.347     44678.575
+ G_4_37              1646.072      5117.347     41505.105
+ G_4_38              1625.163      5117.347     38331.635
+ G_4_39              1611.661      5117.347     35158.166
+ G_4_40              1604.101      5117.347     31984.696
+ G_4_41              1621.079      5117.347     28811.227
+ G_4_42              1662.044      5117.347     25637.757
+ G_4_43                 0.000      5117.347     22464.287
+ G_4_44                 0.000      5117.347     19290.818
+ G_4_45                 0.000      5117.347     16117.348
+ G_4_46                 0.000      5117.347     12943.878
+ G_4_47                 0.000      5117.347      9770.409
+ G_4_48                 0.000      5117.347      6596.939
+ G_4_49                 0.000      5117.347      3423.470
+ G_4_50                 0.000      5117.347       250.000
+ G_5_1                  0.000      6739.796    155750.011
+ G_5_2                  0.000      6739.796    152576.541
+ G_5_3                  0.000      6739.796    149403.072
+ G_5_4                  0.000      6739.796    146229.602
+ G_5_5                  0.000      6739.796    143056.133
+ G_5_6                  0.000      6739.796    139882.663
+ G_5_7                  0.000      6739.796    136709.193
+ G_5_8                  0.000      6739.796    133535.724
+ G_5_9                  0.000      6739.796    130362.254
+ G_5_10                 0.000      6739.796    127188.785
+ G_5_11                 0.000      6739.796    124015.315
+ G_5_12                 0.000      6739.796    120841.845
+ G_5_13                 0.000      6739.796    117668.376
+ G_5_14                 0.000      6739.796    114494.906
+ G_5_15                 0.000      6739.796    111321.436
+ G_5_16                 0.000      6739.796    108147.967
+ G_5_17                 0.000      6739.796    104974.497
+ G_5_18                 0.000      6739.796    101801.028
+ G_5_19                 0.000      6739.796     98627.558
+ G_5_20                 0.000      6739.796     95454.088
+ G_5_21                 0.000      6739.796     92280.619
+ G_5_22                 0.000      6739.796     89107.149
+ G_5_23                 0.000      6739.796     85933.680
+ G_5_24                 0.000      6739.796     82760.210
+ G_5_25                 0.000      6739.796     79586.740
+ G_5_26                 0.000      6739.796     76413.271
+ G_5_27                 0.000      6739.796     73239.801
+ G_5_28              1545.549      6739.796     70066.332
+ G_5_29              1565.026      6739.796     66892.862
+ G_5_30              1571.640      6739.796     63719.392
+ G_5_31              1555.577      6739.796     60545.923
+ G_5_32              1582.887      6739.796     57372.453
+ G_5_33              1634.917      6739.796     54198.983
+ G_5_34              1663.477      6739.796     51025.514
+ G_5_35              1694.261      6739.796     47852.044
+ G_5_36              1706.027      6739.796     44678.575
+ G_5_37              1657.502      6739.796     41505.105
+ G_5_38              1631.930      6739.796     38331.635
+ G_5_39              1600.566      6739.796     35158.166
+ G_5_40              1598.005      6739.796     31984.696
+ G_5_41              1604.620      6739.796     28811.227
+ G_5_42              1633.667      6739.796     25637.757
+ G_5_43                 0.000      6739.796     22464.287
+ G_5_44                 0.000      6739.796     19290.818
+ G_5_45                 0.000      6739.796     16117.348
+ G_5_46                 0.000      6739.796     12943.878
+ G_5_47                 0.000      6739.796      9770.409
+ G_5_48                 0.000      6739.796      6596.939
+ G_5_49                 0.000      6739.796      3423.470
+ G_5_50                 0.000      6739.796       250.000
+ G_6_1                  0.000      8362.245    155750.011
+ G_6_2                  0.000      8362.245    152576.541
+ G_6_3                  0.000      8362.245    149403.072
+ G_6_4                  0.000      8362.245    146229.602
+ G_6_5                  0.000      8362.245    143056.133
+ G_6_6                  0.000      8362.245    139882.663
+ G_6_7                  0.000      8362.245    136709.193
+ G_6_8                  0.000      8362.245    133535.724
+ G_6_9                  0.000      8362.245    130362.254
+ G_6_10                 0.000      8362.245    127188.785
+ G_6_11                 0.000      8362.245    124015.315
+ G_6_12                 0.000      8362.245    120841.845
+ G_6_13                 0.000      8362.245    117668.376
+ G_6_14                 0.000      8362.245    114494.906
+ G_6_15                 0.000      8362.245    111321.436
+ G_6_16                 0.000      8362.245    108147.967
+ G_6_17                 0.000      8362.245    104974.497
+ G_6_18                 0.000      8362.245    101801.028
+ G_6_19                 0.000      8362.245     98627.558
+ G_6_20                 0.000      8362.245     95454.088
+ G_6_21                 0.000      8362.245     92280.619
+ G_6_22                 0.000      8362.245     89107.149
+ G_6_23                 0.000      8362.245     85933.680
+ G_6_24                 0.000      8362.245     82760.210
+ G_6_25                 0.000      8362.245     79586.740
+ G_6_26                 0.000      8362.245     76413.271
+ G_6_27                 0.000      8362.245     73239.801
+ G_6_28              1553.139      8362.245     70066.332
+ G_6_29              1553.627      8362.245     66892.862
+ G_6_30              1578.651      8362.245     63719.392
+ G_6_31              1576.913      8362.245     60545.923
+ G_6_32              1564.538      8362.245     57372.453
+ G_6_33              1607.424      8362.245     54198.983
+ G_6_34              1640.190      8362.245     51025.514
+ G_6_35              1617.391      8362.245     47852.044
+ G_6_36              1663.111      8362.245     44678.575
+ G_6_37              1661.587      8362.245     41505.105
+ G_6_38              1611.356      8362.245     38331.635
+ G_6_39              1585.783      8362.245     35158.166
+ G_6_40              1586.118      8362.245     31984.696
+ G_6_41              1588.343      8362.245     28811.227
+ G_6_42              1604.193      8362.245     25637.757
+ G_6_43                 0.000      8362.245     22464.287
+ G_6_44                 0.000      8362.245     19290.818
+ G_6_45                 0.000      8362.245     16117.348
+ G_6_46                 0.000      8362.245     12943.878
+ G_6_47                 0.000      8362.245      9770.409
+ G_6_48                 0.000      8362.245      6596.939
+ G_6_49                 0.000      8362.245      3423.470
+ G_6_50                 0.000      8362.245       250.000
+ G_7_1                  0.000      9984.695    155750.011
+ G_7_2                  0.000      9984.695    152576.541
+ G_7_3                  0.000      9984.695    149403.072
+ G_7_4                  0.000      9984.695    146229.602
+ G_7_5                  0.000      9984.695    143056.133
+ G_7_6                  0.000      9984.695    139882.663
+ G_7_7                  0.000      9984.695    136709.193
+ G_7_8                  0.000      9984.695    133535.724
+ G_7_9                  0.000      9984.695    130362.254
+ G_7_10                 0.000      9984.695    127188.785
+ G_7_11                 0.000      9984.695    124015.315
+ G_7_12                 0.000      9984.695    120841.845
+ G_7_13                 0.000      9984.695    117668.376
+ G_7_14                 0.000      9984.695    114494.906
+ G_7_15                 0.000      9984.695    111321.436
+ G_7_16                 0.000      9984.695    108147.967
+ G_7_17                 0.000      9984.695    104974.497
+ G_7_18                 0.000      9984.695    101801.028
+ G_7_19                 0.000      9984.695     98627.558
+ G_7_20                 0.000      9984.695     95454.088
+ G_7_21                 0.000      9984.695     92280.619
+ G_7_22                 0.000      9984.695     89107.149
+ G_7_23                 0.000      9984.695     85933.680
+ G_7_24                 0.000      9984.695     82760.210
+ G_7_25                 0.000      9984.695     79586.740
+ G_7_26                 0.000      9984.695     76413.271
+ G_7_27              1568.836      9984.695     73239.801
+ G_7_28              1587.429      9984.695     70066.332
+ G_7_29              1570.909      9984.695     66892.862
+ G_7_30              1541.587      9984.695     63719.392
+ G_7_31              1544.787      9984.695     60545.923
+ G_7_32              1590.325      9984.695     57372.453
+ G_7_33              1574.231      9984.695     54198.983
+ G_7_34              1598.097      9984.695     51025.514
+ G_7_35              1591.605      9984.695     47852.044
+ G_7_36              1623.121      9984.695     44678.575
+ G_7_37              1642.110      9984.695     41505.105
+ G_7_38              1621.963      9984.695     38331.635
+ G_7_39              1589.532      9984.695     35158.166
+ G_7_40              1574.201      9984.695     31984.696
+ G_7_41              1571.945      9984.695     28811.227
+ G_7_42              1578.163      9984.695     25637.757
+ G_7_43              1626.504      9984.695     22464.287
+ G_7_44                 0.000      9984.695     19290.818
+ G_7_45                 0.000      9984.695     16117.348
+ G_7_46                 0.000      9984.695     12943.878
+ G_7_47                 0.000      9984.695      9770.409
+ G_7_48                 0.000      9984.695      6596.939
+ G_7_49                 0.000      9984.695      3423.470
+ G_7_50                 0.000      9984.695       250.000
+ G_8_1                  0.000     11607.144    155750.011
+ G_8_2                  0.000     11607.144    152576.541
+ G_8_3                  0.000     11607.144    149403.072
+ G_8_4                  0.000     11607.144    146229.602
+ G_8_5                  0.000     11607.144    143056.133
+ G_8_6                  0.000     11607.144    139882.663
+ G_8_7                  0.000     11607.144    136709.193
+ G_8_8                  0.000     11607.144    133535.724
+ G_8_9                  0.000     11607.144    130362.254
+ G_8_10                 0.000     11607.144    127188.785
+ G_8_11                 0.000     11607.144    124015.315
+ G_8_12                 0.000     11607.144    120841.845
+ G_8_13                 0.000     11607.144    117668.376
+ G_8_14                 0.000     11607.144    114494.906
+ G_8_15                 0.000     11607.144    111321.436
+ G_8_16                 0.000     11607.144    108147.967
+ G_8_17                 0.000     11607.144    104974.497
+ G_8_18                 0.000     11607.144    101801.028
+ G_8_19                 0.000     11607.144     98627.558
+ G_8_20                 0.000     11607.144     95454.088
+ G_8_21                 0.000     11607.144     92280.619
+ G_8_22                 0.000     11607.144     89107.149
+ G_8_23                 0.000     11607.144     85933.680
+ G_8_24                 0.000     11607.144     82760.210
+ G_8_25                 0.000     11607.144     79586.740
+ G_8_26              1586.575     11607.144     76413.271
+ G_8_27              1592.001     11607.144     73239.801
+ G_8_28              1665.793     11607.144     70066.332
+ G_8_29              1595.323     11607.144     66892.862
+ G_8_30              1571.579     11607.144     63719.392
+ G_8_31              1581.546     11607.144     60545.923
+ G_8_32              1536.405     11607.144     57372.453
+ G_8_33              1527.322     11607.144     54198.983
+ G_8_34              1577.736     11607.144     51025.514
+ G_8_35              1577.675     11607.144     47852.044
+ G_8_36              1626.230     11607.144     44678.575
+ G_8_37              1634.368     11607.144     41505.105
+ G_8_38              1614.709     11607.144     38331.635
+ G_8_39              1592.458     11607.144     35158.166
+ G_8_40              1568.379     11607.144     31984.696
+ G_8_41              1566.977     11607.144     28811.227
+ G_8_42              1556.065     11607.144     25637.757
+ G_8_43              1592.306     11607.144     22464.287
+ G_8_44              1610.350     11607.144     19290.818
+ G_8_45              1644.548     11607.144     16117.348
+ G_8_46              1659.484     11607.144     12943.878
+ G_8_47              1594.409     11607.144      9770.409
+ G_8_48                 0.000     11607.144      6596.939
+ G_8_49                 0.000     11607.144      3423.470
+ G_8_50                 0.000     11607.144       250.000
+ G_9_1                  0.000     13229.593    155750.011
+ G_9_2                  0.000     13229.593    152576.541
+ G_9_3                  0.000     13229.593    149403.072
+ G_9_4                  0.000     13229.593    146229.602
+ G_9_5                  0.000     13229.593    143056.133
+ G_9_6                  0.000     13229.593    139882.663
+ G_9_7                  0.000     13229.593    136709.193
+ G_9_8                  0.000     13229.593    133535.724
+ G_9_9                  0.000     13229.593    130362.254
+ G_9_10                 0.000     13229.593    127188.785
+ G_9_11                 0.000     13229.593    124015.315
+ G_9_12                 0.000     13229.593    120841.845
+ G_9_13                 0.000     13229.593    117668.376
+ G_9_14                 0.000     13229.593    114494.906
+ G_9_15                 0.000     13229.593    111321.436
+ G_9_16                 0.000     13229.593    108147.967
+ G_9_17                 0.000     13229.593    104974.497
+ G_9_18                 0.000     13229.593    101801.028
+ G_9_19                 0.000     13229.593     98627.558
+ G_9_20                 0.000     13229.593     95454.088
+ G_9_21                 0.000     13229.593     92280.619
+ G_9_22                 0.000     13229.593     89107.149
+ G_9_23                 0.000     13229.593     85933.680
+ G_9_24                 0.000     13229.593     82760.210
+ G_9_25                 0.000     13229.593     79586.740
+ G_9_26              1577.828     13229.593     76413.271
+ G_9_27              1609.466     13229.593     73239.801
+ G_9_28              1712.732     13229.593     70066.332
+ G_9_29              1642.384     13229.593     66892.862
+ G_9_30              1646.438     13229.593     63719.392
+ G_9_31              1657.868     13229.593     60545.923
+ G_9_32              1580.327     13229.593     57372.453
+ G_9_33              1515.557     13229.593     54198.983
+ G_9_34              1547.012     13229.593     51025.514
+ G_9_35              1554.998     13229.593     47852.044
+ G_9_36              1591.147     13229.593     44678.575
+ G_9_37              1588.740     13229.593     41505.105
+ G_9_38              1595.018     13229.593     38331.635
+ G_9_39              1585.935     13229.593     35158.166
+ G_9_40              1564.081     13229.593     31984.696
+ G_9_41              1548.811     13229.593     28811.227
+ G_9_42              1534.272     13229.593     25637.757
+ G_9_43              1573.652     13229.593     22464.287
+ G_9_44              1584.594     13229.593     19290.818
+ G_9_45              1597.487     13229.593     16117.348
+ G_9_46              1596.542     13229.593     12943.878
+ G_9_47              1581.302     13229.593      9770.409
+ G_9_48              1546.860     13229.593      6596.939
+ G_9_49                 0.000     13229.593      3423.470
+ G_9_50                 0.000     13229.593       250.000
+ G_10_1                 0.000     14852.042    155750.011
+ G_10_2                 0.000     14852.042    152576.541
+ G_10_3                 0.000     14852.042    149403.072
+ G_10_4                 0.000     14852.042    146229.602
+ G_10_5                 0.000     14852.042    143056.133
+ G_10_6                 0.000     14852.042    139882.663
+ G_10_7                 0.000     14852.042    136709.193
+ G_10_8                 0.000     14852.042    133535.724
+ G_10_9                 0.000     14852.042    130362.254
+ G_10_10                0.000     14852.042    127188.785
+ G_10_11                0.000     14852.042    124015.315
+ G_10_12                0.000     14852.042    120841.845
+ G_10_13                0.000     14852.042    117668.376
+ G_10_14                0.000     14852.042    114494.906
+ G_10_15                0.000     14852.042    111321.436
+ G_10_16                0.000     14852.042    108147.967
+ G_10_17                0.000     14852.042    104974.497
+ G_10_18                0.000     14852.042    101801.028
+ G_10_19                0.000     14852.042     98627.558
+ G_10_20                0.000     14852.042     95454.088
+ G_10_21                0.000     14852.042     92280.619
+ G_10_22                0.000     14852.042     89107.149
+ G_10_23                0.000     14852.042     85933.680
+ G_10_24                0.000     14852.042     82760.210
+ G_10_25             1594.622     14852.042     79586.740
+ G_10_26             1583.832     14852.042     76413.271
+ G_10_27             1636.624     14852.042     73239.801
+ G_10_28             1723.400     14852.042     70066.332
+ G_10_29             1685.117     14852.042     66892.862
+ G_10_30             1685.117     14852.042     63719.392
+ G_10_31             1654.485     14852.042     60545.923
+ G_10_32             1592.550     14852.042     57372.453
+ G_10_33             1518.209     14852.042     54198.983
+ G_10_34             1531.315     14852.042     51025.514
+ G_10_35             1550.914     14852.042     47852.044
+ G_10_36             1561.277     14852.042     44678.575
+ G_10_37             1562.862     14852.042     41505.105
+ G_10_38             1560.881     14852.042     38331.635
+ G_10_39             1565.453     14852.042     35158.166
+ G_10_40             1553.352     14852.042     31984.696
+ G_10_41             1539.453     14852.042     28811.227
+ G_10_42             1519.459     14852.042     25637.757
+ G_10_43             1550.152     14852.042     22464.287
+ G_10_44             1539.301     14852.042     19290.818
+ G_10_45             1559.174     14852.042     16117.348
+ G_10_46             1575.725     14852.042     12943.878
+ G_10_47             1557.924     14852.042      9770.409
+ G_10_48             1545.976     14852.042      6596.939
+ G_10_49                0.000     14852.042      3423.470
+ G_10_50                0.000     14852.042       250.000
+ G_11_1                 0.000     16474.491    155750.011
+ G_11_2                 0.000     16474.491    152576.541
+ G_11_3                 0.000     16474.491    149403.072
+ G_11_4                 0.000     16474.491    146229.602
+ G_11_5                 0.000     16474.491    143056.133
+ G_11_6                 0.000     16474.491    139882.663
+ G_11_7                 0.000     16474.491    136709.193
+ G_11_8                 0.000     16474.491    133535.724
+ G_11_9                 0.000     16474.491    130362.254
+ G_11_10                0.000     16474.491    127188.785
+ G_11_11                0.000     16474.491    124015.315
+ G_11_12                0.000     16474.491    120841.845
+ G_11_13                0.000     16474.491    117668.376
+ G_11_14                0.000     16474.491    114494.906
+ G_11_15                0.000     16474.491    111321.436
+ G_11_16                0.000     16474.491    108147.967
+ G_11_17                0.000     16474.491    104974.497
+ G_11_18                0.000     16474.491    101801.028
+ G_11_19                0.000     16474.491     98627.558
+ G_11_20                0.000     16474.491     95454.088
+ G_11_21                0.000     16474.491     92280.619
+ G_11_22                0.000     16474.491     89107.149
+ G_11_23                0.000     16474.491     85933.680
+ G_11_24             1596.421     16474.491     82760.210
+ G_11_25             1588.953     16474.491     79586.740
+ G_11_26             1608.430     16474.491     76413.271
+ G_11_27             1659.392     16474.491     73239.801
+ G_11_28             1719.986     16474.491     70066.332
+ G_11_29             1706.301     16474.491     66892.862
+ G_11_30             1691.122     16474.491     63719.392
+ G_11_31             1655.857     16474.491     60545.923
+ G_11_32             1578.072     16474.491     57372.453
+ G_11_33             1524.061     16474.491     54198.983
+ G_11_34             1514.307     16474.491     51025.514
+ G_11_35             1530.614     16474.491     47852.044
+ G_11_36             1528.938     16474.491     44678.575
+ G_11_37             1537.868     16474.491     41505.105
+ G_11_38             1525.341     16474.491     38331.635
+ G_11_39             1545.214     16474.491     35158.166
+ G_11_40             1535.095     16474.491     31984.696
+ G_11_41             1513.698     16474.491     28811.227
+ G_11_42             1535.125     16474.491     25637.757
+ G_11_43             1520.922     16474.491     22464.287
+ G_11_44             1534.058     16474.491     19290.818
+ G_11_45             1537.960     16474.491     16117.348
+ G_11_46             1540.490     16474.491     12943.878
+ G_11_47             1537.503     16474.491      9770.409
+ G_11_48             1512.082     16474.491      6596.939
+ G_11_49             1481.298     16474.491      3423.470
+ G_11_50                0.000     16474.491       250.000
+ G_12_1                 0.000     18096.940    155750.011
+ G_12_2                 0.000     18096.940    152576.541
+ G_12_3                 0.000     18096.940    149403.072
+ G_12_4                 0.000     18096.940    146229.602
+ G_12_5                 0.000     18096.940    143056.133
+ G_12_6                 0.000     18096.940    139882.663
+ G_12_7                 0.000     18096.940    136709.193
+ G_12_8                 0.000     18096.940    133535.724
+ G_12_9                 0.000     18096.940    130362.254
+ G_12_10                0.000     18096.940    127188.785
+ G_12_11                0.000     18096.940    124015.315
+ G_12_12                0.000     18096.940    120841.845
+ G_12_13                0.000     18096.940    117668.376
+ G_12_14                0.000     18096.940    114494.906
+ G_12_15                0.000     18096.940    111321.436
+ G_12_16                0.000     18096.940    108147.967
+ G_12_17                0.000     18096.940    104974.497
+ G_12_18                0.000     18096.940    101801.028
+ G_12_19                0.000     18096.940     98627.558
+ G_12_20                0.000     18096.940     95454.088
+ G_12_21                0.000     18096.940     92280.619
+ G_12_22                0.000     18096.940     89107.149
+ G_12_23             1667.591     18096.940     85933.680
+ G_12_24             1652.839     18096.940     82760.210
+ G_12_25             1623.913     18096.940     79586.740
+ G_12_26             1640.281     18096.940     76413.271
+ G_12_27             1723.156     18096.940     73239.801
+ G_12_28             1695.938     18096.940     70066.332
+ G_12_29             1668.109     18096.940     66892.862
+ G_12_30             1644.792     18096.940     63719.392
+ G_12_31             1631.594     18096.940     60545.923
+ G_12_32             1608.673     18096.940     57372.453
+ G_12_33             1555.577     18096.940     54198.983
+ G_12_34             1517.965     18096.940     51025.514
+ G_12_35             1515.588     18096.940     47852.044
+ G_12_36             1498.702     18096.940     44678.575
+ G_12_37             1498.641     18096.940     41505.105
+ G_12_38             1488.034     18096.940     38331.635
+ G_12_39             1492.697     18096.940     35158.166
+ G_12_40             1522.933     18096.940     31984.696
+ G_12_41             1488.704     18096.940     28811.227
+ G_12_42             1504.188     18096.940     25637.757
+ G_12_43             1477.853     18096.940     22464.287
+ G_12_44             1506.200     18096.940     19290.818
+ G_12_45             1505.712     18096.940     16117.348
+ G_12_46             1528.115     18096.940     12943.878
+ G_12_47             1532.504     18096.940      9770.409
+ G_12_48             1500.134     18096.940      6596.939
+ G_12_49             1456.030     18096.940      3423.470
+ G_12_50                0.000     18096.940       250.000
+ G_13_1                 0.000     19719.389    155750.011
+ G_13_2                 0.000     19719.389    152576.541
+ G_13_3                 0.000     19719.389    149403.072
+ G_13_4                 0.000     19719.389    146229.602
+ G_13_5                 0.000     19719.389    143056.133
+ G_13_6                 0.000     19719.389    139882.663
+ G_13_7                 0.000     19719.389    136709.193
+ G_13_8                 0.000     19719.389    133535.724
+ G_13_9                 0.000     19719.389    130362.254
+ G_13_10                0.000     19719.389    127188.785
+ G_13_11                0.000     19719.389    124015.315
+ G_13_12                0.000     19719.389    120841.845
+ G_13_13                0.000     19719.389    117668.376
+ G_13_14                0.000     19719.389    114494.906
+ G_13_15                0.000     19719.389    111321.436
+ G_13_16                0.000     19719.389    108147.967
+ G_13_17                0.000     19719.389    104974.497
+ G_13_18                0.000     19719.389    101801.028
+ G_13_19                0.000     19719.389     98627.558
+ G_13_20                0.000     19719.389     95454.088
+ G_13_21                0.000     19719.389     92280.619
+ G_13_22                0.000     19719.389     89107.149
+ G_13_23             1700.601     19719.389     85933.680
+ G_13_24             1686.458     19719.389     82760.210
+ G_13_25             1648.206     19719.389     79586.740
+ G_13_26             1726.082     19719.389     76413.271
+ G_13_27             1689.903     19719.389     73239.801
+ G_13_28             1682.709     19719.389     70066.332
+ G_13_29             1681.947     19719.389     66892.862
+ G_13_30             1653.814     19719.389     63719.392
+ G_13_31             1639.123     19719.389     60545.923
+ G_13_32             1621.109     19719.389     57372.453
+ G_13_33             1607.241     19719.389     54198.983
+ G_13_34             1557.223     19719.389     51025.514
+ G_13_35             1506.230     19719.389     47852.044
+ G_13_36             1502.999     19719.389     44678.575
+ G_13_37             1507.754     19719.389     41505.105
+ G_13_38             1513.667     19719.389     38331.635
+ G_13_39             1477.579     19719.389     35158.166
+ G_13_40             1485.473     19719.389     31984.696
+ G_13_41             1478.798     19719.389     28811.227
+ G_13_42             1469.258     19719.389     25637.757
+ G_13_43             1461.120     19719.389     22464.287
+ G_13_44             1458.163     19719.389     19290.818
+ G_13_45             1485.961     19719.389     16117.348
+ G_13_46             1527.292     19719.389     12943.878
+ G_13_47             1490.350     19719.389      9770.409
+ G_13_48             1510.894     19719.389      6596.939
+ G_13_49             1452.738     19719.389      3423.470
+ G_13_50                0.000     19719.389       250.000
+ G_14_1                 0.000     21341.838    155750.011
+ G_14_2                 0.000     21341.838    152576.541
+ G_14_3                 0.000     21341.838    149403.072
+ G_14_4                 0.000     21341.838    146229.602
+ G_14_5                 0.000     21341.838    143056.133
+ G_14_6                 0.000     21341.838    139882.663
+ G_14_7                 0.000     21341.838    136709.193
+ G_14_8                 0.000     21341.838    133535.724
+ G_14_9                 0.000     21341.838    130362.254
+ G_14_10                0.000     21341.838    127188.785
+ G_14_11                0.000     21341.838    124015.315
+ G_14_12                0.000     21341.838    120841.845
+ G_14_13                0.000     21341.838    117668.376
+ G_14_14                0.000     21341.838    114494.906
+ G_14_15                0.000     21341.838    111321.436
+ G_14_16                0.000     21341.838    108147.967
+ G_14_17             1791.736     21341.838    104974.497
+ G_14_18             1775.125     21341.838    101801.028
+ G_14_19             1785.823     21341.838     98627.558
+ G_14_20             1796.857     21341.838     95454.088
+ G_14_21             1728.673     21341.838     92280.619
+ G_14_22             1757.111     21341.838     89107.149
+ G_14_23             1748.516     21341.838     85933.680
+ G_14_24             1735.257     21341.838     82760.210
+ G_14_25             1701.211     21341.838     79586.740
+ G_14_26             1708.495     21341.838     76413.271
+ G_14_27             1684.172     21341.838     73239.801
+ G_14_28             1694.292     21341.838     70066.332
+ G_14_29             1693.499     21341.838     66892.862
+ G_14_30             1640.251     21341.838     63719.392
+ G_14_31             1628.485     21341.838     60545.923
+ G_14_32             1623.974     21341.838     57372.453
+ G_14_33             1614.129     21341.838     54198.983
+ G_14_34             1602.791     21341.838     51025.514
+ G_14_35             1545.702     21341.838     47852.044
+ G_14_36             1556.187     21341.838     44678.575
+ G_14_37             1566.520     21341.838     41505.105
+ G_14_38             1564.752     21341.838     38331.635
+ G_14_39             1496.781     21341.838     35158.166
+ G_14_40             1470.934     21341.838     31984.696
+ G_14_41             1485.595     21341.838     28811.227
+ G_14_42             1461.211     21341.838     25637.757
+ G_14_43             1469.715     21341.838     22464.287
+ G_14_44             1449.324     21341.838     19290.818
+ G_14_45             1466.911     21341.838     16117.348
+ G_14_46             1490.259     21341.838     12943.878
+ G_14_47             1451.823     21341.838      9770.409
+ G_14_48             1440.058     21341.838      6596.939
+ G_14_49             1477.518     21341.838      3423.470
+ G_14_50                0.000     21341.838       250.000
+ G_15_1                 0.000     22964.287    155750.011
+ G_15_2                 0.000     22964.287    152576.541
+ G_15_3                 0.000     22964.287    149403.072
+ G_15_4                 0.000     22964.287    146229.602
+ G_15_5                 0.000     22964.287    143056.133
+ G_15_6                 0.000     22964.287    139882.663
+ G_15_7                 0.000     22964.287    136709.193
+ G_15_8                 0.000     22964.287    133535.724
+ G_15_9                 0.000     22964.287    130362.254
+ G_15_10                0.000     22964.287    127188.785
+ G_15_11                0.000     22964.287    124015.315
+ G_15_12                0.000     22964.287    120841.845
+ G_15_13                0.000     22964.287    117668.376
+ G_15_14             1919.630     22964.287    114494.906
+ G_15_15             1900.184     22964.287    111321.436
+ G_15_16             1880.189     22964.287    108147.967
+ G_15_17             1871.777     22964.287    104974.497
+ G_15_18             1848.490     22964.287    101801.028
+ G_15_19             1841.602     22964.287     98627.558
+ G_15_20             1818.041     22964.287     95454.088
+ G_15_21             1780.123     22964.287     92280.619
+ G_15_22             1798.442     22964.287     89107.149
+ G_15_23             1776.374     22964.287     85933.680
+ G_15_24             1763.603     22964.287     82760.210
+ G_15_25             1742.572     22964.287     79586.740
+ G_15_26             1702.156     22964.287     76413.271
+ G_15_27             1680.820     22964.287     73239.801
+ G_15_28             1678.351     22964.287     70066.332
+ G_15_29             1666.982     22964.287     66892.862
+ G_15_30             1632.753     22964.287     63719.392
+ G_15_31             1622.511     22964.287     60545.923
+ G_15_32             1616.690     22964.287     57372.453
+ G_15_33             1620.073     22964.287     54198.983
+ G_15_34             1604.955     22964.287     51025.514
+ G_15_35             1589.806     22964.287     47852.044
+ G_15_36             1584.777     22964.287     44678.575
+ G_15_37             1583.284     22964.287     41505.105
+ G_15_38             1577.675     22964.287     38331.635
+ G_15_39             1534.424     22964.287     35158.166
+ G_15_40             1510.711     22964.287     31984.696
+ G_15_41             1517.935     22964.287     28811.227
+ G_15_42             1520.708     22964.287     25637.757
+ G_15_43             1510.315     22964.287     22464.287
+ G_15_44             1468.770     22964.287     19290.818
+ G_15_45             1446.977     22964.287     16117.348
+ G_15_46             1445.118     22964.287     12943.878
+ G_15_47             1436.279     22964.287      9770.409
+ G_15_48             1427.104     22964.287      6596.939
+ G_15_49             1464.503     22964.287      3423.470
+ G_15_50             1428.445     22964.287       250.000
+ G_16_1                 0.000     24586.736    155750.011
+ G_16_2                 0.000     24586.736    152576.541
+ G_16_3                 0.000     24586.736    149403.072
+ G_16_4                 0.000     24586.736    146229.602
+ G_16_5                 0.000     24586.736    143056.133
+ G_16_6                 0.000     24586.736    139882.663
+ G_16_7                 0.000     24586.736    136709.193
+ G_16_8                 0.000     24586.736    133535.724
+ G_16_9                 0.000     24586.736    130362.254
+ G_16_10                0.000     24586.736    127188.785
+ G_16_11                0.000     24586.736    124015.315
+ G_16_12                0.000     24586.736    120841.845
+ G_16_13             1900.702     24586.736    117668.376
+ G_16_14             1879.885     24586.736    114494.906
+ G_16_15             1859.341     24586.736    111321.436
+ G_16_16             1836.633     24586.736    108147.967
+ G_16_17             1819.595     24586.736    104974.497
+ G_16_18             1813.255     24586.736    101801.028
+ G_16_19             1807.525     24586.736     98627.558
+ G_16_20             1801.886     24586.736     95454.088
+ G_16_21             1784.208     24586.736     92280.619
+ G_16_22             1769.730     24586.736     89107.149
+ G_16_23             1751.411     24586.736     85933.680
+ G_16_24             1748.699     24586.736     82760.210
+ G_16_25             1708.374     24586.736     79586.740
+ G_16_26             1698.711     24586.736     76413.271
+ G_16_27             1776.009     24586.736     73239.801
+ G_16_28             1661.434     24586.736     70066.332
+ G_16_29             1650.157     24586.736     66892.862
+ G_16_30             1624.675     24586.736     63719.392
+ G_16_31             1614.952     24586.736     60545.923
+ G_16_32             1616.995     24586.736     57372.453
+ G_16_33             1602.974     24586.736     54198.983
+ G_16_34             1600.383     24586.736     51025.514
+ G_16_35             1592.123     24586.736     47852.044
+ G_16_36             1584.229     24586.736     44678.575
+ G_16_37             1582.339     24586.736     41505.105
+ G_16_38             1580.053     24586.736     38331.635
+ G_16_39             1580.083     24586.736     35158.166
+ G_16_40             1576.334     24586.736     31984.696
+ G_16_41             1568.989     24586.736     28811.227
+ G_16_42             1544.452     24586.736     25637.757
+ G_16_43             1530.949     24586.736     22464.287
+ G_16_44             1495.806     24586.736     19290.818
+ G_16_45             1442.771     24586.736     16117.348
+ G_16_46             1434.877     24586.736     12943.878
+ G_16_47             1458.346     24586.736      9770.409
+ G_16_48             1470.172     24586.736      6596.939
+ G_16_49             1478.158     24586.736      3423.470
+ G_16_50                0.000     24586.736       250.000
+ G_17_1                 0.000     26209.186    155750.011
+ G_17_2                 0.000     26209.186    152576.541
+ G_17_3                 0.000     26209.186    149403.072
+ G_17_4                 0.000     26209.186    146229.602
+ G_17_5                 0.000     26209.186    143056.133
+ G_17_6                 0.000     26209.186    139882.663
+ G_17_7                 0.000     26209.186    136709.193
+ G_17_8                 0.000     26209.186    133535.724
+ G_17_9                 0.000     26209.186    130362.254
+ G_17_10                0.000     26209.186    127188.785
+ G_17_11                0.000     26209.186    124015.315
+ G_17_12             1927.464     26209.186    120841.845
+ G_17_13             1875.587     26209.186    117668.376
+ G_17_14             1863.791     26209.186    114494.906
+ G_17_15             1845.290     26209.186    111321.436
+ G_17_16             1829.897     26209.186    108147.967
+ G_17_17             1797.558     26209.186    104974.497
+ G_17_18             1784.269     26209.186    101801.028
+ G_17_19             1784.970     26209.186     98627.558
+ G_17_20             1793.291     26209.186     95454.088
+ G_17_21             1776.344     26209.186     92280.619
+ G_17_22             1761.927     26209.186     89107.149
+ G_17_23             1749.278     26209.186     85933.680
+ G_17_24             1724.437     26209.186     82760.210
+ G_17_25             1685.757     26209.186     79586.740
+ G_17_26             1669.359     26209.186     76413.271
+ G_17_27             1686.916     26209.186     73239.801
+ G_17_28             1665.336     26209.186     70066.332
+ G_17_29             1629.034     26209.186     66892.862
+ G_17_30             1604.650     26209.186     63719.392
+ G_17_31             1636.227     26209.186     60545.923
+ G_17_32             1632.143     26209.186     57372.453
+ G_17_33             1560.485     26209.186     54198.983
+ G_17_34             1563.837     26209.186     51025.514
+ G_17_35             1584.259     26209.186     47852.044
+ G_17_36             1583.802     26209.186     44678.575
+ G_17_37             1580.662     26209.186     41505.105
+ G_17_38             1579.047     26209.186     38331.635
+ G_17_39             1581.729     26209.186     35158.166
+ G_17_40             1579.504     26209.186     31984.696
+ G_17_41             1542.776     26209.186     28811.227
+ G_17_42             1499.281     26209.186     25637.757
+ G_17_43             1455.298     26209.186     22464.287
+ G_17_44             1443.350     26209.186     19290.818
+ G_17_45             1441.460     26209.186     16117.348
+ G_17_46             1434.846     26209.186     12943.878
+ G_17_47             1488.948     26209.186      9770.409
+ G_17_48             1472.428     26209.186      6596.939
+ G_17_49             1479.164     26209.186      3423.470
+ G_17_50                0.000     26209.186       250.000
+ G_18_1                 0.000     27831.635    155750.011
+ G_18_2                 0.000     27831.635    152576.541
+ G_18_3                 0.000     27831.635    149403.072
+ G_18_4                 0.000     27831.635    146229.602
+ G_18_5                 0.000     27831.635    143056.133
+ G_18_6                 0.000     27831.635    139882.663
+ G_18_7                 0.000     27831.635    136709.193
+ G_18_8                 0.000     27831.635    133535.724
+ G_18_9              1846.174     27831.635    130362.254
+ G_18_10             1894.423     27831.635    127188.785
+ G_18_11             1948.922     27831.635    124015.315
+ G_18_12             1883.908     27831.635    120841.845
+ G_18_13             1868.119     27831.635    117668.376
+ G_18_14             1840.474     27831.635    114494.906
+ G_18_15             1829.989     27831.635    111321.436
+ G_18_16             1811.305     27831.635    108147.967
+ G_18_17             1773.753     27831.635    104974.497
+ G_18_18             1770.248     27831.635    101801.028
+ G_18_19             1772.930     27831.635     98627.558
+ G_18_20             1777.594     27831.635     95454.088
+ G_18_21             1768.754     27831.635     92280.619
+ G_18_22             1754.155     27831.635     89107.149
+ G_18_23             1741.048     27831.635     85933.680
+ G_18_24             1703.192     27831.635     82760.210
+ G_18_25             1677.894     27831.635     79586.740
+ G_18_26             1636.166     27831.635     76413.271
+ G_18_27             1634.795     27831.635     73239.801
+ G_18_28             1627.937     27831.635     70066.332
+ G_18_29             1589.105     27831.635     66892.862
+ G_18_30             1570.055     27831.635     63719.392
+ G_18_31             1586.240     27831.635     60545.923
+ G_18_32             1587.307     27831.635     57372.453
+ G_18_33             1526.652     27831.635     54198.983
+ G_18_34             1519.032     27831.635     51025.514
+ G_18_35             1530.431     27831.635     47852.044
+ G_18_36             1523.116     27831.635     44678.575
+ G_18_37             1531.346     27831.635     41505.105
+ G_18_38             1518.026     27831.635     38331.635
+ G_18_39             1526.774     27831.635     35158.166
+ G_18_40             1480.627     27831.635     31984.696
+ G_18_41             1468.496     27831.635     28811.227
+ G_18_42             1443.960     27831.635     25637.757
+ G_18_43             1442.405     27831.635     22464.287
+ G_18_44             1438.687     27831.635     19290.818
+ G_18_45             1440.424     27831.635     16117.348
+ G_18_46             1449.781     27831.635     12943.878
+ G_18_47             1497.421     27831.635      9770.409
+ G_18_48             1496.385     27831.635      6596.939
+ G_18_49                0.000     27831.635      3423.470
+ G_18_50                0.000     27831.635       250.000
+ G_19_1                 0.000     29454.084    155750.011
+ G_19_2                 0.000     29454.084    152576.541
+ G_19_3                 0.000     29454.084    149403.072
+ G_19_4                 0.000     29454.084    146229.602
+ G_19_5                 0.000     29454.084    143056.133
+ G_19_6              1697.005     29454.084    139882.663
+ G_19_7              1709.684     29454.084    136709.193
+ G_19_8              1737.055     29454.084    133535.724
+ G_19_9              1771.833     29454.084    130362.254
+ G_19_10             1812.371     29454.084    127188.785
+ G_19_11             1903.689     29454.084    124015.315
+ G_19_12             1851.538     29454.084    120841.845
+ G_19_13             1859.006     29454.084    117668.376
+ G_19_14             1811.487     29454.084    114494.906
+ G_19_15             1808.683     29454.084    111321.436
+ G_19_16             1760.494     29454.084    108147.967
+ G_19_17             1741.383     29454.084    104974.497
+ G_19_18             1753.941     29454.084    101801.028
+ G_19_19             1760.342     29454.084     98627.558
+ G_19_20             1759.123     29454.084     95454.088
+ G_19_21             1759.489     29454.084     92280.619
+ G_19_22             1746.382     29454.084     89107.149
+ G_19_23             1710.995     29454.084     85933.680
+ G_19_24             1681.185     29454.084     82760.210
+ G_19_25             1665.884     29454.084     79586.740
+ G_19_26             1615.775     29454.084     76413.271
+ G_19_27             1589.044     29454.084     73239.801
+ G_19_28             1579.169     29454.084     70066.332
+ G_19_29             1562.893     29454.084     66892.862
+ G_19_30             1543.081     29454.084     63719.392
+ G_19_31             1552.011     29454.084     60545.923
+ G_19_32             1584.046     29454.084     57372.453
+ G_19_33             1511.442     29454.084     54198.983
+ G_19_34             1489.649     29454.084     51025.514
+ G_19_35             1476.969     29454.084     47852.044
+ G_19_36             1479.012     29454.084     44678.575
+ G_19_37             1477.427     29454.084     41505.105
+ G_19_38             1474.257     29454.084     38331.635
+ G_19_39             1465.204     29454.084     35158.166
+ G_19_40             1456.030     29454.084     31984.696
+ G_19_41             1453.286     29454.084     28811.227
+ G_19_42             1445.148     29454.084     25637.757
+ G_19_43             1443.899     29454.084     22464.287
+ G_19_44             1440.454     29454.084     19290.818
+ G_19_45             1459.261     29454.084     16117.348
+ G_19_46             1485.351     29454.084     12943.878
+ G_19_47             1503.182     29454.084      9770.409
+ G_19_48             1525.646     29454.084      6596.939
+ G_19_49                0.000     29454.084      3423.470
+ G_19_50                0.000     29454.084       250.000
+ G_20_1                 0.000     31076.533    155750.011
+ G_20_2                 0.000     31076.533    152576.541
+ G_20_3                 0.000     31076.533    149403.072
+ G_20_4              1690.634     31076.533    146229.602
+ G_20_5              1662.440     31076.533    143056.133
+ G_20_6              1650.279     31076.533    139882.663
+ G_20_7              1731.203     31076.533    136709.193
+ G_20_8              1698.529     31076.533    133535.724
+ G_20_9              1741.414     31076.533    130362.254
+ G_20_10             1830.903     31076.533    127188.785
+ G_20_11             1878.635     31076.533    124015.315
+ G_20_12             1820.936     31076.533    120841.845
+ G_20_13             1800.880     31076.533    117668.376
+ G_20_14             1805.971     31076.533    114494.906
+ G_20_15             1758.574     31076.533    111321.436
+ G_20_16             1721.571     31076.533    108147.967
+ G_20_17             1704.320     31076.533    104974.497
+ G_20_18             1724.711     31076.533    101801.028
+ G_20_19             1735.592     31076.533     98627.558
+ G_20_20             1737.970     31076.533     95454.088
+ G_20_21             1676.796     31076.533     92280.619
+ G_20_22             1659.240     31076.533     89107.149
+ G_20_23             1649.913     31076.533     85933.680
+ G_20_24             1637.934     31076.533     82760.210
+ G_20_25             1656.893     31076.533     79586.740
+ G_20_26             1617.939     31076.533     76413.271
+ G_20_27             1581.882     31076.533     73239.801
+ G_20_28             1549.481     31076.533     70066.332
+ G_20_29             1537.625     31076.533     66892.862
+ G_20_30             1523.208     31076.533     63719.392
+ G_20_31             1523.909     31076.533     60545.923
+ G_20_32             1481.846     31076.533     57372.453
+ G_20_33             1474.866     31076.533     54198.983
+ G_20_34             1472.519     31076.533     51025.514
+ G_20_35             1469.929     31076.533     47852.044
+ G_20_36             1464.747     31076.533     44678.575
+ G_20_37             1467.551     31076.533     41505.105
+ G_20_38             1462.217     31076.533     38331.635
+ G_20_39             1459.200     31076.533     35158.166
+ G_20_40             1453.744     31076.533     31984.696
+ G_20_41             1456.121     31076.533     28811.227
+ G_20_42             1472.885     31076.533     25637.757
+ G_20_43             1471.239     31076.533     22464.287
+ G_20_44             1465.814     31076.533     19290.818
+ G_20_45             1491.295     31076.533     16117.348
+ G_20_46             1512.936     31076.533     12943.878
+ G_20_47             1551.432     31076.533      9770.409
+ G_20_48             1572.250     31076.533      6596.939
+ G_20_49                0.000     31076.533      3423.470
+ G_20_50                0.000     31076.533       250.000
+ G_21_1                 0.000     32698.982    155750.011
+ G_21_2              1803.654     32698.982    152576.541
+ G_21_3              1718.036     32698.982    149403.072
+ G_21_4              1674.967     32698.982    146229.602
+ G_21_5              1705.051     32698.982    143056.133
+ G_21_6              1676.034     32698.982    139882.663
+ G_21_7              1662.257     32698.982    136709.193
+ G_21_8              1685.666     32698.982    133535.724
+ G_21_9              1755.160     32698.982    130362.254
+ G_21_10             1892.168     32698.982    127188.785
+ G_21_11             1878.269     32698.982    124015.315
+ G_21_12             1824.533     32698.982    120841.845
+ G_21_13             1775.216     32698.982    117668.376
+ G_21_14             1759.793     32698.982    114494.906
+ G_21_15             1747.693     32698.982    111321.436
+ G_21_16             1705.356     32698.982    108147.967
+ G_21_17             1678.137     32698.982    104974.497
+ G_21_18             1692.493     32698.982    101801.028
+ G_21_19             1676.095     32698.982     98627.558
+ G_21_20             1679.052     32698.982     95454.088
+ G_21_21             1625.559     32698.982     92280.619
+ G_21_22             1600.993     32698.982     89107.149
+ G_21_23             1583.467     32698.982     85933.680
+ G_21_24             1575.359     32698.982     82760.210
+ G_21_25             1590.264     32698.982     79586.740
+ G_21_26             1603.980     32698.982     76413.271
+ G_21_27             1574.048     32698.982     73239.801
+ G_21_28             1536.771     32698.982     70066.332
+ G_21_29             1516.746     32698.982     66892.862
+ G_21_30             1525.006     32698.982     63719.392
+ G_21_31             1508.943     32698.982     60545.923
+ G_21_32             1476.238     32698.982     57372.453
+ G_21_33             1474.196     32698.982     54198.983
+ G_21_34             1472.032     32698.982     51025.514
+ G_21_35             1466.637     32698.982     47852.044
+ G_21_36             1463.192     32698.982     44678.575
+ G_21_37             1461.181     32698.982     41505.105
+ G_21_38             1458.651     32698.982     38331.635
+ G_21_39             1463.101     32698.982     35158.166
+ G_21_40             1477.640     32698.982     31984.696
+ G_21_41             1466.881     32698.982     28811.227
+ G_21_42             1495.044     32698.982     25637.757
+ G_21_43             1491.447     32698.982     22464.287
+ G_21_44             1488.156     32698.982     19290.818
+ G_21_45             1522.232     32698.982     16117.348
+ G_21_46             1521.196     32698.982     12943.878
+ G_21_47             1563.441     32698.982      9770.409
+ G_21_48                0.000     32698.982      6596.939
+ G_21_49                0.000     32698.982      3423.470
+ G_21_50                0.000     32698.982       250.000
+ G_22_1                 0.000     34321.431    155750.011
+ G_22_2              1704.685     34321.431    152576.541
+ G_22_3              1689.903     34321.431    149403.072
+ G_22_4              1708.008     34321.431    146229.602
+ G_22_5              1753.332     34321.431    143056.133
+ G_22_6              1704.594     34321.431    139882.663
+ G_22_7              1648.938     34321.431    136709.193
+ G_22_8              1709.257     34321.431    133535.724
+ G_22_9              1775.978     34321.431    130362.254
+ G_22_10             1825.874     34321.431    127188.785
+ G_22_11             1869.582     34321.431    124015.315
+ G_22_12             1820.845     34321.431    120841.845
+ G_22_13             1759.001     34321.431    117668.376
+ G_22_14             1727.485     34321.431    114494.906
+ G_22_15             1770.553     34321.431    111321.436
+ G_22_16             1719.072     34321.431    108147.967
+ G_22_17             1651.285     34321.431    104974.497
+ G_22_18             1667.408     34321.431    101801.028
+ G_22_19             1637.569     34321.431     98627.558
+ G_22_20             1587.551     34321.431     95454.088
+ G_22_21             1584.747     34321.431     92280.619
+ G_22_22             1567.190     34321.431     89107.149
+ G_22_23             1544.056     34321.431     85933.680
+ G_22_24             1533.632     34321.431     82760.210
+ G_22_25             1527.414     34321.431     79586.740
+ G_22_26             1539.850     34321.431     76413.271
+ G_22_27             1565.087     34321.431     73239.801
+ G_22_28             1532.595     34321.431     70066.332
+ G_22_29             1526.256     34321.431     66892.862
+ G_22_30             1487.424     34321.431     63719.392
+ G_22_31             1481.359     34321.431     60545.923
+ G_22_32             1477.000     34321.431     57372.453
+ G_22_33             1473.525     34321.431     54198.983
+ G_22_34             1471.544     34321.431     51025.514
+ G_22_35             1466.149     34321.431     47852.044
+ G_22_36             1476.939     34321.431     44678.575
+ G_22_37             1477.914     34321.431     41505.105
+ G_22_38             1481.938     34321.431     38331.635
+ G_22_39             1490.106     34321.431     35158.166
+ G_22_40             1495.562     34321.431     31984.696
+ G_22_41             1479.225     34321.431     28811.227
+ G_22_42             1497.239     34321.431     25637.757
+ G_22_43             1505.377     34321.431     22464.287
+ G_22_44             1516.563     34321.431     19290.818
+ G_22_45             1519.398     34321.431     16117.348
+ G_22_46             1539.941     34321.431     12943.878
+ G_22_47             1588.922     34321.431      9770.409
+ G_22_48                0.000     34321.431      6596.939
+ G_22_49                0.000     34321.431      3423.470
+ G_22_50                0.000     34321.431       250.000
+ G_23_1                 0.000     35943.880    155750.011
+ G_23_2                 0.000     35943.880    152576.541
+ G_23_3              1737.787     35943.880    149403.072
+ G_23_4              1726.631     35943.880    146229.602
+ G_23_5              1774.637     35943.880    143056.133
+ G_23_6              1707.337     35943.880    139882.663
+ G_23_7              1635.679     35943.880    136709.193
+ G_23_8              1688.196     35943.880    133535.724
+ G_23_9              1740.225     35943.880    130362.254
+ G_23_10             1784.025     35943.880    127188.785
+ G_23_11             1858.975     35943.880    124015.315
+ G_23_12             1799.356     35943.880    120841.845
+ G_23_13             1745.315     35943.880    117668.376
+ G_23_14             1705.356     35943.880    114494.906
+ G_23_15             1741.871     35943.880    111321.436
+ G_23_16             1696.700     35943.880    108147.967
+ G_23_17             1626.779     35943.880    104974.497
+ G_23_18             1638.910     35943.880    101801.028
+ G_23_19             1577.157     35943.880     98627.558
+ G_23_20             1564.630     35943.880     95454.088
+ G_23_21             1561.673     35943.880     92280.619
+ G_23_22             1548.567     35943.880     89107.149
+ G_23_23             1516.411     35943.880     85933.680
+ G_23_24             1499.768     35943.880     82760.210
+ G_23_25             1497.909     35943.880     79586.740
+ G_23_26             1498.824     35943.880     76413.271
+ G_23_27             1525.859     35943.880     73239.801
+ G_23_28             1527.048     35943.880     70066.332
+ G_23_29             1485.991     35943.880     66892.862
+ G_23_30             1483.096     35943.880     63719.392
+ G_23_31             1480.718     35943.880     60545.923
+ G_23_32             1476.969     35943.880     57372.453
+ G_23_33             1473.403     35943.880     54198.983
+ G_23_34             1471.087     35943.880     51025.514
+ G_23_35             1492.301     35943.880     47852.044
+ G_23_36             1499.951     35943.880     44678.575
+ G_23_37             1502.877     35943.880     41505.105
+ G_23_38             1506.444     35943.880     38331.635
+ G_23_39             1509.705     35943.880     35158.166
+ G_23_40             1507.724     35943.880     31984.696
+ G_23_41             1501.750     35943.880     28811.227
+ G_23_42             1496.781     35943.880     25637.757
+ G_23_43             1514.795     35943.880     22464.287
+ G_23_44             1521.531     35943.880     19290.818
+ G_23_45             1525.981     35943.880     16117.348
+ G_23_46             1550.792     35943.880     12943.878
+ G_23_47                0.000     35943.880      9770.409
+ G_23_48                0.000     35943.880      6596.939
+ G_23_49                0.000     35943.880      3423.470
+ G_23_50                0.000     35943.880       250.000
+ G_24_1                 0.000     37566.329    155750.011
+ G_24_2                 0.000     37566.329    152576.541
+ G_24_3              1764.823     37566.329    149403.072
+ G_24_4              1774.119     37566.329    146229.602
+ G_24_5              1816.486     37566.329    143056.133
+ G_24_6              1709.471     37566.329    139882.663
+ G_24_7              1631.747     37566.329    136709.193
+ G_24_8              1637.721     37566.329    133535.724
+ G_24_9              1702.339     37566.329    130362.254
+ G_24_10             1727.149     37566.329    127188.785
+ G_24_11             1753.210     37566.329    124015.315
+ G_24_12             1829.593     37566.329    120841.845
+ G_24_13             1734.434     37566.329    117668.376
+ G_24_14             1701.607     37566.329    114494.906
+ G_24_15             1666.342     37566.329    111321.436
+ G_24_16             1648.541     37566.329    108147.967
+ G_24_17             1615.714     37566.329    104974.497
+ G_24_18             1582.491     37566.329    101801.028
+ G_24_19             1561.551     37566.329     98627.558
+ G_24_20             1530.614     37566.329     95454.088
+ G_24_21             1518.087     37566.329     92280.619
+ G_24_22             1506.596     37566.329     89107.149
+ G_24_23             1503.091     37566.329     85933.680
+ G_24_24             1503.121     37566.329     82760.210
+ G_24_25             1502.999     37566.329     79586.740
+ G_24_26             1494.587     37566.329     76413.271
+ G_24_27             1491.630     37566.329     73239.801
+ G_24_28             1488.521     37566.329     70066.332
+ G_24_29             1487.119     37566.329     66892.862
+ G_24_30             1482.700     37566.329     63719.392
+ G_24_31             1479.774     37566.329     60545.923
+ G_24_32             1475.506     37566.329     57372.453
+ G_24_33             1485.991     37566.329     54198.983
+ G_24_34             1516.136     37566.329     51025.514
+ G_24_35             1522.933     37566.329     47852.044
+ G_24_36             1524.305     37566.329     44678.575
+ G_24_37             1521.714     37566.329     41505.105
+ G_24_38             1521.043     37566.329     38331.635
+ G_24_39             1525.951     37566.329     35158.166
+ G_24_40             1523.665     37566.329     31984.696
+ G_24_41             1525.555     37566.329     28811.227
+ G_24_42             1507.602     37566.329     25637.757
+ G_24_43             1532.138     37566.329     22464.287
+ G_24_44             1544.239     37566.329     19290.818
+ G_24_45             1542.562     37566.329     16117.348
+ G_24_46                0.000     37566.329     12943.878
+ G_24_47                0.000     37566.329      9770.409
+ G_24_48                0.000     37566.329      6596.939
+ G_24_49                0.000     37566.329      3423.470
+ G_24_50                0.000     37566.329       250.000
+ G_25_1                 0.000     39188.778    155750.011
+ G_25_2                 0.000     39188.778    152576.541
+ G_25_3              1812.463     39188.778    149403.072
+ G_25_4              1774.058     39188.778    146229.602
+ G_25_5              1767.779     39188.778    143056.133
+ G_25_6              1711.513     39188.778    139882.663
+ G_25_7              1653.875     39188.778    136709.193
+ G_25_8              1625.864     39188.778    133535.724
+ G_25_9              1655.460     39188.778    130362.254
+ G_25_10             1690.390     39188.778    127188.785
+ G_25_11             1714.835     39188.778    124015.315
+ G_25_12             1750.436     39188.778    120841.845
+ G_25_13             1721.846     39188.778    117668.376
+ G_25_14             1704.899     39188.778    114494.906
+ G_25_15             1651.010     39188.778    111321.436
+ G_25_16             1631.290     39188.778    108147.967
+ G_25_17             1567.647     39188.778    104974.497
+ G_25_18             1575.999     39188.778    101801.028
+ G_25_19             1518.757     39188.778     98627.558
+ G_25_20             1512.905     39188.778     95454.088
+ G_25_21             1509.553     39188.778     92280.619
+ G_25_22             1506.261     39188.778     89107.149
+ G_25_23             1504.188     39188.778     85933.680
+ G_25_24             1505.407     39188.778     82760.210
+ G_25_25             1506.413     39188.778     79586.740
+ G_25_26             1495.440     39188.778     76413.271
+ G_25_27             1492.087     39188.778     73239.801
+ G_25_28             1488.887     39188.778     70066.332
+ G_25_29             1487.119     39188.778     66892.862
+ G_25_30             1482.395     39188.778     63719.392
+ G_25_31             1479.073     39188.778     60545.923
+ G_25_32             1487.241     39188.778     57372.453
+ G_25_33             1517.904     39188.778     54198.983
+ G_25_34             1530.736     39188.778     51025.514
+ G_25_35             1524.152     39188.778     47852.044
+ G_25_36             1523.909     39188.778     44678.575
+ G_25_37             1519.550     39188.778     41505.105
+ G_25_38             1516.197     39188.778     38331.635
+ G_25_39             1527.566     39188.778     35158.166
+ G_25_40             1535.430     39188.778     31984.696
+ G_25_41             1532.413     39188.778     28811.227
+ G_25_42             1547.073     39188.778     25637.757
+ G_25_43             1549.085     39188.778     22464.287
+ G_25_44             1561.308     39188.778     19290.818
+ G_25_45                0.000     39188.778     16117.348
+ G_25_46                0.000     39188.778     12943.878
+ G_25_47                0.000     39188.778      9770.409
+ G_25_48                0.000     39188.778      6596.939
+ G_25_49                0.000     39188.778      3423.470
+ G_25_50                0.000     39188.778       250.000
+ G_26_1                 0.000     40811.227    155750.011
+ G_26_2                 0.000     40811.227    152576.541
+ G_26_3                 0.000     40811.227    149403.072
+ G_26_4              1848.399     40811.227    146229.602
+ G_26_5              1813.133     40811.227    143056.133
+ G_26_6              1739.250     40811.227    139882.663
+ G_26_7              1688.409     40811.227    136709.193
+ G_26_8              1624.767     40811.227    133535.724
+ G_26_9              1637.660     40811.227    130362.254
+ G_26_10             1698.559     40811.227    127188.785
+ G_26_11             1669.908     40811.227    124015.315
+ G_26_12             1765.371     40811.227    120841.845
+ G_26_13             1709.075     40811.227    117668.376
+ G_26_14             1655.277     40811.227    114494.906
+ G_26_15             1658.935     40811.227    111321.436
+ G_26_16             1624.462     40811.227    108147.967
+ G_26_17             1575.999     40811.227    104974.497
+ G_26_18             1523.878     40811.227    101801.028
+ G_26_19             1519.916     40811.227     98627.558
+ G_26_20             1513.698     40811.227     95454.088
+ G_26_21             1510.589     40811.227     92280.619
+ G_26_22             1506.931     40811.227     89107.149
+ G_26_23             1505.285     40811.227     85933.680
+ G_26_24             1507.663     40811.227     82760.210
+ G_26_25             1515.588     40811.227     79586.740
+ G_26_26             1532.291     40811.227     76413.271
+ G_26_27             1532.291     40811.227     73239.801
+ G_26_28             1538.813     40811.227     70066.332
+ G_26_29             1510.467     40811.227     66892.862
+ G_26_30             1507.907     40811.227     63719.392
+ G_26_31             1522.354     40811.227     60545.923
+ G_26_32             1536.741     40811.227     57372.453
+ G_26_33             1534.241     40811.227     54198.983
+ G_26_34             1529.243     40811.227     51025.514
+ G_26_35             1526.896     40811.227     47852.044
+ G_26_36             1523.573     40811.227     44678.575
+ G_26_37             1533.571     40811.227     41505.105
+ G_26_38             1543.934     40811.227     38331.635
+ G_26_39             1544.726     40811.227     35158.166
+ G_26_40             1539.819     40811.227     31984.696
+ G_26_41             1538.935     40811.227     28811.227
+ G_26_42             1553.596     40811.227     25637.757
+ G_26_43             1543.964     40811.227     22464.287
+ G_26_44                0.000     40811.227     19290.818
+ G_26_45                0.000     40811.227     16117.348
+ G_26_46                0.000     40811.227     12943.878
+ G_26_47                0.000     40811.227      9770.409
+ G_26_48                0.000     40811.227      6596.939
+ G_26_49                0.000     40811.227      3423.470
+ G_26_50                0.000     40811.227       250.000
+ G_27_1                 0.000     42433.676    155750.011
+ G_27_2                 0.000     42433.676    152576.541
+ G_27_3                 0.000     42433.676    149403.072
+ G_27_4              1927.830     42433.676    146229.602
+ G_27_5              1824.015     42433.676    143056.133
+ G_27_6              1783.354     42433.676    139882.663
+ G_27_7              1702.003     42433.676    136709.193
+ G_27_8              1669.877     42433.676    133535.724
+ G_27_9              1613.032     42433.676    130362.254
+ G_27_10             1648.816     42433.676    127188.785
+ G_27_11             1690.421     42433.676    124015.315
+ G_27_12             1715.902     42433.676    120841.845
+ G_27_13             1677.010     42433.676    117668.376
+ G_27_14             1626.260     42433.676    114494.906
+ G_27_15             1612.575     42433.676    111321.436
+ G_27_16             1607.881     42433.676    108147.967
+ G_27_17             1524.000     42433.676    104974.497
+ G_27_18             1523.756     42433.676    101801.028
+ G_27_19             1520.800     42433.676     98627.558
+ G_27_20             1514.673     42433.676     95454.088
+ G_27_21             1511.686     42433.676     92280.619
+ G_27_22             1524.122     42433.676     89107.149
+ G_27_23             1512.143     42433.676     85933.680
+ G_27_24             1543.903     42433.676     82760.210
+ G_27_25             1599.072     42433.676     79586.740
+ G_27_26             1578.681     42433.676     76413.271
+ G_27_27             1601.541     42433.676     73239.801
+ G_27_28             1590.904     42433.676     70066.332
+ G_27_29             1550.914     42433.676     66892.862
+ G_27_30             1546.250     42433.676     63719.392
+ G_27_31             1557.802     42433.676     60545.923
+ G_27_32             1548.475     42433.676     57372.453
+ G_27_33             1539.697     42433.676     54198.983
+ G_27_34             1532.992     42433.676     51025.514
+ G_27_35             1531.986     42433.676     47852.044
+ G_27_36             1535.064     42433.676     44678.575
+ G_27_37             1542.928     42433.676     41505.105
+ G_27_38             1551.767     42433.676     38331.635
+ G_27_39             1549.908     42433.676     35158.166
+ G_27_40             1541.557     42433.676     31984.696
+ G_27_41             1547.287     42433.676     28811.227
+ G_27_42             1563.502     42433.676     25637.757
+ G_27_43                0.000     42433.676     22464.287
+ G_27_44                0.000     42433.676     19290.818
+ G_27_45                0.000     42433.676     16117.348
+ G_27_46                0.000     42433.676     12943.878
+ G_27_47                0.000     42433.676      9770.409
+ G_27_48                0.000     42433.676      6596.939
+ G_27_49                0.000     42433.676      3423.470
+ G_27_50                0.000     42433.676       250.000
+ G_28_1                 0.000     44056.126    155750.011
+ G_28_2                 0.000     44056.126    152576.541
+ G_28_3                 0.000     44056.126    149403.072
+ G_28_4              1925.025     44056.126    146229.602
+ G_28_5              1883.207     44056.126    143056.133
+ G_28_6              1776.405     44056.126    139882.663
+ G_28_7              1785.976     44056.126    136709.193
+ G_28_8              1691.671     44056.126    133535.724
+ G_28_9              1621.231     44056.126    130362.254
+ G_28_10             1604.863     44056.126    127188.785
+ G_28_11             1647.932     44056.126    124015.315
+ G_28_12             1710.934     44056.126    120841.845
+ G_28_13             1642.963     44056.126    117668.376
+ G_28_14             1595.079     44056.126    114494.906
+ G_28_15             1580.967     44056.126    111321.436
+ G_28_16             1542.410     44056.126    108147.967
+ G_28_17             1526.621     44056.126    104974.497
+ G_28_18             1523.543     44056.126    101801.028
+ G_28_19             1521.988     44056.126     98627.558
+ G_28_20             1533.327     44056.126     95454.088
+ G_28_21             1558.442     44056.126     92280.619
+ G_28_22             1570.269     44056.126     89107.149
+ G_28_23             1616.293     44056.126     85933.680
+ G_28_24             1560.271     44056.126     82760.210
+ G_28_25             1615.592     44056.126     79586.740
+ G_28_26             1615.714     44056.126     76413.271
+ G_28_27             1606.845     44056.126     73239.801
+ G_28_28             1594.927     44056.126     70066.332
+ G_28_29             1583.101     44056.126     66892.862
+ G_28_30             1565.880     44056.126     63719.392
+ G_28_31             1563.350     44056.126     60545.923
+ G_28_32             1554.419     44056.126     57372.453
+ G_28_33             1546.525     44056.126     54198.983
+ G_28_34             1543.599     44056.126     51025.514
+ G_28_35             1548.963     44056.126     47852.044
+ G_28_36             1551.310     44056.126     44678.575
+ G_28_37             1555.212     44056.126     41505.105
+ G_28_38             1559.448     44056.126     38331.635
+ G_28_39             1557.040     44056.126     35158.166
+ G_28_40             1551.127     44056.126     31984.696
+ G_28_41             1558.442     44056.126     28811.227
+ G_28_42                0.000     44056.126     25637.757
+ G_28_43                0.000     44056.126     22464.287
+ G_28_44                0.000     44056.126     19290.818
+ G_28_45                0.000     44056.126     16117.348
+ G_28_46                0.000     44056.126     12943.878
+ G_28_47                0.000     44056.126      9770.409
+ G_28_48                0.000     44056.126      6596.939
+ G_28_49                0.000     44056.126      3423.470
+ G_28_50                0.000     44056.126       250.000
+ G_29_1                 0.000     45678.575    155750.011
+ G_29_2                 0.000     45678.575    152576.541
+ G_29_3                 0.000     45678.575    149403.072
+ G_29_4              2077.944     45678.575    146229.602
+ G_29_5              1928.134     45678.575    143056.133
+ G_29_6              1943.100     45678.575    139882.663
+ G_29_7              1775.369     45678.575    136709.193
+ G_29_8              1753.332     45678.575    133535.724
+ G_29_9              1694.810     45678.575    130362.254
+ G_29_10             1584.960     45678.575    127188.785
+ G_29_11             1630.406     45678.575    124015.315
+ G_29_12             1658.356     45678.575    120841.845
+ G_29_13             1618.244     45678.575    117668.376
+ G_29_14             1600.901     45678.575    114494.906
+ G_29_15             1532.839     45678.575    111321.436
+ G_29_16             1541.099     45678.575    108147.967
+ G_29_17             1526.469     45678.575    104974.497
+ G_29_18             1532.992     45678.575    101801.028
+ G_29_19             1550.426     45678.575     98627.558
+ G_29_20             1556.278     45678.575     95454.088
+ G_29_21             1572.037     45678.575     92280.619
+ G_29_22             1602.486     45678.575     89107.149
+ G_29_23             1618.701     45678.575     85933.680
+ G_29_24             1579.291     45678.575     82760.210
+ G_29_25             1609.405     45678.575     79586.740
+ G_29_26             1604.376     45678.575     76413.271
+ G_29_27             1597.853     45678.575     73239.801
+ G_29_28             1583.924     45678.575     70066.332
+ G_29_29             1593.007     45678.575     66892.862
+ G_29_30             1584.655     45678.575     63719.392
+ G_29_31             1576.548     45678.575     60545.923
+ G_29_32             1568.318     45678.575     57372.453
+ G_29_33             1563.350     45678.575     54198.983
+ G_29_34             1559.601     45678.575     51025.514
+ G_29_35             1561.704     45678.575     47852.044
+ G_29_36             1563.472     45678.575     44678.575
+ G_29_37             1564.447     45678.575     41505.105
+ G_29_38             1565.179     45678.575     38331.635
+ G_29_39             1562.771     45678.575     35158.166
+ G_29_40             1560.576     45678.575     31984.696
+ G_29_41                0.000     45678.575     28811.227
+ G_29_42                0.000     45678.575     25637.757
+ G_29_43                0.000     45678.575     22464.287
+ G_29_44                0.000     45678.575     19290.818
+ G_29_45                0.000     45678.575     16117.348
+ G_29_46                0.000     45678.575     12943.878
+ G_29_47                0.000     45678.575      9770.409
+ G_29_48                0.000     45678.575      6596.939
+ G_29_49                0.000     45678.575      3423.470
+ G_29_50                0.000     45678.575       250.000
+ G_30_1                 0.000     47301.024    155750.011
+ G_30_2                 0.000     47301.024    152576.541
+ G_30_3                 0.000     47301.024    149403.072
+ G_30_4                 0.000     47301.024    146229.602
+ G_30_5              1970.928     47301.024    143056.133
+ G_30_6              1937.370     47301.024    139882.663
+ G_30_7              1902.684     47301.024    136709.193
+ G_30_8              1920.331     47301.024    133535.724
+ G_30_9              1894.484     47301.024    130362.254
+ G_30_10             1601.145     47301.024    127188.785
+ G_30_11             1620.622     47301.024    124015.315
+ G_30_12             1643.786     47301.024    120841.845
+ G_30_13             1604.101     47301.024    117668.376
+ G_30_14             1570.147     47301.024    114494.906
+ G_30_15             1532.778     47301.024    111321.436
+ G_30_16             1534.394     47301.024    108147.967
+ G_30_17             1541.557     47301.024    104974.497
+ G_30_18             1571.427     47301.024    101801.028
+ G_30_19             1578.986     47301.024     98627.558
+ G_30_20             1579.291     47301.024     95454.088
+ G_30_21             1585.631     47301.024     92280.619
+ G_30_22             1611.661     47301.024     89107.149
+ G_30_23             1623.365     47301.024     85933.680
+ G_30_24             1605.778     47301.024     82760.210
+ G_30_25             1611.661     47301.024     79586.740
+ G_30_26             1605.686     47301.024     76413.271
+ G_30_27             1593.312     47301.024     73239.801
+ G_30_28             1598.463     47301.024     70066.332
+ G_30_29             1612.057     47301.024     66892.862
+ G_30_30             1603.980     47301.024     63719.392
+ G_30_31             1596.329     47301.024     60545.923
+ G_30_32             1586.911     47301.024     57372.453
+ G_30_33             1580.175     47301.024     54198.983
+ G_30_34             1576.365     47301.024     51025.514
+ G_30_35             1575.999     47301.024     47852.044
+ G_30_36             1576.669     47301.024     44678.575
+ G_30_37             1577.523     47301.024     41505.105
+ G_30_38             1577.767     47301.024     38331.635
+ G_30_39             1576.974     47301.024     35158.166
+ G_30_40                0.000     47301.024     31984.696
+ G_30_41                0.000     47301.024     28811.227
+ G_30_42                0.000     47301.024     25637.757
+ G_30_43                0.000     47301.024     22464.287
+ G_30_44                0.000     47301.024     19290.818
+ G_30_45                0.000     47301.024     16117.348
+ G_30_46                0.000     47301.024     12943.878
+ G_30_47                0.000     47301.024      9770.409
+ G_30_48                0.000     47301.024      6596.939
+ G_30_49                0.000     47301.024      3423.470
+ G_30_50                0.000     47301.024       250.000
+ G_31_1                 0.000     48923.473    155750.011
+ G_31_2                 0.000     48923.473    152576.541
+ G_31_3                 0.000     48923.473    149403.072
+ G_31_4                 0.000     48923.473    146229.602
+ G_31_5                 0.000     48923.473    143056.133
+ G_31_6              1873.392     48923.473    139882.663
+ G_31_7              1892.229     48923.473    136709.193
+ G_31_8              1916.400     48923.473    133535.724
+ G_31_9              1810.695     48923.473    130362.254
+ G_31_10             1734.922     48923.473    127188.785
+ G_31_11             1593.921     48923.473    124015.315
+ G_31_12             1619.524     48923.473    120841.845
+ G_31_13             1576.243     48923.473    117668.376
+ G_31_14             1536.070     48923.473    114494.906
+ G_31_15             1533.601     48923.473    111321.436
+ G_31_16             1554.754     48923.473    108147.967
+ G_31_17             1592.306     48923.473    104974.497
+ G_31_18             1611.782     48923.473    101801.028
+ G_31_19             1616.354     48923.473     98627.558
+ G_31_20             1606.509     48923.473     95454.088
+ G_31_21             1601.419     48923.473     92280.619
+ G_31_22             1618.427     48923.473     89107.149
+ G_31_23             1627.175     48923.473     85933.680
+ G_31_24             1618.336     48923.473     82760.210
+ G_31_25             1618.122     48923.473     79586.740
+ G_31_26             1613.306     48923.473     76413.271
+ G_31_27             1606.631     48923.473     73239.801
+ G_31_28             1621.506     48923.473     70066.332
+ G_31_29             1631.442     48923.473     66892.862
+ G_31_30             1623.365     48923.473     63719.392
+ G_31_31             1616.659     48923.473     60545.923
+ G_31_32             1610.441     48923.473     57372.453
+ G_31_33             1597.030     48923.473     54198.983
+ G_31_34             1593.098     48923.473     51025.514
+ G_31_35             1599.377     48923.473     47852.044
+ G_31_36             1600.200     48923.473     44678.575
+ G_31_37             1603.218     48923.473     41505.105
+ G_31_38             1604.010     48923.473     38331.635
+ G_31_39                0.000     48923.473     35158.166
+ G_31_40                0.000     48923.473     31984.696
+ G_31_41                0.000     48923.473     28811.227
+ G_31_42                0.000     48923.473     25637.757
+ G_31_43                0.000     48923.473     22464.287
+ G_31_44                0.000     48923.473     19290.818
+ G_31_45                0.000     48923.473     16117.348
+ G_31_46                0.000     48923.473     12943.878
+ G_31_47                0.000     48923.473      9770.409
+ G_31_48                0.000     48923.473      6596.939
+ G_31_49                0.000     48923.473      3423.470
+ G_31_50                0.000     48923.473       250.000
+ G_32_1                 0.000     50545.922    155750.011
+ G_32_2                 0.000     50545.922    152576.541
+ G_32_3                 0.000     50545.922    149403.072
+ G_32_4                 0.000     50545.922    146229.602
+ G_32_5                 0.000     50545.922    143056.133
+ G_32_6              1838.127     50545.922    139882.663
+ G_32_7              1841.602     50545.922    136709.193
+ G_32_8              1822.460     50545.922    133535.724
+ G_32_9              1777.807     50545.922    130362.254
+ G_32_10             1744.005     50545.922    127188.785
+ G_32_11             1588.252     50545.922    124015.315
+ G_32_12             1573.256     50545.922    120841.845
+ G_32_13             1540.581     50545.922    117668.376
+ G_32_14             1540.368     50545.922    114494.906
+ G_32_15             1587.490     50545.922    111321.436
+ G_32_16             1607.485     50545.922    108147.967
+ G_32_17             1659.971     50545.922    104974.497
+ G_32_18             1668.018     50545.922    101801.028
+ G_32_19             1674.998     50545.922     98627.558
+ G_32_20             1650.614     50545.922     95454.088
+ G_32_21             1637.142     50545.922     92280.619
+ G_32_22             1641.257     50545.922     89107.149
+ G_32_23             1644.122     50545.922     85933.680
+ G_32_24             1621.506     50545.922     82760.210
+ G_32_25             1630.619     50545.922     79586.740
+ G_32_26             1630.345     50545.922     76413.271
+ G_32_27             1632.387     50545.922     73239.801
+ G_32_28             1646.438     50545.922     70066.332
+ G_32_29             1657.929     50545.922     66892.862
+ G_32_30             1649.212     50545.922     63719.392
+ G_32_31             1643.786     50545.922     60545.923
+ G_32_32             1638.178     50545.922     57372.453
+ G_32_33             1637.111     50545.922     54198.983
+ G_32_34             1616.172     50545.922     51025.514
+ G_32_35                0.000     50545.922     47852.044
+ G_32_36                0.000     50545.922     44678.575
+ G_32_37                0.000     50545.922     41505.105
+ G_32_38                0.000     50545.922     38331.635
+ G_32_39                0.000     50545.922     35158.166
+ G_32_40                0.000     50545.922     31984.696
+ G_32_41                0.000     50545.922     28811.227
+ G_32_42                0.000     50545.922     25637.757
+ G_32_43                0.000     50545.922     22464.287
+ G_32_44                0.000     50545.922     19290.818
+ G_32_45                0.000     50545.922     16117.348
+ G_32_46                0.000     50545.922     12943.878
+ G_32_47                0.000     50545.922      9770.409
+ G_32_48                0.000     50545.922      6596.939
+ G_32_49                0.000     50545.922      3423.470
+ G_32_50                0.000     50545.922       250.000
+ G_33_1                 0.000     52168.371    155750.011
+ G_33_2                 0.000     52168.371    152576.541
+ G_33_3                 0.000     52168.371    149403.072
+ G_33_4                 0.000     52168.371    146229.602
+ G_33_5              1829.410     52168.371    143056.133
+ G_33_6              1839.895     52168.371    139882.663
+ G_33_7              1817.004     52168.371    136709.193
+ G_33_8              1759.854     52168.371    133535.724
+ G_33_9              1714.927     52168.371    130362.254
+ G_33_10             1729.161     52168.371    127188.785
+ G_33_11             1626.382     52168.371    124015.315
+ G_33_12             1543.324     52168.371    120841.845
+ G_33_13             1551.950     52168.371    117668.376
+ G_33_14             1585.539     52168.371    114494.906
+ G_33_15             1625.285     52168.371    111321.436
+ G_33_16             1640.098     52168.371    108147.967
+ G_33_17             1712.580     52168.371    104974.497
+ G_33_18             1712.641     52168.371    101801.028
+ G_33_19             1719.011     52168.371     98627.558
+ G_33_20             1679.814     52168.371     95454.088
+ G_33_21             1663.934     52168.371     92280.619
+ G_33_22             1660.459     52168.371     89107.149
+ G_33_23             1644.091     52168.371     85933.680
+ G_33_24             1636.441     52168.371     82760.210
+ G_33_25             1652.351     52168.371     79586.740
+ G_33_26             1652.626     52168.371     76413.271
+ G_33_27                0.000     52168.371     73239.801
+ G_33_28                0.000     52168.371     70066.332
+ G_33_29                0.000     52168.371     66892.862
+ G_33_30                0.000     52168.371     63719.392
+ G_33_31                0.000     52168.371     60545.923
+ G_33_32                0.000     52168.371     57372.453
+ G_33_33                0.000     52168.371     54198.983
+ G_33_34                0.000     52168.371     51025.514
+ G_33_35                0.000     52168.371     47852.044
+ G_33_36                0.000     52168.371     44678.575
+ G_33_37                0.000     52168.371     41505.105
+ G_33_38                0.000     52168.371     38331.635
+ G_33_39                0.000     52168.371     35158.166
+ G_33_40                0.000     52168.371     31984.696
+ G_33_41                0.000     52168.371     28811.227
+ G_33_42                0.000     52168.371     25637.757
+ G_33_43                0.000     52168.371     22464.287
+ G_33_44                0.000     52168.371     19290.818
+ G_33_45                0.000     52168.371     16117.348
+ G_33_46                0.000     52168.371     12943.878
+ G_33_47                0.000     52168.371      9770.409
+ G_33_48                0.000     52168.371      6596.939
+ G_33_49                0.000     52168.371      3423.470
+ G_33_50                0.000     52168.371       250.000
+ G_34_1                 0.000     53790.820    155750.011
+ G_34_2              2004.853     53790.820    152576.541
+ G_34_3              1960.260     53790.820    149403.072
+ G_34_4              1875.526     53790.820    146229.602
+ G_34_5              1793.108     53790.820    143056.133
+ G_34_6              1824.929     53790.820    139882.663
+ G_34_7              1830.507     53790.820    136709.193
+ G_34_8              1830.812     53790.820    133535.724
+ G_34_9              1731.569     53790.820    130362.254
+ G_34_10             1722.669     53790.820    127188.785
+ G_34_11             1567.617     53790.820    124015.315
+ G_34_12             1546.921     53790.820    120841.845
+ G_34_13             1606.936     53790.820    117668.376
+ G_34_14             1650.035     53790.820    114494.906
+ G_34_15             1679.875     53790.820    111321.436
+ G_34_16             1701.272     53790.820    108147.967
+ G_34_17             1791.310     53790.820    104974.497
+ G_34_18             1764.670     53790.820    101801.028
+ G_34_19             1769.791     53790.820     98627.558
+ G_34_20             1729.649     53790.820     95454.088
+ G_34_21             1700.875     53790.820     92280.619
+ G_34_22             1689.324     53790.820     89107.149
+ G_34_23             1675.912     53790.820     85933.680
+ G_34_24             1665.153     53790.820     82760.210
+ G_34_25             1676.339     53790.820     79586.740
+ G_34_26                0.000     53790.820     76413.271
+ G_34_27                0.000     53790.820     73239.801
+ G_34_28                0.000     53790.820     70066.332
+ G_34_29                0.000     53790.820     66892.862
+ G_34_30                0.000     53790.820     63719.392
+ G_34_31                0.000     53790.820     60545.923
+ G_34_32                0.000     53790.820     57372.453
+ G_34_33                0.000     53790.820     54198.983
+ G_34_34                0.000     53790.820     51025.514
+ G_34_35                0.000     53790.820     47852.044
+ G_34_36                0.000     53790.820     44678.575
+ G_34_37                0.000     53790.820     41505.105
+ G_34_38                0.000     53790.820     38331.635
+ G_34_39                0.000     53790.820     35158.166
+ G_34_40                0.000     53790.820     31984.696
+ G_34_41                0.000     53790.820     28811.227
+ G_34_42                0.000     53790.820     25637.757
+ G_34_43                0.000     53790.820     22464.287
+ G_34_44                0.000     53790.820     19290.818
+ G_34_45                0.000     53790.820     16117.348
+ G_34_46                0.000     53790.820     12943.878
+ G_34_47                0.000     53790.820      9770.409
+ G_34_48                0.000     53790.820      6596.939
+ G_34_49                0.000     53790.820      3423.470
+ G_34_50                0.000     53790.820       250.000
+ G_35_1                 0.000     55413.269    155750.011
+ G_35_2              1993.788     55413.269    152576.541
+ G_35_3              1896.130     55413.269    149403.072
+ G_35_4              1846.478     55413.269    146229.602
+ G_35_5              1770.339     55413.269    143056.133
+ G_35_6              1862.419     55413.269    139882.663
+ G_35_7              1873.606     55413.269    136709.193
+ G_35_8              1883.573     55413.269    133535.724
+ G_35_9              1745.254     55413.269    130362.254
+ G_35_10             1633.728     55413.269    127188.785
+ G_35_11             1652.382     55413.269    124015.315
+ G_35_12             1593.555     55413.269    120841.845
+ G_35_13             1617.665     55413.269    117668.376
+ G_35_14             1695.541     55413.269    114494.906
+ G_35_15             1754.734     55413.269    111321.436
+ G_35_16                0.000     55413.269    108147.967
+ G_35_17                0.000     55413.269    104974.497
+ G_35_18             1838.554     55413.269    101801.028
+ G_35_19             1821.271     55413.269     98627.558
+ G_35_20             1773.601     55413.269     95454.088
+ G_35_21             1761.957     55413.269     92280.619
+ G_35_22             1719.590     55413.269     89107.149
+ G_35_23             1741.079     55413.269     85933.680
+ G_35_24                0.000     55413.269     82760.210
+ G_35_25                0.000     55413.269     79586.740
+ G_35_26                0.000     55413.269     76413.271
+ G_35_27                0.000     55413.269     73239.801
+ G_35_28                0.000     55413.269     70066.332
+ G_35_29                0.000     55413.269     66892.862
+ G_35_30                0.000     55413.269     63719.392
+ G_35_31                0.000     55413.269     60545.923
+ G_35_32                0.000     55413.269     57372.453
+ G_35_33                0.000     55413.269     54198.983
+ G_35_34                0.000     55413.269     51025.514
+ G_35_35                0.000     55413.269     47852.044
+ G_35_36                0.000     55413.269     44678.575
+ G_35_37                0.000     55413.269     41505.105
+ G_35_38                0.000     55413.269     38331.635
+ G_35_39                0.000     55413.269     35158.166
+ G_35_40                0.000     55413.269     31984.696
+ G_35_41                0.000     55413.269     28811.227
+ G_35_42                0.000     55413.269     25637.757
+ G_35_43                0.000     55413.269     22464.287
+ G_35_44                0.000     55413.269     19290.818
+ G_35_45                0.000     55413.269     16117.348
+ G_35_46                0.000     55413.269     12943.878
+ G_35_47                0.000     55413.269      9770.409
+ G_35_48                0.000     55413.269      6596.939
+ G_35_49                0.000     55413.269      3423.470
+ G_35_50                0.000     55413.269       250.000
+ G_36_1                 0.000     57035.718    155750.011
+ G_36_2              1990.801     57035.718    152576.541
+ G_36_3              1912.742     57035.718    149403.072
+ G_36_4              1781.861     57035.718    146229.602
+ G_36_5              1772.046     57035.718    143056.133
+ G_36_6              1751.686     57035.718    139882.663
+ G_36_7              1770.553     57035.718    136709.193
+ G_36_8              1802.100     57035.718    133535.724
+ G_36_9              1726.601     57035.718    130362.254
+ G_36_10             1657.960     57035.718    127188.785
+ G_36_11             1553.291     57035.718    124015.315
+ G_36_12             1617.330     57035.718    120841.845
+ G_36_13             1652.260     57035.718    117668.376
+ G_36_14             1737.208     57035.718    114494.906
+ G_36_15                0.000     57035.718    111321.436
+ G_36_16                0.000     57035.718    108147.967
+ G_36_17                0.000     57035.718    104974.497
+ G_36_18                0.000     57035.718    101801.028
+ G_36_19                0.000     57035.718     98627.558
+ G_36_20                0.000     57035.718     95454.088
+ G_36_21                0.000     57035.718     92280.619
+ G_36_22                0.000     57035.718     89107.149
+ G_36_23                0.000     57035.718     85933.680
+ G_36_24                0.000     57035.718     82760.210
+ G_36_25                0.000     57035.718     79586.740
+ G_36_26                0.000     57035.718     76413.271
+ G_36_27                0.000     57035.718     73239.801
+ G_36_28                0.000     57035.718     70066.332
+ G_36_29                0.000     57035.718     66892.862
+ G_36_30                0.000     57035.718     63719.392
+ G_36_31                0.000     57035.718     60545.923
+ G_36_32                0.000     57035.718     57372.453
+ G_36_33                0.000     57035.718     54198.983
+ G_36_34                0.000     57035.718     51025.514
+ G_36_35                0.000     57035.718     47852.044
+ G_36_36                0.000     57035.718     44678.575
+ G_36_37                0.000     57035.718     41505.105
+ G_36_38                0.000     57035.718     38331.635
+ G_36_39                0.000     57035.718     35158.166
+ G_36_40                0.000     57035.718     31984.696
+ G_36_41                0.000     57035.718     28811.227
+ G_36_42                0.000     57035.718     25637.757
+ G_36_43                0.000     57035.718     22464.287
+ G_36_44                0.000     57035.718     19290.818
+ G_36_45                0.000     57035.718     16117.348
+ G_36_46                0.000     57035.718     12943.878
+ G_36_47                0.000     57035.718      9770.409
+ G_36_48                0.000     57035.718      6596.939
+ G_36_49                0.000     57035.718      3423.470
+ G_36_50                0.000     57035.718       250.000
+ G_37_1              2047.555     58658.167    155750.011
+ G_37_2              1943.679     58658.167    152576.541
+ G_37_3              1907.438     58658.167    149403.072
+ G_37_4              1811.365     58658.167    146229.602
+ G_37_5              1728.003     58658.167    143056.133
+ G_37_6              1697.218     58658.167    139882.663
+ G_37_7              1740.682     58658.167    136709.193
+ G_37_8              1693.804     58658.167    133535.724
+ G_37_9              1693.012     58658.167    130362.254
+ G_37_10             1557.589     58658.167    127188.785
+ G_37_11             1563.380     58658.167    124015.315
+ G_37_12             1672.072     58658.167    120841.845
+ G_37_13             1705.082     58658.167    117668.376
+ G_37_14                0.000     58658.167    114494.906
+ G_37_15                0.000     58658.167    111321.436
+ G_37_16                0.000     58658.167    108147.967
+ G_37_17                0.000     58658.167    104974.497
+ G_37_18                0.000     58658.167    101801.028
+ G_37_19                0.000     58658.167     98627.558
+ G_37_20                0.000     58658.167     95454.088
+ G_37_21                0.000     58658.167     92280.619
+ G_37_22                0.000     58658.167     89107.149
+ G_37_23                0.000     58658.167     85933.680
+ G_37_24                0.000     58658.167     82760.210
+ G_37_25                0.000     58658.167     79586.740
+ G_37_26                0.000     58658.167     76413.271
+ G_37_27                0.000     58658.167     73239.801
+ G_37_28                0.000     58658.167     70066.332
+ G_37_29                0.000     58658.167     66892.862
+ G_37_30                0.000     58658.167     63719.392
+ G_37_31                0.000     58658.167     60545.923
+ G_37_32                0.000     58658.167     57372.453
+ G_37_33                0.000     58658.167     54198.983
+ G_37_34                0.000     58658.167     51025.514
+ G_37_35                0.000     58658.167     47852.044
+ G_37_36                0.000     58658.167     44678.575
+ G_37_37                0.000     58658.167     41505.105
+ G_37_38                0.000     58658.167     38331.635
+ G_37_39                0.000     58658.167     35158.166
+ G_37_40                0.000     58658.167     31984.696
+ G_37_41                0.000     58658.167     28811.227
+ G_37_42                0.000     58658.167     25637.757
+ G_37_43                0.000     58658.167     22464.287
+ G_37_44                0.000     58658.167     19290.818
+ G_37_45                0.000     58658.167     16117.348
+ G_37_46                0.000     58658.167     12943.878
+ G_37_47                0.000     58658.167      9770.409
+ G_37_48                0.000     58658.167      6596.939
+ G_37_49                0.000     58658.167      3423.470
+ G_37_50                0.000     58658.167       250.000
+ G_38_1              1942.948     60280.617    155750.011
+ G_38_2              1971.843     60280.617    152576.541
+ G_38_3              1804.203     60280.617    149403.072
+ G_38_4              1807.708     60280.617    146229.602
+ G_38_5              1703.314     60280.617    143056.133
+ G_38_6              1707.429     60280.617    139882.663
+ G_38_7              1699.534     60280.617    136709.193
+ G_38_8              1648.938     60280.617    133535.724
+ G_38_9              1602.730     60280.617    130362.254
+ G_38_10             1560.424     60280.617    127188.785
+ G_38_11             1589.227     60280.617    124015.315
+ G_38_12             1671.462     60280.617    120841.845
+ G_38_13             1701.851     60280.617    117668.376
+ G_38_14                0.000     60280.617    114494.906
+ G_38_15                0.000     60280.617    111321.436
+ G_38_16                0.000     60280.617    108147.967
+ G_38_17                0.000     60280.617    104974.497
+ G_38_18                0.000     60280.617    101801.028
+ G_38_19                0.000     60280.617     98627.558
+ G_38_20                0.000     60280.617     95454.088
+ G_38_21                0.000     60280.617     92280.619
+ G_38_22                0.000     60280.617     89107.149
+ G_38_23                0.000     60280.617     85933.680
+ G_38_24                0.000     60280.617     82760.210
+ G_38_25                0.000     60280.617     79586.740
+ G_38_26                0.000     60280.617     76413.271
+ G_38_27                0.000     60280.617     73239.801
+ G_38_28                0.000     60280.617     70066.332
+ G_38_29                0.000     60280.617     66892.862
+ G_38_30                0.000     60280.617     63719.392
+ G_38_31                0.000     60280.617     60545.923
+ G_38_32                0.000     60280.617     57372.453
+ G_38_33                0.000     60280.617     54198.983
+ G_38_34                0.000     60280.617     51025.514
+ G_38_35                0.000     60280.617     47852.044
+ G_38_36                0.000     60280.617     44678.575
+ G_38_37                0.000     60280.617     41505.105
+ G_38_38                0.000     60280.617     38331.635
+ G_38_39                0.000     60280.617     35158.166
+ G_38_40                0.000     60280.617     31984.696
+ G_38_41                0.000     60280.617     28811.227
+ G_38_42                0.000     60280.617     25637.757
+ G_38_43                0.000     60280.617     22464.287
+ G_38_44                0.000     60280.617     19290.818
+ G_38_45                0.000     60280.617     16117.348
+ G_38_46                0.000     60280.617     12943.878
+ G_38_47                0.000     60280.617      9770.409
+ G_38_48                0.000     60280.617      6596.939
+ G_38_49                0.000     60280.617      3423.470
+ G_38_50                0.000     60280.617       250.000
+ G_39_1              1845.290     61903.066    155750.011
+ G_39_2              1892.412     61903.066    152576.541
+ G_39_3              1814.840     61903.066    149403.072
+ G_39_4              1714.409     61903.066    146229.602
+ G_39_5              1721.175     61903.066    143056.133
+ G_39_6              1614.221     61903.066    139882.663
+ G_39_7              1616.293     61903.066    136709.193
+ G_39_8              1573.134     61903.066    133535.724
+ G_39_9              1573.926     61903.066    130362.254
+ G_39_10             1624.005     61903.066    127188.785
+ G_39_11                0.000     61903.066    124015.315
+ G_39_12             1716.390     61903.066    120841.845
+ G_39_13                0.000     61903.066    117668.376
+ G_39_14                0.000     61903.066    114494.906
+ G_39_15                0.000     61903.066    111321.436
+ G_39_16                0.000     61903.066    108147.967
+ G_39_17                0.000     61903.066    104974.497
+ G_39_18                0.000     61903.066    101801.028
+ G_39_19                0.000     61903.066     98627.558
+ G_39_20                0.000     61903.066     95454.088
+ G_39_21                0.000     61903.066     92280.619
+ G_39_22                0.000     61903.066     89107.149
+ G_39_23                0.000     61903.066     85933.680
+ G_39_24                0.000     61903.066     82760.210
+ G_39_25                0.000     61903.066     79586.740
+ G_39_26                0.000     61903.066     76413.271
+ G_39_27                0.000     61903.066     73239.801
+ G_39_28                0.000     61903.066     70066.332
+ G_39_29                0.000     61903.066     66892.862
+ G_39_30                0.000     61903.066     63719.392
+ G_39_31                0.000     61903.066     60545.923
+ G_39_32                0.000     61903.066     57372.453
+ G_39_33                0.000     61903.066     54198.983
+ G_39_34                0.000     61903.066     51025.514
+ G_39_35                0.000     61903.066     47852.044
+ G_39_36                0.000     61903.066     44678.575
+ G_39_37                0.000     61903.066     41505.105
+ G_39_38                0.000     61903.066     38331.635
+ G_39_39                0.000     61903.066     35158.166
+ G_39_40                0.000     61903.066     31984.696
+ G_39_41                0.000     61903.066     28811.227
+ G_39_42                0.000     61903.066     25637.757
+ G_39_43                0.000     61903.066     22464.287
+ G_39_44                0.000     61903.066     19290.818
+ G_39_45                0.000     61903.066     16117.348
+ G_39_46                0.000     61903.066     12943.878
+ G_39_47                0.000     61903.066      9770.409
+ G_39_48                0.000     61903.066      6596.939
+ G_39_49                0.000     61903.066      3423.470
+ G_39_50                0.000     61903.066       250.000
+ G_40_1              1858.091     63525.515    155750.011
+ G_40_2              1709.014     63525.515    152576.541
+ G_40_3              1738.183     63525.515    149403.072
+ G_40_4              1717.487     63525.515    146229.602
+ G_40_5              1663.537     63525.515    143056.133
+ G_40_6              1640.403     63525.515    139882.663
+ G_40_7              1569.324     63525.515    136709.193
+ G_40_8              1561.887     63525.515    133535.724
+ G_40_9              1646.133     63525.515    130362.254
+ G_40_10             1643.085     63525.515    127188.785
+ G_40_11             1655.704     63525.515    124015.315
+ G_40_12                0.000     63525.515    120841.845
+ G_40_13                0.000     63525.515    117668.376
+ G_40_14                0.000     63525.515    114494.906
+ G_40_15                0.000     63525.515    111321.436
+ G_40_16                0.000     63525.515    108147.967
+ G_40_17                0.000     63525.515    104974.497
+ G_40_18                0.000     63525.515    101801.028
+ G_40_19                0.000     63525.515     98627.558
+ G_40_20                0.000     63525.515     95454.088
+ G_40_21                0.000     63525.515     92280.619
+ G_40_22                0.000     63525.515     89107.149
+ G_40_23                0.000     63525.515     85933.680
+ G_40_24                0.000     63525.515     82760.210
+ G_40_25                0.000     63525.515     79586.740
+ G_40_26                0.000     63525.515     76413.271
+ G_40_27                0.000     63525.515     73239.801
+ G_40_28                0.000     63525.515     70066.332
+ G_40_29                0.000     63525.515     66892.862
+ G_40_30                0.000     63525.515     63719.392
+ G_40_31                0.000     63525.515     60545.923
+ G_40_32                0.000     63525.515     57372.453
+ G_40_33                0.000     63525.515     54198.983
+ G_40_34                0.000     63525.515     51025.514
+ G_40_35                0.000     63525.515     47852.044
+ G_40_36                0.000     63525.515     44678.575
+ G_40_37                0.000     63525.515     41505.105
+ G_40_38                0.000     63525.515     38331.635
+ G_40_39                0.000     63525.515     35158.166
+ G_40_40                0.000     63525.515     31984.696
+ G_40_41                0.000     63525.515     28811.227
+ G_40_42                0.000     63525.515     25637.757
+ G_40_43                0.000     63525.515     22464.287
+ G_40_44                0.000     63525.515     19290.818
+ G_40_45                0.000     63525.515     16117.348
+ G_40_46                0.000     63525.515     12943.878
+ G_40_47                0.000     63525.515      9770.409
+ G_40_48                0.000     63525.515      6596.939
+ G_40_49                0.000     63525.515      3423.470
+ G_40_50                0.000     63525.515       250.000
+ G_41_1              1794.175     65147.964    155750.011
+ G_41_2              1780.215     65147.964    152576.541
+ G_41_3              1681.856     65147.964    149403.072
+ G_41_4              1662.227     65147.964    146229.602
+ G_41_5              1673.047     65147.964    143056.133
+ G_41_6              1573.621     65147.964    139882.663
+ G_41_7              1569.354     65147.964    136709.193
+ G_41_8              1598.859     65147.964    133535.724
+ G_41_9              1606.906     65147.964    130362.254
+ G_41_10             1634.399     65147.964    127188.785
+ G_41_11             1703.710     65147.964    124015.315
+ G_41_12                0.000     65147.964    120841.845
+ G_41_13                0.000     65147.964    117668.376
+ G_41_14                0.000     65147.964    114494.906
+ G_41_15                0.000     65147.964    111321.436
+ G_41_16                0.000     65147.964    108147.967
+ G_41_17                0.000     65147.964    104974.497
+ G_41_18                0.000     65147.964    101801.028
+ G_41_19                0.000     65147.964     98627.558
+ G_41_20                0.000     65147.964     95454.088
+ G_41_21                0.000     65147.964     92280.619
+ G_41_22                0.000     65147.964     89107.149
+ G_41_23                0.000     65147.964     85933.680
+ G_41_24                0.000     65147.964     82760.210
+ G_41_25                0.000     65147.964     79586.740
+ G_41_26                0.000     65147.964     76413.271
+ G_41_27                0.000     65147.964     73239.801
+ G_41_28                0.000     65147.964     70066.332
+ G_41_29                0.000     65147.964     66892.862
+ G_41_30                0.000     65147.964     63719.392
+ G_41_31                0.000     65147.964     60545.923
+ G_41_32                0.000     65147.964     57372.453
+ G_41_33                0.000     65147.964     54198.983
+ G_41_34                0.000     65147.964     51025.514
+ G_41_35                0.000     65147.964     47852.044
+ G_41_36                0.000     65147.964     44678.575
+ G_41_37                0.000     65147.964     41505.105
+ G_41_38                0.000     65147.964     38331.635
+ G_41_39                0.000     65147.964     35158.166
+ G_41_40                0.000     65147.964     31984.696
+ G_41_41                0.000     65147.964     28811.227
+ G_41_42                0.000     65147.964     25637.757
+ G_41_43                0.000     65147.964     22464.287
+ G_41_44                0.000     65147.964     19290.818
+ G_41_45                0.000     65147.964     16117.348
+ G_41_46                0.000     65147.964     12943.878
+ G_41_47                0.000     65147.964      9770.409
+ G_41_48                0.000     65147.964      6596.939
+ G_41_49                0.000     65147.964      3423.470
+ G_41_50                0.000     65147.964       250.000
+ G_42_1              1751.869     66770.413    155750.011
+ G_42_2              1753.393     66770.413    152576.541
+ G_42_3              1646.072     66770.413    149403.072
+ G_42_4              1598.554     66770.413    146229.602
+ G_42_5              1603.339     66770.413    143056.133
+ G_42_6              1578.315     66770.413    139882.663
+ G_42_7              1588.191     66770.413    136709.193
+ G_42_8              1623.487     66770.413    133535.724
+ G_42_9              1643.543     66770.413    130362.254
+ G_42_10             1656.771     66770.413    127188.785
+ G_42_11             1645.097     66770.413    124015.315
+ G_42_12                0.000     66770.413    120841.845
+ G_42_13                0.000     66770.413    117668.376
+ G_42_14                0.000     66770.413    114494.906
+ G_42_15                0.000     66770.413    111321.436
+ G_42_16                0.000     66770.413    108147.967
+ G_42_17                0.000     66770.413    104974.497
+ G_42_18                0.000     66770.413    101801.028
+ G_42_19                0.000     66770.413     98627.558
+ G_42_20                0.000     66770.413     95454.088
+ G_42_21                0.000     66770.413     92280.619
+ G_42_22                0.000     66770.413     89107.149
+ G_42_23                0.000     66770.413     85933.680
+ G_42_24                0.000     66770.413     82760.210
+ G_42_25                0.000     66770.413     79586.740
+ G_42_26                0.000     66770.413     76413.271
+ G_42_27                0.000     66770.413     73239.801
+ G_42_28                0.000     66770.413     70066.332
+ G_42_29                0.000     66770.413     66892.862
+ G_42_30                0.000     66770.413     63719.392
+ G_42_31                0.000     66770.413     60545.923
+ G_42_32                0.000     66770.413     57372.453
+ G_42_33                0.000     66770.413     54198.983
+ G_42_34                0.000     66770.413     51025.514
+ G_42_35                0.000     66770.413     47852.044
+ G_42_36                0.000     66770.413     44678.575
+ G_42_37                0.000     66770.413     41505.105
+ G_42_38                0.000     66770.413     38331.635
+ G_42_39                0.000     66770.413     35158.166
+ G_42_40                0.000     66770.413     31984.696
+ G_42_41                0.000     66770.413     28811.227
+ G_42_42                0.000     66770.413     25637.757
+ G_42_43                0.000     66770.413     22464.287
+ G_42_44                0.000     66770.413     19290.818
+ G_42_45                0.000     66770.413     16117.348
+ G_42_46                0.000     66770.413     12943.878
+ G_42_47                0.000     66770.413      9770.409
+ G_42_48                0.000     66770.413      6596.939
+ G_42_49                0.000     66770.413      3423.470
+ G_42_50                0.000     66770.413       250.000
+ G_43_1              1734.068     68392.862    155750.011
+ G_43_2              1699.900     68392.862    152576.541
+ G_43_3              1616.233     68392.862    149403.072
+ G_43_4              1585.813     68392.862    146229.602
+ G_43_5              1583.771     68392.862    143056.133
+ G_43_6              1579.717     68392.862    139882.663
+ G_43_7              1610.655     68392.862    136709.193
+ G_43_8              1634.521     68392.862    133535.724
+ G_43_9              1652.107     68392.862    130362.254
+ G_43_10             1675.547     68392.862    127188.785
+ G_43_11                0.000     68392.862    124015.315
+ G_43_12                0.000     68392.862    120841.845
+ G_43_13                0.000     68392.862    117668.376
+ G_43_14                0.000     68392.862    114494.906
+ G_43_15                0.000     68392.862    111321.436
+ G_43_16                0.000     68392.862    108147.967
+ G_43_17                0.000     68392.862    104974.497
+ G_43_18                0.000     68392.862    101801.028
+ G_43_19                0.000     68392.862     98627.558
+ G_43_20                0.000     68392.862     95454.088
+ G_43_21                0.000     68392.862     92280.619
+ G_43_22                0.000     68392.862     89107.149
+ G_43_23                0.000     68392.862     85933.680
+ G_43_24                0.000     68392.862     82760.210
+ G_43_25                0.000     68392.862     79586.740
+ G_43_26                0.000     68392.862     76413.271
+ G_43_27                0.000     68392.862     73239.801
+ G_43_28                0.000     68392.862     70066.332
+ G_43_29                0.000     68392.862     66892.862
+ G_43_30                0.000     68392.862     63719.392
+ G_43_31                0.000     68392.862     60545.923
+ G_43_32                0.000     68392.862     57372.453
+ G_43_33                0.000     68392.862     54198.983
+ G_43_34                0.000     68392.862     51025.514
+ G_43_35                0.000     68392.862     47852.044
+ G_43_36                0.000     68392.862     44678.575
+ G_43_37                0.000     68392.862     41505.105
+ G_43_38                0.000     68392.862     38331.635
+ G_43_39                0.000     68392.862     35158.166
+ G_43_40                0.000     68392.862     31984.696
+ G_43_41                0.000     68392.862     28811.227
+ G_43_42                0.000     68392.862     25637.757
+ G_43_43                0.000     68392.862     22464.287
+ G_43_44                0.000     68392.862     19290.818
+ G_43_45                0.000     68392.862     16117.348
+ G_43_46                0.000     68392.862     12943.878
+ G_43_47                0.000     68392.862      9770.409
+ G_43_48                0.000     68392.862      6596.939
+ G_43_49                0.000     68392.862      3423.470
+ G_43_50                0.000     68392.862       250.000
+ G_44_1              1713.311     70015.311    155750.011
+ G_44_2              1701.028     70015.311    152576.541
+ G_44_3              1587.277     70015.311    149403.072
+ G_44_4              1588.008     70015.311    146229.602
+ G_44_5              1601.389     70015.311    143056.133
+ G_44_6              1623.060     70015.311    139882.663
+ G_44_7              1642.659     70015.311    136709.193
+ G_44_8              1674.449     70015.311    133535.724
+ G_44_9              1686.580     70015.311    130362.254
+ G_44_10                0.000     70015.311    127188.785
+ G_44_11                0.000     70015.311    124015.315
+ G_44_12                0.000     70015.311    120841.845
+ G_44_13                0.000     70015.311    117668.376
+ G_44_14                0.000     70015.311    114494.906
+ G_44_15                0.000     70015.311    111321.436
+ G_44_16                0.000     70015.311    108147.967
+ G_44_17                0.000     70015.311    104974.497
+ G_44_18                0.000     70015.311    101801.028
+ G_44_19                0.000     70015.311     98627.558
+ G_44_20                0.000     70015.311     95454.088
+ G_44_21                0.000     70015.311     92280.619
+ G_44_22                0.000     70015.311     89107.149
+ G_44_23                0.000     70015.311     85933.680
+ G_44_24                0.000     70015.311     82760.210
+ G_44_25                0.000     70015.311     79586.740
+ G_44_26                0.000     70015.311     76413.271
+ G_44_27                0.000     70015.311     73239.801
+ G_44_28                0.000     70015.311     70066.332
+ G_44_29                0.000     70015.311     66892.862
+ G_44_30                0.000     70015.311     63719.392
+ G_44_31                0.000     70015.311     60545.923
+ G_44_32                0.000     70015.311     57372.453
+ G_44_33                0.000     70015.311     54198.983
+ G_44_34                0.000     70015.311     51025.514
+ G_44_35                0.000     70015.311     47852.044
+ G_44_36                0.000     70015.311     44678.575
+ G_44_37                0.000     70015.311     41505.105
+ G_44_38                0.000     70015.311     38331.635
+ G_44_39                0.000     70015.311     35158.166
+ G_44_40                0.000     70015.311     31984.696
+ G_44_41                0.000     70015.311     28811.227
+ G_44_42                0.000     70015.311     25637.757
+ G_44_43                0.000     70015.311     22464.287
+ G_44_44                0.000     70015.311     19290.818
+ G_44_45                0.000     70015.311     16117.348
+ G_44_46                0.000     70015.311     12943.878
+ G_44_47                0.000     70015.311      9770.409
+ G_44_48                0.000     70015.311      6596.939
+ G_44_49                0.000     70015.311      3423.470
+ G_44_50                0.000     70015.311       250.000
+ G_45_1              1708.343     71637.760    155750.011
+ G_45_2              1621.567     71637.760    152576.541
+ G_45_3              1645.128     71637.760    149403.072
+ G_45_4              1608.308     71637.760    146229.602
+ G_45_5              1673.596     71637.760    143056.133
+ G_45_6              1658.203     71637.760    139882.663
+ G_45_7              1627.388     71637.760    136709.193
+ G_45_8              1704.045     71637.760    133535.724
+ G_45_9                 0.000     71637.760    130362.254
+ G_45_10                0.000     71637.760    127188.785
+ G_45_11                0.000     71637.760    124015.315
+ G_45_12                0.000     71637.760    120841.845
+ G_45_13                0.000     71637.760    117668.376
+ G_45_14                0.000     71637.760    114494.906
+ G_45_15                0.000     71637.760    111321.436
+ G_45_16                0.000     71637.760    108147.967
+ G_45_17                0.000     71637.760    104974.497
+ G_45_18                0.000     71637.760    101801.028
+ G_45_19                0.000     71637.760     98627.558
+ G_45_20                0.000     71637.760     95454.088
+ G_45_21                0.000     71637.760     92280.619
+ G_45_22                0.000     71637.760     89107.149
+ G_45_23                0.000     71637.760     85933.680
+ G_45_24                0.000     71637.760     82760.210
+ G_45_25                0.000     71637.760     79586.740
+ G_45_26                0.000     71637.760     76413.271
+ G_45_27                0.000     71637.760     73239.801
+ G_45_28                0.000     71637.760     70066.332
+ G_45_29                0.000     71637.760     66892.862
+ G_45_30                0.000     71637.760     63719.392
+ G_45_31                0.000     71637.760     60545.923
+ G_45_32                0.000     71637.760     57372.453
+ G_45_33                0.000     71637.760     54198.983
+ G_45_34                0.000     71637.760     51025.514
+ G_45_35                0.000     71637.760     47852.044
+ G_45_36                0.000     71637.760     44678.575
+ G_45_37                0.000     71637.760     41505.105
+ G_45_38                0.000     71637.760     38331.635
+ G_45_39                0.000     71637.760     35158.166
+ G_45_40                0.000     71637.760     31984.696
+ G_45_41                0.000     71637.760     28811.227
+ G_45_42                0.000     71637.760     25637.757
+ G_45_43                0.000     71637.760     22464.287
+ G_45_44                0.000     71637.760     19290.818
+ G_45_45                0.000     71637.760     16117.348
+ G_45_46                0.000     71637.760     12943.878
+ G_45_47                0.000     71637.760      9770.409
+ G_45_48                0.000     71637.760      6596.939
+ G_45_49                0.000     71637.760      3423.470
+ G_45_50                0.000     71637.760       250.000
+ G_46_1                 0.000     73260.209    155750.011
+ G_46_2              1696.273     73260.209    152576.541
+ G_46_3              1664.513     73260.209    149403.072
+ G_46_4              1626.199     73260.209    146229.602
+ G_46_5              1679.814     73260.209    143056.133
+ G_46_6              1648.755     73260.209    139882.663
+ G_46_7              1625.925     73260.209    136709.193
+ G_46_8              1710.141     73260.209    133535.724
+ G_46_9                 0.000     73260.209    130362.254
+ G_46_10                0.000     73260.209    127188.785
+ G_46_11                0.000     73260.209    124015.315
+ G_46_12                0.000     73260.209    120841.845
+ G_46_13                0.000     73260.209    117668.376
+ G_46_14                0.000     73260.209    114494.906
+ G_46_15                0.000     73260.209    111321.436
+ G_46_16                0.000     73260.209    108147.967
+ G_46_17                0.000     73260.209    104974.497
+ G_46_18                0.000     73260.209    101801.028
+ G_46_19                0.000     73260.209     98627.558
+ G_46_20                0.000     73260.209     95454.088
+ G_46_21                0.000     73260.209     92280.619
+ G_46_22                0.000     73260.209     89107.149
+ G_46_23                0.000     73260.209     85933.680
+ G_46_24                0.000     73260.209     82760.210
+ G_46_25                0.000     73260.209     79586.740
+ G_46_26                0.000     73260.209     76413.271
+ G_46_27                0.000     73260.209     73239.801
+ G_46_28                0.000     73260.209     70066.332
+ G_46_29                0.000     73260.209     66892.862
+ G_46_30                0.000     73260.209     63719.392
+ G_46_31                0.000     73260.209     60545.923
+ G_46_32                0.000     73260.209     57372.453
+ G_46_33                0.000     73260.209     54198.983
+ G_46_34                0.000     73260.209     51025.514
+ G_46_35                0.000     73260.209     47852.044
+ G_46_36                0.000     73260.209     44678.575
+ G_46_37                0.000     73260.209     41505.105
+ G_46_38                0.000     73260.209     38331.635
+ G_46_39                0.000     73260.209     35158.166
+ G_46_40                0.000     73260.209     31984.696
+ G_46_41                0.000     73260.209     28811.227
+ G_46_42                0.000     73260.209     25637.757
+ G_46_43                0.000     73260.209     22464.287
+ G_46_44                0.000     73260.209     19290.818
+ G_46_45                0.000     73260.209     16117.348
+ G_46_46                0.000     73260.209     12943.878
+ G_46_47                0.000     73260.209      9770.409
+ G_46_48                0.000     73260.209      6596.939
+ G_46_49                0.000     73260.209      3423.470
+ G_46_50                0.000     73260.209       250.000
+ G_47_1                 0.000     74882.658    155750.011
+ G_47_2              1777.289     74882.658    152576.541
+ G_47_3              1664.299     74882.658    149403.072
+ G_47_4              1663.172     74882.658    146229.602
+ G_47_5              1678.259     74882.658    143056.133
+ G_47_6              1660.886     74882.658    139882.663
+ G_47_7              1634.216     74882.658    136709.193
+ G_47_8              1702.674     74882.658    133535.724
+ G_47_9                 0.000     74882.658    130362.254
+ G_47_10                0.000     74882.658    127188.785
+ G_47_11                0.000     74882.658    124015.315
+ G_47_12                0.000     74882.658    120841.845
+ G_47_13                0.000     74882.658    117668.376
+ G_47_14                0.000     74882.658    114494.906
+ G_47_15                0.000     74882.658    111321.436
+ G_47_16                0.000     74882.658    108147.967
+ G_47_17                0.000     74882.658    104974.497
+ G_47_18                0.000     74882.658    101801.028
+ G_47_19                0.000     74882.658     98627.558
+ G_47_20                0.000     74882.658     95454.088
+ G_47_21                0.000     74882.658     92280.619
+ G_47_22                0.000     74882.658     89107.149
+ G_47_23                0.000     74882.658     85933.680
+ G_47_24                0.000     74882.658     82760.210
+ G_47_25                0.000     74882.658     79586.740
+ G_47_26                0.000     74882.658     76413.271
+ G_47_27                0.000     74882.658     73239.801
+ G_47_28                0.000     74882.658     70066.332
+ G_47_29                0.000     74882.658     66892.862
+ G_47_30                0.000     74882.658     63719.392
+ G_47_31                0.000     74882.658     60545.923
+ G_47_32                0.000     74882.658     57372.453
+ G_47_33                0.000     74882.658     54198.983
+ G_47_34                0.000     74882.658     51025.514
+ G_47_35                0.000     74882.658     47852.044
+ G_47_36                0.000     74882.658     44678.575
+ G_47_37                0.000     74882.658     41505.105
+ G_47_38                0.000     74882.658     38331.635
+ G_47_39                0.000     74882.658     35158.166
+ G_47_40                0.000     74882.658     31984.696
+ G_47_41                0.000     74882.658     28811.227
+ G_47_42                0.000     74882.658     25637.757
+ G_47_43                0.000     74882.658     22464.287
+ G_47_44                0.000     74882.658     19290.818
+ G_47_45                0.000     74882.658     16117.348
+ G_47_46                0.000     74882.658     12943.878
+ G_47_47                0.000     74882.658      9770.409
+ G_47_48                0.000     74882.658      6596.939
+ G_47_49                0.000     74882.658      3423.470
+ G_47_50                0.000     74882.658       250.000
+ G_48_1                 0.000     76505.107    155750.011
+ G_48_2                 0.000     76505.107    152576.541
+ G_48_3              1675.211     76505.107    149403.072
+ G_48_4              1661.373     76505.107    146229.602
+ G_48_5              1689.080     76505.107    143056.133
+ G_48_6              1689.049     76505.107    139882.663
+ G_48_7              1632.174     76505.107    136709.193
+ G_48_8              1698.132     76505.107    133535.724
+ G_48_9                 0.000     76505.107    130362.254
+ G_48_10                0.000     76505.107    127188.785
+ G_48_11                0.000     76505.107    124015.315
+ G_48_12                0.000     76505.107    120841.845
+ G_48_13                0.000     76505.107    117668.376
+ G_48_14                0.000     76505.107    114494.906
+ G_48_15                0.000     76505.107    111321.436
+ G_48_16                0.000     76505.107    108147.967
+ G_48_17                0.000     76505.107    104974.497
+ G_48_18                0.000     76505.107    101801.028
+ G_48_19                0.000     76505.107     98627.558
+ G_48_20                0.000     76505.107     95454.088
+ G_48_21                0.000     76505.107     92280.619
+ G_48_22                0.000     76505.107     89107.149
+ G_48_23                0.000     76505.107     85933.680
+ G_48_24                0.000     76505.107     82760.210
+ G_48_25                0.000     76505.107     79586.740
+ G_48_26                0.000     76505.107     76413.271
+ G_48_27                0.000     76505.107     73239.801
+ G_48_28                0.000     76505.107     70066.332
+ G_48_29                0.000     76505.107     66892.862
+ G_48_30                0.000     76505.107     63719.392
+ G_48_31                0.000     76505.107     60545.923
+ G_48_32                0.000     76505.107     57372.453
+ G_48_33                0.000     76505.107     54198.983
+ G_48_34                0.000     76505.107     51025.514
+ G_48_35                0.000     76505.107     47852.044
+ G_48_36                0.000     76505.107     44678.575
+ G_48_37                0.000     76505.107     41505.105
+ G_48_38                0.000     76505.107     38331.635
+ G_48_39                0.000     76505.107     35158.166
+ G_48_40                0.000     76505.107     31984.696
+ G_48_41                0.000     76505.107     28811.227
+ G_48_42                0.000     76505.107     25637.757
+ G_48_43                0.000     76505.107     22464.287
+ G_48_44                0.000     76505.107     19290.818
+ G_48_45                0.000     76505.107     16117.348
+ G_48_46                0.000     76505.107     12943.878
+ G_48_47                0.000     76505.107      9770.409
+ G_48_48                0.000     76505.107      6596.939
+ G_48_49                0.000     76505.107      3423.470
+ G_48_50                0.000     76505.107       250.000
+ G_49_1                 0.000     78127.557    155750.011
+ G_49_2                 0.000     78127.557    152576.541
+ G_49_3                 0.000     78127.557    149403.072
+ G_49_4              1686.093     78127.557    146229.602
+ G_49_5              1661.282     78127.557    143056.133
+ G_49_6              1700.022     78127.557    139882.663
+ G_49_7              1641.439     78127.557    136709.193
+ G_49_8              1686.519     78127.557    133535.724
+ G_49_9                 0.000     78127.557    130362.254
+ G_49_10                0.000     78127.557    127188.785
+ G_49_11                0.000     78127.557    124015.315
+ G_49_12                0.000     78127.557    120841.845
+ G_49_13                0.000     78127.557    117668.376
+ G_49_14                0.000     78127.557    114494.906
+ G_49_15                0.000     78127.557    111321.436
+ G_49_16                0.000     78127.557    108147.967
+ G_49_17                0.000     78127.557    104974.497
+ G_49_18                0.000     78127.557    101801.028
+ G_49_19                0.000     78127.557     98627.558
+ G_49_20                0.000     78127.557     95454.088
+ G_49_21                0.000     78127.557     92280.619
+ G_49_22                0.000     78127.557     89107.149
+ G_49_23                0.000     78127.557     85933.680
+ G_49_24                0.000     78127.557     82760.210
+ G_49_25                0.000     78127.557     79586.740
+ G_49_26                0.000     78127.557     76413.271
+ G_49_27                0.000     78127.557     73239.801
+ G_49_28                0.000     78127.557     70066.332
+ G_49_29                0.000     78127.557     66892.862
+ G_49_30                0.000     78127.557     63719.392
+ G_49_31                0.000     78127.557     60545.923
+ G_49_32                0.000     78127.557     57372.453
+ G_49_33                0.000     78127.557     54198.983
+ G_49_34                0.000     78127.557     51025.514
+ G_49_35                0.000     78127.557     47852.044
+ G_49_36                0.000     78127.557     44678.575
+ G_49_37                0.000     78127.557     41505.105
+ G_49_38                0.000     78127.557     38331.635
+ G_49_39                0.000     78127.557     35158.166
+ G_49_40                0.000     78127.557     31984.696
+ G_49_41                0.000     78127.557     28811.227
+ G_49_42                0.000     78127.557     25637.757
+ G_49_43                0.000     78127.557     22464.287
+ G_49_44                0.000     78127.557     19290.818
+ G_49_45                0.000     78127.557     16117.348
+ G_49_46                0.000     78127.557     12943.878
+ G_49_47                0.000     78127.557      9770.409
+ G_49_48                0.000     78127.557      6596.939
+ G_49_49                0.000     78127.557      3423.470
+ G_49_50                0.000     78127.557       250.000
+ G_50_1                 0.000     79750.006    155750.011
+ G_50_2                 0.000     79750.006    152576.541
+ G_50_3                 0.000     79750.006    149403.072
+ G_50_4                 0.000     79750.006    146229.602
+ G_50_5              1758.940     79750.006    143056.133
+ G_50_6              1707.032     79750.006    139882.663
+ G_50_7              1684.020     79750.006    136709.193
+ G_50_8                 0.000     79750.006    133535.724
+ G_50_9                 0.000     79750.006    130362.254
+ G_50_10                0.000     79750.006    127188.785
+ G_50_11                0.000     79750.006    124015.315
+ G_50_12                0.000     79750.006    120841.845
+ G_50_13                0.000     79750.006    117668.376
+ G_50_14                0.000     79750.006    114494.906
+ G_50_15                0.000     79750.006    111321.436
+ G_50_16                0.000     79750.006    108147.967
+ G_50_17                0.000     79750.006    104974.497
+ G_50_18                0.000     79750.006    101801.028
+ G_50_19                0.000     79750.006     98627.558
+ G_50_20                0.000     79750.006     95454.088
+ G_50_21                0.000     79750.006     92280.619
+ G_50_22                0.000     79750.006     89107.149
+ G_50_23                0.000     79750.006     85933.680
+ G_50_24                0.000     79750.006     82760.210
+ G_50_25                0.000     79750.006     79586.740
+ G_50_26                0.000     79750.006     76413.271
+ G_50_27                0.000     79750.006     73239.801
+ G_50_28                0.000     79750.006     70066.332
+ G_50_29                0.000     79750.006     66892.862
+ G_50_30                0.000     79750.006     63719.392
+ G_50_31                0.000     79750.006     60545.923
+ G_50_32                0.000     79750.006     57372.453
+ G_50_33                0.000     79750.006     54198.983
+ G_50_34                0.000     79750.006     51025.514
+ G_50_35                0.000     79750.006     47852.044
+ G_50_36                0.000     79750.006     44678.575
+ G_50_37                0.000     79750.006     41505.105
+ G_50_38                0.000     79750.006     38331.635
+ G_50_39                0.000     79750.006     35158.166
+ G_50_40                0.000     79750.006     31984.696
+ G_50_41                0.000     79750.006     28811.227
+ G_50_42                0.000     79750.006     25637.757
+ G_50_43                0.000     79750.006     22464.287
+ G_50_44                0.000     79750.006     19290.818
+ G_50_45                0.000     79750.006     16117.348
+ G_50_46                0.000     79750.006     12943.878
+ G_50_47                0.000     79750.006      9770.409
+ G_50_48                0.000     79750.006      6596.939
+ G_50_49                0.000     79750.006      3423.470
+ G_50_50                0.000     79750.006       250.000
+   
+ NORMAL TERMINATION OF HEAVY SIMULATION
