@@ -1,3 +1,5 @@
+**This github.com site is a mirror of the official code release at [code.usgs.gov](https://code.usgs.gov/sgp/heavy).** Issues can be opened on either platform (opening issues on code.usgs.gov requires an account on that platform).
+
 # Heavy
 A forward-gravity program for MODFLOW-2005 and MODFLOW-NWT
 
