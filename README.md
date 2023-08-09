@@ -1,12 +1,7 @@
-**This is a Github mirror of Heavy. The official software release is at [code.usgs.gov](https://code.usgs.gov/sgp/heavy/-/tree/1.0)**
-(The Truxton model files were removed owing ot their large size)
-
-Issues and pull requests can be submitted using this Github mirror. 
-
 # Heavy
 A forward-gravity program for MODFLOW-2005 and MODFLOW-NWT
 
-[Download Heavy Windows executable and source code](https://code.usgs.gov/sgp/heavy/-/archive/v1.0/heavy-v1.0.zip)
+[Download Heavy Windows executable and source code (updated 2023-08-09)](https://code.usgs.gov/sgp/heavy/-/archive/1.0.1/heavy-1.0.1.zip)
 
 ![gravity calculation](./img/g_calculation.png)
 

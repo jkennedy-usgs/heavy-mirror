@@ -3,22 +3,22 @@
     "name": "Heavy",
     "organization": "U.S. Geological Survey",
     "description": "A forward-gravity program for MODFLOW-2005 and MODFLOW-NWT",
-    "version": "1.0",
-    "status": "Production",
+    "version": "1.0.1",
+    "status": "Development",
 
     "permissions": {
       "usageType": "openSource",
       "licenses": [
         {
           "name": "Public Domain, CC0-1.0",
-          "URL": "https://code.usgs.gov/sgp/heavy/-/raw/1.0/LICENSE.md"
+          "URL": "https://code.usgs.gov/sgp/heavy/-/raw/1.0.1/LICENSE.md"
         }
       ]
     },
 
     "homepageURL": "https://code.usgs.gov/sgp/heavy",
-    "downloadURL": "https://code.usgs.gov/sgp/heavy/-/archive/1.0/heavy-1.0.zip",
-    "disclaimerURL": "https://code.usgs.gov/sgp/heavy/-/raw/1.0/DISCLAIMER.md",
+    "downloadURL": "https://code.usgs.gov/sgp/heavy/-/archive/1.0.1/heavy-1.0.1.zip",
+    "disclaimerURL": "https://code.usgs.gov/sgp/heavy/-/raw/1.0.1/DISCLAIMER.md",
     "repositoryURL": "https://code.usgs.gov/sgp/heavy.git",
     "vcs": "git",
 
@@ -46,7 +46,7 @@
     },
 
     "date": {
-      "metadataLastUpdated": "2023-03-30"
+      "metadataLastUpdated": "2023-08-08"
     }
   }
 ]

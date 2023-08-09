@@ -90,8 +90,8 @@ def update_plot(i, data, idxs, scat, ts):
     dp = []
     d = data[i]
     scat.set_array(np.array(d))
-    #scat.set_clim([d.min(), d.max()])
-    ax2.set_title("{:.0f} years".format(float(ts[i])/365))
+    # scat.set_clim([d.min(), d.max()])
+    ax2.set_title("{:.0f}".format(float(ts[i])))
     plt.draw()
     labels = [item.get_text() for item in ax2.get_xticklabels()]
 

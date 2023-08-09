@@ -320,34 +320,34 @@ C6------READ PARAMETER DEFINITIONS
          DO 120 K=1,NPLPF
          SCFLG=0
          CALL UPARARRRP(IN,IOUT,N,1,PTYP,1,0,-1,PN)
-         IF (ANY((/ 'HK  ', 'HANI','VKCB','VK  ','VANI'/) == PTYP)) THEN
-            WRITE(IOUT,*) ' PARAMETER NOT DEEDED FOR HEAVY: ', PN
-*C   Note that NPHK and the other NP variables in
-*C   this group are used only as flags, not counts
-*         IF(PTYP.EQ.'HK') THEN
-*            NPHK=1
-*         ELSE IF(PTYP.EQ.'HANI') THEN
-*C6A-----WHEN A HANI PARAMETER IS USED, THEN ALL HORIZONTAL ANISOTROPY
-*C6A-----MUST BE DEFINED USING PARAMETERS.  ENSURE THAT ALL CHANI <= 0
-*            DO 118 I = 1, NLAY
-*              IF (CHANI(I).GT.0.0) THEN
-*                WRITE(IOUT,117)
-*  117           FORMAT(/,
+*         IF (ANY((/ 'HK  ', 'HANI','VKCB','VK  ','VANI'/) == PTYP)) THEN
+*            WRITE(IOUT,*) ' PARAMETER NOT DEEDED FOR HEAVY: ', PN
+C   Note that NPHK and the other NP variables in
+C   this group are used only as flags, not counts
+         IF(PTYP.EQ.'HK') THEN
+            NPHK=1
+         ELSE IF(PTYP.EQ.'HANI') THEN
+C6A-----WHEN A HANI PARAMETER IS USED, THEN ALL HORIZONTAL ANISOTROPY
+C6A-----MUST BE DEFINED USING PARAMETERS.  ENSURE THAT ALL CHANI <= 0
+            DO 118 I = 1, NLAY
+              IF (CHANI(I).GT.0.0) THEN
+                WRITE(IOUT,117)
+  117           FORMAT(/,'ERROR')
 *     &' ERROR: WHEN A HANI PARAMETER IS USED, CHANI FOR ALL LAYERS',/,
 *     &' MUST BE LESS THAN OR EQUAL TO 0.0 -- STOP EXECUTION',
 *     &' (GWF2LPF7AR)')
-*                CALL USTOP(' ')
-*              ENDIF
-*  118       CONTINUE
-*            NPHANI=1
-*         ELSE IF(PTYP.EQ.'VKCB') THEN
-*            NPVKCB=1
-*         ELSE IF(PTYP.EQ.'VK') THEN
-*            NPVK=1
-*            CALL SGWF2LPF7CK(IOUT,N,'VK  ')
-*         ELSE IF(PTYP.EQ.'VANI') THEN
-*            NPVANI=1
-*            CALL SGWF2LPF7CK(IOUT,N,'VANI')
+                CALL USTOP(' ')
+              ENDIF
+  118       CONTINUE
+            NPHANI=1
+         ELSE IF(PTYP.EQ.'VKCB') THEN
+            NPVKCB=1
+         ELSE IF(PTYP.EQ.'VK') THEN
+            NPVK=1
+            CALL SGWF2LPF7CK(IOUT,N,'VK  ')
+         ELSE IF(PTYP.EQ.'VANI') THEN
+            NPVANI=1
+            CALL SGWF2LPF7CK(IOUT,N,'VANI')
          ELSE IF(PTYP.EQ.'SS') THEN
             NPSS=1
          ELSE IF(PTYP.EQ.'SY') THEN
@@ -364,52 +364,52 @@ C7------DEFINE DATA FOR EACH LAYER -- VIA READING OR NAMED PARAMETERS.
       KK=K
 C
 C7A-----DEFINE HORIZONTAL HYDRAULIC CONDUCTIVITY (HK)
-*      IF(NPHK.EQ.0) THEN
-*         CALL U2DREL(HK(:,:,KK),ANAME(1),NROW,NCOL,KK,IN,IOUT)
-*      ELSE
-*         READ(IN,*) LAYFLG(1,K)
-*         WRITE(IOUT,121) ANAME(1),K,LAYFLG(1,K)
+      IF(NPHK.EQ.0) THEN
+         CALL U2DREL(HK(:,:,KK),ANAME(1),NROW,NCOL,KK,IN,IOUT)
+      ELSE
+         READ(IN,*) LAYFLG(1,K)
+         WRITE(IOUT,121) ANAME(1),K,LAYFLG(1,K)
   121    FORMAT(1X,/1X,A,' FOR LAYER',I4,
      1   ' WILL BE DEFINED BY PARAMETERS',/1X,'(PRINT FLAG=',I4,')')
-*         CALL UPARARRSUB1(HK(:,:,KK),NCOL,NROW,KK,'HK',
-*     1      IOUT,ANAME(1),LAYFLG(1,KK))
-*         IF(NOPCHK.EQ.0) CALL UPARARRCK(BUFF,IBOUND,IOUT,K,NCOL,NLAY,
-*     1      NROW,'HK  ')
-*      END IF
+         CALL UPARARRSUB1(HK(:,:,KK),NCOL,NROW,KK,'HK',
+     1      IOUT,ANAME(1),LAYFLG(1,KK))
+         IF(NOPCHK.EQ.0) CALL UPARARRCK(BUFF,IBOUND,IOUT,K,NCOL,NLAY,
+     1      NROW,'HK  ')
+      END IF
 *C
 *C7B-----READ HORIZONTAL ANISOTROPY IF CHANI IS NON-ZERO
-*      IF(CHANI(K).LE.ZERO) THEN
-*        KHANI=-CHANI(K)
-*        IF(NPHANI.EQ.0) THEN
-*           CALL U2DREL(HANI(:,:,KHANI),ANAME(2),NROW,NCOL,KK,IN,IOUT)
-*        ELSE
-*           READ(IN,*) LAYFLG(6,K)
-*           WRITE(IOUT,121) ANAME(2),K,LAYFLG(6,K)
-*           CALL UPARARRSUB1(HANI(:,:,KHANI),NCOL,NROW,KK,'HANI',
-*     1      IOUT,ANAME(2),LAYFLG(6,KK))
-*           IF(NOPCHK.EQ.0) CALL UPARARRCK(BUFF,IBOUND,IOUT,K,NCOL,
-*     1      NLAY,NROW,'HANI')
-*        END IF
-*      END IF
+      IF(CHANI(K).LE.ZERO) THEN
+        KHANI=-CHANI(K)
+        IF(NPHANI.EQ.0) THEN
+           CALL U2DREL(HANI(:,:,KHANI),ANAME(2),NROW,NCOL,KK,IN,IOUT)
+        ELSE
+           READ(IN,*) LAYFLG(6,K)
+           WRITE(IOUT,121) ANAME(2),K,LAYFLG(6,K)
+           CALL UPARARRSUB1(HANI(:,:,KHANI),NCOL,NROW,KK,'HANI',
+     1      IOUT,ANAME(2),LAYFLG(6,KK))
+           IF(NOPCHK.EQ.0) CALL UPARARRCK(BUFF,IBOUND,IOUT,K,NCOL,
+     1      NLAY,NROW,'HANI')
+        END IF
+      END IF
 *C
 *C7C-----DEFINE VERTICAL HYDRAULIC CONDUCTIVITY OR HORIZONTAL TO VERTICAL
 *C7C-----ANISOTROPY (VKA).
-*      IANAME=3
-*      PTYP='VK'
-*      IF(LAYVKA(K).NE.0) THEN
-*         IANAME=4
-*         PTYP='VANI'
-*      END IF
-*      IF(NPVK.EQ.0 .AND. NPVANI.EQ.0) THEN
-*         CALL U2DREL(VKA(:,:,KK),ANAME(IANAME),NROW,NCOL,KK,IN,IOUT)
-*      ELSE
-*         READ(IN,*) LAYFLG(2,K)
-*         WRITE(IOUT,121) ANAME(IANAME),K,LAYFLG(2,K)
-*         CALL UPARARRSUB1(VKA(:,:,KK),NCOL,NROW,KK,PTYP,IOUT,
-*     1                       ANAME(IANAME),LAYFLG(2,KK))
-*         IF(NOPCHK.EQ.0) CALL UPARARRCK(BUFF,IBOUND,IOUT,K,NCOL,NLAY,
-*     1                       NROW,PTYP)
-*      END IF
+      IANAME=3
+      PTYP='VK'
+      IF(LAYVKA(K).NE.0) THEN
+         IANAME=4
+         PTYP='VANI'
+      END IF
+      IF(NPVK.EQ.0 .AND. NPVANI.EQ.0) THEN
+         CALL U2DREL(VKA(:,:,KK),ANAME(IANAME),NROW,NCOL,KK,IN,IOUT)
+      ELSE
+         READ(IN,*) LAYFLG(2,K)
+         WRITE(IOUT,121) ANAME(IANAME),K,LAYFLG(2,K)
+         CALL UPARARRSUB1(VKA(:,:,KK),NCOL,NROW,KK,PTYP,IOUT,
+     1                       ANAME(IANAME),LAYFLG(2,KK))
+         IF(NOPCHK.EQ.0) CALL UPARARRCK(BUFF,IBOUND,IOUT,K,NCOL,NLAY,
+     1                       NROW,PTYP)
+      END IF
 C
 C7D-----DEFINE SPECIFIC STORAGE OR STORAGE COEFFICIENT IN ARRAY SC1 IF TRANSIENT.
       IF(ITRSS.NE.0) THEN

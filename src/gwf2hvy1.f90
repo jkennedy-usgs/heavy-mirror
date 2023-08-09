@@ -315,7 +315,7 @@ subroutine HVYALARR()
    end do
 !
 !2--Get storage capacity from the appropriate flow pkg
-
+! LPF
    if (IUNIT(3) .GT. 0) then
       if (LAYTYP(1) .eq. 0) then
          MESSAGE = "LAYER 1 IS CONFINED, CANNOT CALCULATE GRAVITY"
@@ -325,6 +325,7 @@ subroutine HVYALARR()
       SCSY(:,:,1:S) = SC2
       SCSS = SC1
       LTYP = LAYTYP
+! UPW
    else if (IUNIT(4) .GT. 0) then
       if (LAYTYPUPW(1) .eq. 0) then
          MESSAGE = "LAYER 1 IS CONFINED, CANNOT CALCULATE GRAVITY"
@@ -432,7 +433,7 @@ subroutine HVYPRISMLP(KP, KS, TOTIM, LAYER_TO_CALC)
 !   OPEN(UNIT=66,FILE='prism.csv',ACTION='WRITE',position='append')
    do N = 1, NFHVY
 
-      if ( abs(XYZHVY(3, N)) < 0.01 ) cycle  ! Skip stations at z = 0
+!      if ( abs(XYZHVY(3, N)) < 0.01 ) cycle  ! Skip stations at z = 0
 
       do L = 1,NLAY
          if (LAYER_TO_CALC.ne.0) then
@@ -455,23 +456,26 @@ subroutine HVYPRISMLP(KP, KS, TOTIM, LAYER_TO_CALC)
                 IBND = HVYBND(J, I, L)
 
                 if (IBND .ne. 0) then
+                    dh = HF - HVYSTRT(J, I, L)*CFACT
                    ! Head higher than top of prism = confined
+
                    if ( HF .gt. BOTM(J, I, L-1) * CFACT) then
-                         prism_bottom = BOTM(J, I, L) * CFACT
-                         prism_top = BOTM(J, I, L-1) * CFACT
-                      dh = HF - HVYSTRT(J, I, L)*CFACT
+                      prism_bottom = BOTM(J, I, L) * CFACT
+                      prism_top = BOTM(J, I, L-1) * CFACT
+
                       d_rho = SSHVY(J, I, L) * dh
                    else
+                      HS = HVYSTRT(J, I, L)*CFACT
+                      prism_bottom = min(HS, HF)
+                      prism_top = max(HS, HF)
 
-                      prism_bottom = HVYSTRT(J, I, L)*CFACT
-                      prism_top = HF
+                      if (dh.gt.0) then
 
-                      if (prism_top > prism_bottom) then
                         d_rho = SYHVY(J, I, L)
+
                       else
                         d_rho = (-1 * SYHVY(J, I, L) )
                       end if
-!                      s = 0
                    end if
     !
                    x = XYZHVY(1, N) - XC(J)
@@ -502,7 +506,7 @@ subroutine HVYPRISMLP(KP, KS, TOTIM, LAYER_TO_CALC)
 !                     &       BOTM(J, I, L) * CFACT, BOTM(J, I, L-1) * CFACT, &
 !                     &       d_rho, XYZHVY(1, N), XYZHVY(2, N), XYZHVY(3, N), formula
 !101                  format(I1,F15.5,E15.5,F15.5,F15.5,F15.5,F15.5,F15.5,F15.5,F15.5,F15.5,E15.5,F15.5,F15.5,F15.5,A5)
-!                  end if
+!                   end if
                 end if
             end do
          end do
